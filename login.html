@@ -2,14 +2,41 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>无标题文档</title>
+<title>登录</title>
 <link rel="stylesheet" type="text/css" href="static/bootstrap/css/bootstrap.min.css" />
-<script src="static/bootstrap/js/less.min.js" ></script>
 <link rel="stylesheet/less" type="text/css" href="static/less/site.less" />
+<script src="static/bootstrap/js/less.min.js" ></script>
+<style media="screen">
+
+</style>
 </head>
 
-<body>
-
+<body class="page-login">
+  <div class="login">
+    <h1>暖通维保平台</h1>
+    <form action="index.html" method="">
+    <div class="form-group">
+      <div class="input-group input-group-lg">
+        <div class="input-group-addon"><i class="glyphicon glyphicon-user"></i></div>
+        <input type="text" class="form-control" placeholder="请输入用户名">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="input-group input-group-lg">
+        <div class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></div>
+        <input type="password" class="form-control" placeholder="请输入密码">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="input-group input-group-lg">
+        <div class="input-group-addon"><i class="glyphicon glyphicon-picture"></i></div>
+        <input type="text" class="form-control" placeholder="请输入验证码">
+        <span class="input-group-addon input-group-addon-vscode"><img src="static/images/img_vscode.jpg" alt="" height="46">  </span>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block btn-lg">登录</button>
+    </form>
+  </div>
 <script type="text/javascript" src="static/bootstrap/js/jquery.js"></script>
 <script type="text/javascript" src="static/bootstrap/js/bootstrap.min.js"></script>
 </body>

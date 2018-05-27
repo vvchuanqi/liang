@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>首页</title>
+<link rel="stylesheet" type="text/css" href="static/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="static/fontawesome/css/fontawesome-all.min.css" />
+<link rel="stylesheet/less" type="text/css" href="static/less/site.less" />
+<script src="static/bootstrap/js/less.min.js" ></script>
+<style media="screen">
+
+</style>
+</head>
+
+<body class="page-main">
+  <!-- start header -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">暖通维保平台</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <p class="navbar-text navbar-left"><span class="badge">设备总数：4</span><span class="badge">在线：23</span><span class="badge">故障：4</span></p>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">张三丰 <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#"><i class="glyphicon glyphicon-lock"></i> 修改密码</a></li>
+              <li><a href="#"><i class="glyphicon glyphicon-cog"></i> 个人设置</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </li>
+          <li><a href="#"><i class="glyphicon glyphicon-off"></i> 退出</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <!-- end header -->
+  <!-- start aside -->
+<div class="aside">
+  <a href="javascript:void(0);" class="btn-toggle-aside" id="btnToggleAside"><i class="fa fa-caret-left"></i></a>
+  <ul class="left-menu">
+    <li class="active"><a href="#"><i class="fa fa-home fa-fw"></i>首页</a></li>
+    <li><a href="#"><i class="fa fa-map fa-fw"></i>地图搜索</a></li>
+    <li><a href="#"><i class="fa fa-building fa-fw"></i>工程管理</a></li>
+    <li><a href="#"><i class="fa fa-cogs fa-fw"></i>机型配置</a></li>
+    <li><a href="#"><i class="fa fa-shield-alt fa-fw"></i>维保服务</a></li>
+    <li><a href="#"><i class="fa fa-bell fa-fw"></i>报警服务</a></li>
+    <li><a href="#"><i class="fa fa-server fa-fw"></i>数据保存策略</a></li>
+    <li><a href="#"><i class="fa fa-user-cog fa-fw"></i>账号管理</a></li>
+    <li><a href="#"><i class="fa fa-chart-line fa-fw"></i>数据分析</a></li>
+    <li><a href="#"><i class="fa fa-cloud-upload-alt fa-fw"></i>远程升级</a></li>
+    <li><a href="#"><i class="fa fa-info-circle fa-fw"></i>操作日志</a></li>
+    <li><a href="#"><i class="fa fa-question-circle fa-fw"></i>常见问题</a></li>
+    <li><a href="#"><i class="fa fa-edit fa-fw"></i>问题反馈</a></li>
+  </ul>
+</div>
+  <!-- end aside -->
+  <!-- start main -->
+<div class="main">
+杀杀杀
+</div>
+  <!-- end main -->
+<script type="text/javascript" src="static/bootstrap/js/jquery.js"></script>
+<script type="text/javascript" src="static/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+  $(function(){
+    //折叠左侧的菜单栏
+    $("#btnToggleAside").click(function(){
+        $(".page-main").toggleClass("off")
+    });
+  });
+</script>
+</body>
+</html>
