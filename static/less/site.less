@@ -5,7 +5,23 @@ html{
     display:block;
   }
 }
-
+// 扩展bootstrap的某些组件样式
+.panel{
+  .panel-heading{
+    position: relative;
+    .panel-actions{
+      position:absolute;
+      right:0;
+      top:0;
+      bottom:0;
+      text-align: right;
+      .more{
+        display: inline-block;
+        padding:9px 15px;
+      }
+    }
+  }
+}
 // 登录页专用样式
 .page-login{
   background:url(../images/bg_login.png) center center no-repeat;
@@ -86,11 +102,14 @@ html{
       > li >a {
         display: block;
         padding:10px 12px;
-        color:#999;
+        color:#9d9d9d;
         > .fa{margin-right:5px;}
         &:hover,&:visited,&:focus{
           text-decoration: none;
           background-color:#6d6d6d;
+        }
+        &:hover{
+          color:#FFF;
         }
         &:active{
           text-decoration: none;
@@ -117,6 +136,9 @@ html{
   &.off{
     .aside{
       transform: translate(-100%,0);
+      .btn-toggle-aside .fa-caret-left:before{
+        content:"\f0da";
+      }
     }
     .main{
       margin-left:0;
