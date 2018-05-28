@@ -51,9 +51,9 @@
 <div class="aside">
   <a href="javascript:void(0);" class="btn-toggle-aside" id="btnToggleAside"><i class="fa fa-caret-left"></i></a>
   <ul class="left-menu">
-    <li class="active"><a href="#home"><i class="fa fa-home fa-fw"></i>首页</a></li>
-    <li><a href="#"><i class="fa fa-map fa-fw"></i>地图搜索</a></li>
-    <li><a href="#"><i class="fa fa-building fa-fw"></i>工程管理</a></li>
+    <li class="active"><a href="templates/home.html" class="ajax-link"><i class="fa fa-home fa-fw"></i>首页</a></li>
+    <li><a href="templates/map.html" class="ajax-link"><i class="fa fa-map fa-fw"></i>地图搜索</a></li>
+    <li><a href="templates/typeCogs.html" class="ajax-link"><i class="fa fa-building fa-fw"></i>工程管理</a></li>
     <li><a href="#"><i class="fa fa-cogs fa-fw"></i>机型配置</a></li>
     <li><a href="#"><i class="fa fa-shield-alt fa-fw"></i>维保服务</a></li>
     <li><a href="#"><i class="fa fa-bell fa-fw"></i>报警服务</a></li>
@@ -81,7 +81,16 @@
         $(".page-main").toggleClass("off")
     });
     //默认载入首页模板
-    $("#mainContent").load("templates/home.html");
+    $("#mainContent").load("templates/map.html");
+    //点击左侧菜单链接，右侧载入内容
+    $(".ajax-link").each(function(){
+      $(this).click(function(){
+        $(this).parent("li").addClass("active").siblings("li").removeClass("active");
+        var target = $(this).attr("href");
+        $("#mainContent").load(target);
+        return false;
+      });
+    });
   });
 </script>
 </body>

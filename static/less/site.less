@@ -6,6 +6,12 @@ html{
   }
 }
 // 扩展bootstrap的某些组件样式
+.navbar-inverse{
+  background-color: #1C222B;
+  .navbar-brand,.navbar-nav>li>a{
+    color:#9da5b4;
+  }
+}
 .panel{
   .panel-heading{
     position: relative;
@@ -74,7 +80,7 @@ html{
     top:50px;
     bottom:0;
     z-index:20;
-    background-color:#5c5c5c;
+    background-color:#21252b;
     transition: transform  0.2s cubic-bezier(0.5, 0, 1, 0);
     .btn-toggle-aside{
       position: absolute;
@@ -85,11 +91,11 @@ html{
       right:-15px;
       top:50%;
       margin-top:-24px;
-      background-color:#5c5c5c;
+      background-color:#21252b;
       color:#FFF;
       border-radius:0 5px 5px 0;
       &:hover{
-        background-color:#666666;
+        background-color:#4b5261;
       }
       &:active{
         background-color:#444;
@@ -102,25 +108,26 @@ html{
       > li >a {
         display: block;
         padding:10px 12px;
-        color:#9d9d9d;
+        color:#9da5b4;
+        transition: background-color 0.15s;
         > .fa{margin-right:5px;}
         &:hover,&:visited,&:focus{
           text-decoration: none;
-          background-color:#6d6d6d;
+          background-color:#4b5261;
         }
         &:hover{
           color:#FFF;
         }
         &:active{
           text-decoration: none;
-          background-color:#444444;
+          background-color:#4d78cc;
           color:#FFF;
         }
       }
       > li.active > a {
           text-decoration: none;
-          background-color:#444444;
-          color:#FFF;
+          background-color:#3a3f4b;
+          color:#5bc0de;
           > .fa{
             color:#5bc0de;
           }
@@ -144,5 +151,35 @@ html{
       margin-left:0;
       transition-delay: 0.3s;
     }
+  }
+}
+//首页样式
+.home-wrapper{padding-top:15px;}
+//地图页面样式
+.map-wrapper{
+  height: 100%;
+  position:relative;
+  .map{height:100%;width:100%;background-color:#f3f1ec;}
+  .map-search{
+    position: absolute;
+    right:20px;top:20px;
+    width:250px;
+    z-index:500;
+    background-color:#FFF;
+    box-shadow:0 1px 10px rgba(0,0,0,.25);
+    transition: all 0.2s cubic-bezier(0.5, 0, 1, 0);
+    .input-label{
+      position: absolute;left:0;top:0;bottom:0;color:#999;line-height: 1.56;
+      padding:6px 15px;
+      &:after{
+        content:"";
+        position: absolute;
+        right:0;
+        top:4px;
+        bottom:4px;
+        border-right:1px solid #e5e5e5;
+      }
+    }
+    .form-control{padding-left:65px;border-color:transparent;border-radius: 0;box-shadow:none;}
   }
 }
