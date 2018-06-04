@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <title>首页</title>
-<link rel="stylesheet" type="text/css" href="static/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="static/bootstrap/css/bootstrap.css" />
 <link rel="stylesheet" type="text/css" href="static/fontawesome/css/fontawesome-all.min.css" />
 <link rel="stylesheet/less" type="text/css" href="static/less/site.less" />
-<script src="static/bootstrap/js/less.min.js" ></script>
+<script src="static/js/less.min.js" ></script>
 <style media="screen">
 
 </style>
@@ -55,12 +55,35 @@
     <li><a href="templates/map.html" class="ajax-link"><i class="fa fa-map fa-fw"></i>地图搜索</a></li>
     <li><a href="templates/project.html" class="ajax-link"><i class="fa fa-building fa-fw"></i>工程管理</a></li>
     <li><a href="#"><i class="fa fa-cogs fa-fw"></i>机型配置</a></li>
-    <li><a href="#"><i class="fa fa-shield-alt fa-fw"></i>维保服务</a></li>
-    <li><a href="#"><i class="fa fa-bell fa-fw"></i>报警服务</a></li>
+    <li><a href="#"><i class="fa fa-shield-alt fa-fw"></i>维保服务 <i class="fa fa-caret-down"></i></a>
+      <ul>
+        <li><a href="#">维保计划</a></li>
+        <li><a href="#">维保记录</a></li>
+      </ul>
+    </li>
+    <li><a href="#"><i class="fa fa-bell fa-fw"></i>报警服务 <i class="fa fa-caret-down"></i></a>
+      <ul>
+        <li><a href="#">报警模板</a></li>
+        <li><a href="#">报警规则</a></li>
+        <li><a href="#">报警历史</a></li>
+        <li><a href="#">订阅规则</a></li>
+      </ul>
+    </li>
     <li><a href="#"><i class="fa fa-server fa-fw"></i>数据保存策略</a></li>
     <li><a href="#"><i class="fa fa-user-cog fa-fw"></i>账号管理</a></li>
-    <li><a href="#"><i class="fa fa-chart-line fa-fw"></i>数据分析</a></li>
-    <li><a href="#"><i class="fa fa-cloud-upload-alt fa-fw"></i>远程升级</a></li>
+    <li><a href="#"><i class="fa fa-chart-line fa-fw"></i>数据分析 <i class="fa fa-caret-down"></i></a>
+      <ul>
+        <li><a href="#">故障分析</a></li>
+        <li><a href="#">机组分布</a></li>
+      </ul>
+    </li>
+    <li><a href="#"><i class="fa fa-cloud-upload-alt fa-fw"></i>远程升级 <i class="fa fa-caret-down"></i></a>
+      <ul>
+        <li><a href="#">设备升级</a></li>
+        <li><a href="#">DTU升级</a></li>
+        <li><a href="#">固件管理</a></li>
+      </ul>
+    </li>
     <li><a href="#"><i class="fa fa-info-circle fa-fw"></i>操作日志</a></li>
     <li><a href="#"><i class="fa fa-question-circle fa-fw"></i>常见问题</a></li>
     <li><a href="#"><i class="fa fa-edit fa-fw"></i>问题反馈</a></li>

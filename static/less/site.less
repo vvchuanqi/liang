@@ -1,60 +1,20 @@
+
+@brand-primary:         darken(#2d8cf0, 6.5%);
+@brand-success:         #19be6b;
+@brand-info:            #2d8cf0;
+@brand-warning:         #ff9900;
+@brand-danger:          #ed3f14;
+//定义全局颜色
 html{
   height:100%;
   body{
     height:100%;
     display:block;
-    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   }
 }
-// 扩展bootstrap的某些组件样式
-.navbar-inverse{
-  background-color: #1C222B;
-  .navbar-brand,.navbar-nav>li>a{
-    color:#9da5b4;
-  }
-}
-.panel{
-  .panel-heading{
-    position: relative;
-    .panel-heading-label-group{
-      display: inline-block;
-      .badge{
-        margin-right:10px;
-        vertical-align:2px;
-      &.badge-default{
-        background-color:#999;
-        }
-      }
-    }
-    .panel-actions{
-      position:absolute;
-      right:0;
-      top:0;
-      bottom:0;
-      text-align: right;
-      .more{
-        display: inline-block;
-        padding:9px 15px;
-      }
-    }
-  }
-}
-.badge-primary{background-color:#337ab7;color:#FFF;}
-.badge-success{background-color:#dff0d8;color:#3c763d;}
-.badge-info{background-color:#d9edf7;color:#31708f;}
-.badge-warning{background-color:#fcf8e3;color:#8a6d3b;}
-.badge-danger{background-color:#f2dede;color:#a94442;}
+//end ===================全局设置
 
-.table-responsive{
-  .table:last-child{
-    margin-bottom:0;
-  }
-}
-.table-nowrap{
-  th,td{
-    white-space: nowrap;
-  }
-}
+
 // 登录页专用样式
 .page-login{
   background:url(../images/bg_login.png) center center no-repeat;
@@ -132,11 +92,23 @@ html{
       margin:0;
       padding:0;
       list-style: none;
+      > li > ul{
+        display: none;
+      }
       > li >a {
         display: block;
         padding:10px 12px;
         color:#9da5b4;
         transition: background-color 0.1s;
+        position: relative;
+        > .fa-caret-down{
+          margin:0;
+          position: absolute;
+          right:10px;
+          top:50%;
+          margin-top:-7px;
+          transition: transform 0.2s;
+        }
         > .fa{margin-right:5px;}
         &:hover,&:visited,&:focus{
           text-decoration: none;
@@ -147,16 +119,21 @@ html{
         }
         &:active{
           text-decoration: none;
-          background-color:#4d78cc;
+          background-color:@brand-info;
           color:#FFF;
+        }
+      }
+      > li.active{
+        > ul{
+          display: block;
         }
       }
       > li.active > a {
           text-decoration: none;
           background-color:#3a3f4b;
-          color:#5bc0de;
-          > .fa{
-            color:#5bc0de;
+          color:@brand-success;
+          > .fa-caret-down{
+          transform: rotate(180deg);
           }
       }
     }
