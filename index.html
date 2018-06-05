@@ -132,6 +132,13 @@
         }
       }
     });
+    //二级菜单点击添加active效果
+    $(".left-menu > li ul > li > a").click(function(){
+      var $father =   $(this).parent("li");
+      var $brother = $(".left-menu > li ul > li");
+      $brother.removeClass("active"); 
+      $father.addClass("active");
+    });
   });
 </script>
 </body>

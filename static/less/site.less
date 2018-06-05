@@ -23,6 +23,18 @@ html{
   }
 }
 
+@keyframes fadeInleft {
+  from {
+    opacity: 0;
+    transform: translate3d(10px,0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 .show-animation{
   animation-name: fadeInRight;
   animation-duration: 0.4s;
@@ -138,6 +150,15 @@ html{
             }
             &:focus,&:visited{
               text-decoration: none;
+            }
+          }
+          &.active{
+            > a{
+              animation-name: fadeInleft;
+              animation-duration: 0.4s;
+              animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+              background-color:#010202;
+              color:@brand-warning;
             }
           }
         }
