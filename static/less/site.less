@@ -120,13 +120,14 @@ html{
         overflow:hidden;
         margin:0;
         padding:0;
-        transition:max-height 0.4s  cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition:all 0.4s  cubic-bezier(0.215, 0.61, 0.355, 1);
         background-color: #080a0c;
         list-style:none;
         >li{
           > a{
             display: block;
             padding:10px 15px 10px 40px;
+            transition: all 0.2s;
             &:hover{
               text-decoration: none;
               background-color:#13181d;
@@ -145,7 +146,7 @@ html{
         display: block;
         padding:10px 12px;
         color:#9da5b4;
-        transition: background-color 0.1s;
+        transition:all 0.1s;
         position: relative;
         > .fa-caret-down{
           margin:0;
