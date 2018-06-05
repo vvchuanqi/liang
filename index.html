@@ -2,6 +2,8 @@
 <html>
 <head>
 <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>首页</title>
 <link rel="stylesheet" type="text/css" href="static/bootstrap/css/bootstrap.css" />
 <link rel="stylesheet" type="text/css" href="static/fontawesome/css/fontawesome-all.min.css" />
@@ -105,14 +107,30 @@
     });
     //默认载入首页模板
     $("#mainContent").load("templates/home.html");
-    //点击左侧菜单链接，右侧载入内容
+    //点击左侧菜单ajax链接，右侧载入内容
     $(".ajax-link").each(function(){
       $(this).click(function(){
         $(this).parent("li").addClass("active").siblings("li").removeClass("active");
         var target = $(this).attr("href");
-        $("#mainContent").load(target);
+        $("#mainContent").load(target).addClass("show-animation");
+        setTimeout(function(){
+          $("#mainContent").removeClass("show-animation");
+        },500);
         return false;
       });
+    });
+    //判断是否有下级菜单，如果有点击时就展开，其他的折叠隐藏
+    $(".left-menu > li > a").click(function(){
+      var $father = $(this).parent("li");
+      var $length = $father.find("ul").length;
+      if($length > 0){
+        if($father.hasClass("active")){
+          $father.removeClass("active");
+        }
+        else{
+          $father.addClass("active").siblings("li").removeClass("active");          
+        }
+      }
     });
   });
 </script>

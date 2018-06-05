@@ -11,26 +11,45 @@ html{
     display:block;
   }
 }
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(-20px,0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.show-animation{
+  animation-name: fadeInRight;
+  animation-duration: 0.4s;
+  animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
 //end ===================全局设置
 
 
 // 登录页专用样式
 .page-login{
-  background:url(../images/bg_login.png) center center no-repeat;
+  background:#0e1115 url(../images/bg_login.png) center center / auto 100% no-repeat;
   .login{
-    background-color:rgba(255,255,255,.44);
+    background-color:rgba(17, 123, 235, 0.15);
     border-radius:6px;
     padding:15px;
-    position: absolute;
-    top:50%;
-    left:60%;
-    transform:translate(-50%,-50%);
+    margin:30px 15px;
     h1{
       font-size:24px;
       text-align: center;
       color:#FFF;
       margin:0 0 15px;
       padding:15px 0;
+    }
+    .input-group-addon{
+      background-color:#E3F2FD;
+      border-color:#E3F2FD;
+      color:@brand-primary;
     }
     .input-group-addon-vscode{
       border:none;
@@ -43,9 +62,14 @@ html{
 }
 @media(min-width:768px){
   .page-login{
-    background:url(../images/bg_login.png) center center no-repeat;
+    background:#0e1115 url(../images/bg_login.png) center center / auto auto no-repeat;
     .login{
       width:400px;
+      position: absolute;
+      top:50%;
+      left:60%;
+      transform:translate(-50%,-50%);
+      margin:0;
       }
     }
 }
@@ -67,7 +91,7 @@ html{
     bottom:0;
     z-index:20;
     background-color:#21252b;
-    transition: transform  0.2s cubic-bezier(0.5, 0, 1, 0);
+    transition: transform  0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
     .btn-toggle-aside{
       position: absolute;
       width:15px;
@@ -92,7 +116,30 @@ html{
       padding:0;
       list-style: none;
       > li > ul{
-        display: none;
+        max-height: 0;
+        overflow:hidden;
+        margin:0;
+        padding:0;
+        transition:max-height 0.4s  cubic-bezier(0.215, 0.61, 0.355, 1);
+        background-color: #080a0c;
+        list-style:none;
+        >li{
+          > a{
+            display: block;
+            padding:10px 15px 10px 40px;
+            &:hover{
+              text-decoration: none;
+              background-color:#13181d;
+            }
+            &:active{
+              text-decoration: none;
+              background-color:#010202;
+            }
+            &:focus,&:visited{
+              text-decoration: none;
+            }
+          }
+        }
       }
       > li >a {
         display: block;
@@ -124,7 +171,7 @@ html{
       }
       > li.active{
         > ul{
-          display: block;
+            max-height:900px;
         }
       }
       > li.active > a {
@@ -217,13 +264,15 @@ html{
 //工程管理样式
 .project-wrapper{
   padding-top:15px;
+  padding-bottom:50px;
 }
  .pagination-footer{
     position: fixed;
     bottom:0;left:175px;
     right:0;
     background-color:#f2f2f2;
-    padding:0 15px;
     text-align: right;
+    .pagination{
+      margin:10px 15px;
+    }
   }
-
