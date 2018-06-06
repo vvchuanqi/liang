@@ -36,11 +36,11 @@
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">张三丰 <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="#"><i class="glyphicon glyphicon-lock"></i> 修改密码</a></li>
-              <li><a href="#"><i class="glyphicon glyphicon-cog"></i> 个人设置</a></li>
-              <li><a href="#">Something else here</a></li>
+              <li><a href="#"><i class="fa fa-lock fa-fw"></i> 修改密码</a></li>
+              <li><a href="#"><i class="fa fa-cog fa-fw"></i> 个人设置</a></li>
               <li role="separator" class="divider"></li>
-              <li><a href="#">Separated link</a></li>
+              <li><a href="#"><i class="fa fa-user-secret fa-fw"></i> 管理员入口</a></li>
+              <li><a href="#"><i class="fa fa-low-vision fa-fw"></i> 权限设置</a></li>
             </ul>
           </li>
           <li><a href="#"><i class="glyphicon glyphicon-off"></i> 退出</a></li>
@@ -128,7 +128,7 @@
           $father.removeClass("active");
         }
         else{
-          $father.addClass("active").siblings("li").removeClass("active");          
+          $father.addClass("active").siblings("li").removeClass("active");
         }
       }
     });
@@ -136,7 +136,7 @@
     $(".left-menu > li ul > li > a").click(function(){
       var $father =   $(this).parent("li");
       var $brother = $(".left-menu > li ul > li");
-      $brother.removeClass("active"); 
+      $brother.removeClass("active");
       $father.addClass("active");
     });
   });
