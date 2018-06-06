@@ -138,8 +138,10 @@ html{
         >li{
           > a{
             display: block;
-            padding:10px 15px 10px 40px;
+            padding:10px 15px 10px 2.4em;
             transition: all 0.2s;
+            color:#9da5b4;
+            border-bottom:1px dashed #13181d;
             &:hover{
               text-decoration: none;
               background-color:#13181d;
@@ -157,7 +159,6 @@ html{
               animation-name: fadeInleft;
               animation-duration: 0.4s;
               animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-              background-color:#010202;
               color:@brand-warning;
             }
           }
@@ -194,6 +195,8 @@ html{
       > li.active{
         > ul{
             max-height:900px;
+            transition-timing-function:cubic-bezier(0.65, 0.05, 0.36, 1);
+            transition-delay: 0s;
         }
       }
       > li.active > a {
