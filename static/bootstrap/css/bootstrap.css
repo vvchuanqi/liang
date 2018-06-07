@@ -1136,7 +1136,7 @@ hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
-  border-top: 1px solid #eeeeee;
+  border-top: 1px solid #f8f8f9;
 }
 .sr-only {
   position: absolute;
@@ -1399,7 +1399,7 @@ a.bg-danger:focus {
 .page-header {
   padding-bottom: 9px;
   margin: 40px 0 20px;
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid #f8f8f9;
 }
 ul,
 ol {
@@ -1467,7 +1467,7 @@ blockquote {
   padding: 10px 20px;
   margin: 0 0 20px;
   font-size: 17.5px;
-  border-left: 5px solid #eeeeee;
+  border-left: 5px solid #f8f8f9;
 }
 blockquote p:last-child,
 blockquote ul:last-child,
@@ -1491,7 +1491,7 @@ blockquote .small:before {
 blockquote.pull-right {
   padding-right: 15px;
   padding-left: 0;
-  border-right: 5px solid #eeeeee;
+  border-right: 5px solid #f8f8f9;
   border-left: 0;
   text-align: right;
 }
@@ -1553,7 +1553,7 @@ pre {
   word-wrap: break-word;
   color: #495060;
   background-color: #f8f8f9;
-  border: 1px solid #ccc;
+  border: 1px solid #dcdfe6;
   border-radius: 4px;
 }
 pre code {
@@ -2551,7 +2551,7 @@ output {
   color: #495060;
   background-color: #fff;
   background-image: none;
-  border: 1px solid #ccc;
+  border: 1px solid #dcdfe6;
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -2582,7 +2582,7 @@ output {
 .form-control[disabled],
 .form-control[readonly],
 fieldset[disabled] .form-control {
-  background-color: #eeeeee;
+  background-color: #f8f8f9;
   opacity: 1;
 }
 .form-control[disabled],
@@ -3523,7 +3523,7 @@ tbody.collapse.in {
   font-size: 14px;
   text-align: left;
   background-color: #fff;
-  border: 1px solid #ccc;
+  border: 1px solid #dcdfe6;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
@@ -3893,8 +3893,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   line-height: 1;
   color: #495060;
   text-align: center;
-  background-color: #eeeeee;
-  border: 1px solid #ccc;
+  background-color: #f8f8f9;
+  border: 1px solid #dcdfe6;
   border-radius: 4px;
 }
 .input-group-addon.input-sm {
@@ -3979,7 +3979,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav > li > a:hover,
 .nav > li > a:focus {
   text-decoration: none;
-  background-color: #eeeeee;
+  background-color: #f8f8f9;
 }
 .nav > li.disabled > a {
   color: #777777;
@@ -3994,7 +3994,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav .open > a,
 .nav .open > a:hover,
 .nav .open > a:focus {
-  background-color: #eeeeee;
+  background-color: #f8f8f9;
   border-color: #117beb;
 }
 .nav .nav-divider {
@@ -4020,7 +4020,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-radius: 4px 4px 0 0;
 }
 .nav-tabs > li > a:hover {
-  border-color: #eeeeee #eeeeee #ddd;
+  border-color: #f8f8f9 #f8f8f9 #ddd;
 }
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
@@ -4512,7 +4512,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > .disabled > a,
 .navbar-default .navbar-nav > .disabled > a:hover,
 .navbar-default .navbar-nav > .disabled > a:focus {
-  color: #ccc;
+  color: #dcdfe6;
   background-color: transparent;
 }
 .navbar-default .navbar-toggle {
@@ -4553,7 +4553,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
-    color: #ccc;
+    color: #dcdfe6;
     background-color: transparent;
   }
 }
@@ -4574,7 +4574,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 fieldset[disabled] .navbar-default .btn-link:hover,
 .navbar-default .btn-link[disabled]:focus,
 fieldset[disabled] .navbar-default .btn-link:focus {
-  color: #ccc;
+  color: #dcdfe6;
 }
 .navbar-inverse {
   background-color: #1C222B;
@@ -4691,7 +4691,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .breadcrumb > li + li:before {
   content: "/\00a0";
   padding: 0 5px;
-  color: #ccc;
+  color: #dcdfe6;
 }
 .breadcrumb > .active {
   color: #777777;
@@ -4734,7 +4734,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > li > span:focus {
   z-index: 2;
   color: #0c56a4;
-  background-color: #eeeeee;
+  background-color: #f8f8f9;
   border-color: #ddd;
 }
 .pagination > .active > a,
@@ -4812,7 +4812,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pager li > a:hover,
 .pager li > a:focus {
   text-decoration: none;
-  background-color: #eeeeee;
+  background-color: #f8f8f9;
 }
 .pager .next > a,
 .pager .next > span {
@@ -4968,7 +4968,7 @@ a.badge:focus {
   padding-bottom: 30px;
   margin-bottom: 30px;
   color: inherit;
-  background-color: #eeeeee;
+  background-color: #f8f8f9;
 }
 .jumbotron h1,
 .jumbotron .h1 {
@@ -4980,7 +4980,7 @@ a.badge:focus {
   font-weight: 200;
 }
 .jumbotron > hr {
-  border-top-color: #d5d5d5;
+  border-top-color: #dddde1;
 }
 .container .jumbotron,
 .container-fluid .jumbotron {
@@ -5284,7 +5284,7 @@ button.list-group-item {
 .list-group-item.disabled,
 .list-group-item.disabled:hover,
 .list-group-item.disabled:focus {
-  background-color: #eeeeee;
+  background-color: #f8f8f9;
   color: #777777;
   cursor: not-allowed;
 }
@@ -6120,7 +6120,7 @@ button.close {
   font-size: 14px;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid #ccc;
+  border: 1px solid #dcdfe6;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 6px;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -6169,7 +6169,7 @@ button.close {
   left: 50%;
   margin-left: -11px;
   border-bottom-width: 0;
-  border-top-color: #999999;
+  border-top-color: #a1a9bb;
   border-top-color: rgba(0, 0, 0, 0.25);
   bottom: -11px;
 }
@@ -6185,7 +6185,7 @@ button.close {
   left: -11px;
   margin-top: -11px;
   border-left-width: 0;
-  border-right-color: #999999;
+  border-right-color: #a1a9bb;
   border-right-color: rgba(0, 0, 0, 0.25);
 }
 .popover.right > .arrow:after {
@@ -6199,7 +6199,7 @@ button.close {
   left: 50%;
   margin-left: -11px;
   border-top-width: 0;
-  border-bottom-color: #999999;
+  border-bottom-color: #a1a9bb;
   border-bottom-color: rgba(0, 0, 0, 0.25);
   top: -11px;
 }
@@ -6215,7 +6215,7 @@ button.close {
   right: -11px;
   margin-top: -11px;
   border-right-width: 0;
-  border-left-color: #999999;
+  border-left-color: #a1a9bb;
   border-left-color: rgba(0, 0, 0, 0.25);
 }
 .popover.left > .arrow:after {

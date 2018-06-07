@@ -36,7 +36,7 @@
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">张三丰 <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="#"><i class="fa fa-lock fa-fw"></i> 修改密码</a></li>
+              <li><a href="#changePassword" data-toggle="modal"><i class="fa fa-lock fa-fw"></i> 修改密码</a></li>
               <li><a href="#"><i class="fa fa-cog fa-fw"></i> 个人设置</a></li>
               <li role="separator" class="divider"></li>
               <li><a href="#"><i class="fa fa-user-secret fa-fw"></i> 管理员入口</a></li>
@@ -97,6 +97,43 @@
 
 </div>
   <!-- end main -->
+
+  <!-- start 修改密码弹窗 -->
+  <div class="modal fade" tabindex="-1" id="changePassword">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">修改密码</h4>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon">输入旧密码：</span>
+                <input type="password" class="form-control" placeholder="请输入旧密码">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon">输入新密码：</span>
+                <input type="password" class="form-control" placeholder="请输入新密码">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon">确认新密码：</span>
+                <input type="password" class="form-control" placeholder="请再次输入新密码">
+              </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+          <button type="button" class="btn btn-primary">确定</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+  <!-- end 修改密码弹窗 -->
 <script type="text/javascript" src="static/js/jquery.js"></script>
 <script type="text/javascript" src="static/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript">
@@ -112,9 +149,9 @@
       $(this).click(function(){
         $(this).parent("li").addClass("active").siblings("li").removeClass("active");
         var target = $(this).attr("href");
-        $("#mainContent").load(target).addClass("show-animation");
+        $("#mainContent").load(target).addClass("fadeInRight");
         setTimeout(function(){
-          $("#mainContent").removeClass("show-animation");
+          $("#mainContent").removeClass("fadeInRight");
         },500);
         return false;
       });
