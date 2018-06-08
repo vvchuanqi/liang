@@ -1,3 +1,22 @@
+<h1>目录结构说明<h1>
+<p>本站的静态文件需要放置在服务器环境下浏览,而不是用浏览器直接打开file:/形式访问</p>
+
+liang/</br>
+├── login.html <span style="color:#999;font-size:14px;">//登录页面</span></br>
+├── index.html <span style="color:#999;font-size:14px;">//首页</span></br>
+├── static  //静态资源文件夹</br>
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── bootstrap  <span style="color:#999;font-size:14px;">//引用的UI框架，基于流行的bootstrap </span></br>
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── fontawesome  <span style="color:#999;font-size:14px;">//字体图标 </span></br>
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── images  <span style="color:#999;font-size:14px;">//站点所用到的图片资源</span></br>
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── js  <span style="color:#999;font-size:14px;">//全局js文件</span> </br>
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── less  <span style="color:#999;font-size:14px;">//本站自定义的样式（基于less语法书写）</span> </br>
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</br>
+└── templates //模板页文件夹</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── account-management.html <span style="color:#999;font-size:14px;">//站内左侧菜单点击链接的html模板，采用ajax方法load进div.main#mainContent内容区域</span></br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── ....html</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── ....html</br>
+    
+    
 <h1>项目截图预览</h1>
 
 <h2>登录页</h2>
