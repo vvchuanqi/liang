@@ -12,7 +12,7 @@ liang/</br>
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── less  <span style="color:#999;font-size:14px;">//本站自定义的样式（基于less语法书写）</span> </br>
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</br>
 └── templates //模板页文件夹</br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── account-management.html <span style="color:#999;font-size:14px;">//站内左侧菜单点击链接的html模板，采用ajax方法load进div.main#mainContent内容区域</span></br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── xxx.html <span style="color:#999;font-size:14px;">//站内左侧菜单点击链接的html模板，采用ajax方法load进div.main#mainContent内容区域</span></br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── ....html</br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── ....html</br>
     
