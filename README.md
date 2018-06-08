@@ -2,20 +2,20 @@
 
 > 本站的静态文件需要放置在服务器环境下浏览,而不是用浏览器直接打开file::/形式访问 
 
-> liang/ 
-> ├── login.html <span style="color:#999;font-size:14px;">//登录页面</span>  
-> ├── index.html <span style="color:#999;font-size:14px;">//首页</span>  
-> ├── static  //静态资源文件夹  
-> │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── bootstrap  <span style="color:#999;font-size:14px;">//引用的UI框架，基于流行的bootstrap </span> 
-> │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── fontawesome  <span style="color:#999;font-size:14px;">//字体图标 </span>  
-> │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── images  <span style="color:#999;font-size:14px;">//站点所用到的图片资源</span>  
-> │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── js  <span style="color:#999;font-size:14px;">//全局js文件</span>  
-> │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── less  <span style="color:#999;font-size:14px;">//本站自定义的样式（基于less语法书写）</span>  
-> │  
-> └── templates //模板页文件夹  
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── xxx.html <span style="color:#999;font-size:14px;">//站内左侧菜单点击链接的html模板，采用ajax方法load进div.main#mainContent内容区域</span>  
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── ....html  
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── ....  
+> liang/   
+> &nbsp;&nbsp;├── login.html //登录页面  
+> &nbsp;&nbsp;├── index.html //首页  
+> &nbsp;&nbsp;├── static  //静态资源文件夹  
+> &nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── bootstrap //引用的UI框架，基于流行的bootstrap  
+> &nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── fontawesome //字体图标  
+> &nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── images //站点所用到的图片资源  
+> &nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── js //全局js文件  
+> &nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── less //本站自定义的样式（基于less语法书写）  
+> &nbsp;&nbsp;│  
+> &nbsp;&nbsp;└── templates //模板页文件夹  
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── xxx.html //站内左侧菜单点击链接的html模板，采用ajax方法load进div.main#mainContent内容区域  
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── ....html  
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── ....  
 
 ## 项目截图预览
 
