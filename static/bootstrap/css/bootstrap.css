@@ -5470,9 +5470,8 @@ button.list-group-item-danger.active:focus {
 .panel-heading .panel-heading-label-group {
   display: inline-block;
 }
-.panel-heading .panel-heading-label-group .badge {
-  margin-right: 10px;
-  vertical-align: 2px;
+.panel-heading .panel-heading-label-group .heading-label {
+  margin-right: 15px;
 }
 .panel-heading .panel-actions {
   position: absolute;
