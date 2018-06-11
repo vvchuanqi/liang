@@ -31,5 +31,7 @@
 ### 地图页
 <img src="https://github.com/vvchuanqi/liang/blob/master/%E5%9C%B0%E5%9B%BE.png"/>
 
-<h2>更多详情请访问：[静态页面](https://vvchuanqi.github.io/liang/)</h2>
+## 更多详情请访问：
+### [首页](https://vvchuanqi.github.io/liang/)
+### [登录页面](https://vvchuanqi.github.io/liang/login.html)
   
