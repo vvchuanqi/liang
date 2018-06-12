@@ -15,6 +15,11 @@
 </head>
 
 <body class="page-main">
+  <!-- start 全局的loading动态菊花 -->
+  <div id="loading" class="loading">
+	  <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+  </div>
+  <!-- end 全局的loading动态菊花 -->
   <!-- start header -->
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
@@ -149,10 +154,26 @@
       $(this).click(function(){
         $(this).parent("li").addClass("active").siblings("li").removeClass("active");
         var target = $(this).attr("href");
-        $("#mainContent").load(target).addClass("fadeInRight");
-        setTimeout(function(){
-          $("#mainContent").removeClass("fadeInRight");
-        },500);
+        $("#loading").fadeIn(50);
+        $("#mainContent").empty().load(target,function(res,status,xhr){
+          if(status=="success"){
+                //alert("外部内容加载成功!");
+                $("#loading").fadeOut(50);
+                $("#mainContent").addClass("fadeInRight");
+                setTimeout(function(){
+                  $("#mainContent").removeClass("fadeInRight");
+                },500);
+              }
+            if(status=="error"){
+                $("#loading").fadeOut(50);
+                $("#mainContent").addClass("fadeInRight");
+                setTimeout(function(){
+                  $("#mainContent").removeClass("fadeInRight");
+                },500);
+                alert("加载错误: "+xhr.status+": "+xhr.statusText);
+              }
+        });
+
         return false;
       });
     });
