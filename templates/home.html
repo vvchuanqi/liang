@@ -1,13 +1,12 @@
 <!doctype html>
+
 <div class="container-fluid home-wrapper">
   <div class="row">
     <div class="col-xs-4">
       <div class="panel panel-default">
         <div class="panel-heading">
           <h3 class="panel-title">机型比例</h3>
-          <div class="panel-actions">
-            <a href="#" class="more">详情 <i class="fa fa-angle-double-right"></i></a>
-          </div>
+          <div class="panel-actions"> <a href="#" class="more">详情 <i class="fa fa-angle-double-right"></i></a> </div>
         </div>
         <div class="panel-body">
           <div id="chart1" style="height:300px;width:100%;"></div>
@@ -18,9 +17,7 @@
       <div class="panel panel-default">
         <div class="panel-heading">
           <h3 class="panel-title">上周监控情况<small class="text-muted">（时间：2018-5-21至2018-5-27）</small></h3>
-          <div class="panel-actions">
-            <a href="#" class="more">详情 <i class="fa fa-angle-double-right"></i></a>
-          </div>
+          <div class="panel-actions"> <a href="#" class="more">详情 <i class="fa fa-angle-double-right"></i></a> </div>
         </div>
         <div class="panel-body">
           <div id="chart2" style="height:300px;width:100%;"></div>
@@ -31,9 +28,7 @@
       <div class="panel panel-default">
         <div class="panel-heading">
           <h3 class="panel-title">故障比例<small class="text-muted">（最近7天）</small></h3>
-          <div class="panel-actions">
-            <a href="#" class="more">详情 <i class="fa fa-angle-double-right"></i></a>
-          </div>
+          <div class="panel-actions"> <a href="#" class="more">详情 <i class="fa fa-angle-double-right"></i></a> </div>
         </div>
         <div class="panel-body">
           <div id="chart3" style="height:300px;width:100%;"></div>
@@ -54,10 +49,9 @@
     </div>
   </div>
 </div>
-
-<script type="text/javascript" src="static/js/echarts.min.js"></script>
-<script type="text/javascript" src="static/js/china.js"></script>
-<script type="text/javascript" src="static/js/macarons.js"></script>
+<script type="text/javascript" src="static/js/echarts.min.js"></script> 
+<script type="text/javascript" src="static/js/china.js"></script> 
+<script type="text/javascript" src="static/js/macarons.js"></script> 
 <script>
   //第一个图表
   var chart1 = echarts.init(document.getElementById('chart1'), 'macarons');
@@ -109,7 +103,10 @@
         }
     ]
 };
-  chart1.setOption(option1);
+  //延时加载图表，保证交互动作顺滑
+  setTimeout(function(){
+    chart1.setOption(option1);
+  },800);
 //第二个图表
  var chart2 = echarts.init(document.getElementById('chart2'), 'macarons');
  var option2 = {
@@ -186,7 +183,12 @@
         }
     ]
 };
-chart2.setOption(option2);
+
+ //延时加载图表，保证交互动作顺滑
+  setTimeout(function(){
+    chart2.setOption(option2);
+  },1000);
+  
 //第三个图表
 var chart3 = echarts.init(document.getElementById('chart3'), 'macarons');
 var option3 = {
@@ -223,133 +225,139 @@ var option3 = {
     ]
 };
 
-chart3.setOption(option3);
+
+ //延时加载图表，保证交互动作顺滑
+  setTimeout(function(){
+    chart3.setOption(option3);
+  },1200);
+  
 //第四个图表
 var chart4 = echarts.init(document.getElementById('chart4'), 'macarons');
-var data4 = [{
+var data4 = [
+        {
         name: '北京',
         value: 5.3
-    },
-    {
-        name: '天津',
-        value: 3.8
-    },
-    {
-        name: '上海',
-        value: 4.6
-    },
-    {
-        name: '重庆',
-        value: 3.6
-    },
-    {
-        name: '河北',
-        value: 3.4
-    },
-    {
-        name: '河南',
-        value: 3.2
-    },
-    {
-        name: '云南',
-        value: 1.6
-    },
-    {
-        name: '辽宁',
-        value: 4.3
-    },
-    {
-        name: '黑龙江',
-        value: 4.1
-    },
-    {
-        name: '湖南',
-        value: 2.4
-    },
-    {
-        name: '安徽',
-        value: 3.3
-    },
-    {
-        name: '山东',
-        value: 3.0
-    },
-    {
-        name: '新疆',
-        value: 1
-    },
-    {
-        name: '江苏',
-        value: 3.9
-    },
-    {
-        name: '浙江',
-        value: 3.5
-    },
-    {
-        name: '江西',
-        value: 2.0
-    },
-    {
-        name: '湖北',
-        value: 2.1
-    },
-    {
-        name: '广西',
-        value: 3.0
-    },
-    {
-        name: '甘肃',
-        value: 1.2
-    },
-    {
-        name: '山西',
-        value: 3.2
-    },
-    {
-        name: '内蒙古',
-        value: 3.5
-    },
-    {
-        name: '陕西',
-        value: 2.5
-    },
-    {
-        name: '吉林',
-        value: 4.5
-    },
-    {
-        name: '福建',
-        value: 2.8
-    },
-    {
-        name: '贵州',
-        value: 1.8
-    },
-    {
-        name: '广东',
-        value: 3.7
-    },
-    {
-        name: '青海',
-        value: 0.6
-    },
-    {
-        name: '西藏',
-        value: 0.4
-    },
-    {
-        name: '四川',
-        value: 3.3
-    },
-    {
-        name: '宁夏',
-        value: 0.8
-    },
-    {
-        name: '海南',
-        value: 1.9
-    }
+          },
+          {
+              name: '天津',
+              value: 3.8
+          },
+          {
+              name: '上海',
+              value: 4.6
+          },
+          {
+              name: '重庆',
+              value: 3.6
+          },
+          {
+              name: '河北',
+              value: 3.4
+          },
+          {
+              name: '河南',
+              value: 3.2
+          },
+          {
+              name: '云南',
+              value: 1.6
+          },
+          {
+              name: '辽宁',
+              value: 4.3
+          },
+          {
+              name: '黑龙江',
+              value: 4.1
+          },
+          {
+              name: '湖南',
+              value: 2.4
+          },
+          {
+              name: '安徽',
+              value: 3.3
+          },
+          {
+              name: '山东',
+              value: 3.0
+          },
+          {
+              name: '新疆',
+              value: 1
+          },
+          {
+              name: '江苏',
+              value: 3.9
+          },
+          {
+              name: '浙江',
+              value: 3.5
+          },
+          {
+              name: '江西',
+              value: 2.0
+          },
+          {
+              name: '湖北',
+              value: 2.1
+          },
+          {
+              name: '广西',
+              value: 3.0
+          },
+          {
+              name: '甘肃',
+              value: 1.2
+          },
+          {
+              name: '山西',
+              value: 3.2
+          },
+          {
+              name: '内蒙古',
+              value: 3.5
+          },
+          {
+              name: '陕西',
+              value: 2.5
+          },
+          {
+              name: '吉林',
+              value: 4.5
+          },
+          {
+              name: '福建',
+              value: 2.8
+          },
+          {
+              name: '贵州',
+              value: 1.8
+          },
+          {
+              name: '广东',
+              value: 3.7
+          },
+          {
+              name: '青海',
+              value: 0.6
+          },
+          {
+              name: '西藏',
+              value: 0.4
+          },
+          {
+              name: '四川',
+              value: 3.3
+          },
+          {
+              name: '宁夏',
+              value: 0.8
+          },
+          {
+              name: '海南',
+              value: 1.9
+          }
 ];
 
 var yData4 = [];
@@ -506,11 +514,16 @@ var option4 = {
     }]
 };
 
-chart4.setOption(option4);
-  window.onresize = function(){
-      chart1.resize();
-      chart2.resize();
-      chart3.resize();
-      chart4.resize();
-  };
-</script>
+
+ //延时加载图表，保证交互动作顺滑
+  setTimeout(function(){   
+      chart4.setOption(option4);
+  },1400);
+  
+window.onresize = function(){
+    chart1.resize();
+    chart2.resize();
+    chart3.resize();
+    chart4.resize();
+};
+</script> 
