@@ -72,7 +72,7 @@
         {
             name:'机型比例',
             type:'pie',
-            radius: ['50%', '70%'],
+            radius: ['40%', '60%'],
             center: ['28%', '50%'],
             avoidLabelOverlap: false,
             label: {
@@ -205,7 +205,7 @@ var option3 = {
         {
             name: '故障比例',
             type: 'pie',
-            radius : '75%',
+            radius : '60%',
             center: ['50%', '50%'],
             data:[
                 {value:335, name:'C1-1冷凝风机过载'},
@@ -526,4 +526,16 @@ window.onresize = function(){
     chart3.resize();
     chart4.resize();
 };
+
+$(function(){
+  //当整个内容区宽度改变时也进行图表重绘
+  $("#btnToggleAside").on("click",function(){
+     setTimeout(function(){   
+        chart1.resize();
+        chart2.resize();
+        chart3.resize();
+        chart4.resize();
+    },800);
+  });
+});
 </script> 
