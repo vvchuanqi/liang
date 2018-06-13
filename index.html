@@ -9,54 +9,46 @@
 <link rel="stylesheet" type="text/css" href="static/fontawesome/css/fontawesome-all.min.css" />
 <link rel="stylesheet/less" type="text/css" href="static/less/site.less" />
 <script src="static/js/less.min.js" ></script>
-<style media="screen">
-
-</style>
+<style media="screen"></style>
 </head>
 
 <body class="page-main">
-  <!-- start 全局的loading动态菊花 -->
-  <div id="loading" class="loading">
-	  <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+<!-- start 全局的loading动态菊花 -->
+<div id="loading" class="loading">
+  <div class="loading-box"><span class="circle"></span><span class="circle"></span></div>
+</div>
+<!-- end 全局的loading动态菊花 --> 
+<!-- start header -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid"> 
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"> <span class="sr-only">Toggle</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand" href="#">暖通维保平台</a> </div>
+    
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+      <p class="navbar-text navbar-left"><span class="badge badge-info">设备总数：4</span><span class="badge badge-success">在线：23</span><span class="badge badge-danger">故障：4</span></p>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">张三丰 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#changePassword" data-toggle="modal"><i class="fa fa-lock fa-fw"></i> 修改密码</a></li>
+            <li><a href="#"><i class="fa fa-cog fa-fw"></i> 个人设置</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#"><i class="fa fa-user-secret fa-fw"></i> 管理员入口</a></li>
+            <li><a href="#"><i class="fa fa-low-vision fa-fw"></i> 权限设置</a></li>
+          </ul>
+        </li>
+        <li><a href="login.html"><i class="glyphicon glyphicon-off"></i> 退出</a></li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse --> 
   </div>
-  <!-- end 全局的loading动态菊花 -->
-  <!-- start header -->
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-          <span class="sr-only">Toggle</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">暖通维保平台</a>
-      </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="navbar-collapse">
-        <p class="navbar-text navbar-left"><span class="badge badge-info">设备总数：4</span><span class="badge badge-success">在线：23</span><span class="badge badge-danger">故障：4</span></p>
-        <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">张三丰 <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#changePassword" data-toggle="modal"><i class="fa fa-lock fa-fw"></i> 修改密码</a></li>
-              <li><a href="#"><i class="fa fa-cog fa-fw"></i> 个人设置</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#"><i class="fa fa-user-secret fa-fw"></i> 管理员入口</a></li>
-              <li><a href="#"><i class="fa fa-low-vision fa-fw"></i> 权限设置</a></li>
-            </ul>
-          </li>
-          <li><a href="login.html"><i class="glyphicon glyphicon-off"></i> 退出</a></li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
-  <!-- end header -->
-  <!-- start aside -->
-<div class="aside">
-  <a href="javascript:void(0);" class="btn-toggle-aside" id="btnToggleAside"><i class="fa fa-caret-left"></i></a>
+  <!-- /.container-fluid --> 
+</nav>
+<!-- end header --> 
+<!-- start aside -->
+<div class="aside"> <a href="javascript:void(0);" class="btn-toggle-aside" id="btnToggleAside"><i class="fa fa-caret-left"></i></a>
   <ul class="left-menu">
     <li class="active"><a href="templates/home.html" class="ajax-link"><i class="fa fa-home fa-fw"></i>首页</a></li>
     <li><a href="templates/map.html" class="ajax-link"><i class="fa fa-map fa-fw"></i>地图搜索</a></li>
@@ -96,51 +88,49 @@
     <li><a href="templates/feed.html" class="ajax-link"><i class="fa fa-edit fa-fw"></i>问题反馈</a></li>
   </ul>
 </div>
-  <!-- end aside -->
-  <!-- start main -->
-<div class="main" id="mainContent">
+<!-- end aside --> 
+<!-- start main -->
+<div class="main" id="mainContent"> </div>
+<!-- end main --> 
 
+<!-- start 修改密码弹窗 -->
+<div class="modal fade" tabindex="-1" id="changePassword">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">修改密码</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <div class="input-group"> <span class="input-group-addon">输入旧密码：</span>
+            <input type="password" class="form-control" placeholder="请输入旧密码">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group"> <span class="input-group-addon">输入新密码：</span>
+            <input type="password" class="form-control" placeholder="请输入新密码">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group"> <span class="input-group-addon">确认新密码：</span>
+            <input type="password" class="form-control" placeholder="请再次输入新密码">
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary">确定</button>
+      </div>
+    </div>
+    <!-- /.modal-content --> 
+  </div>
+  <!-- /.modal-dialog --> 
 </div>
-  <!-- end main -->
-
-  <!-- start 修改密码弹窗 -->
-  <div class="modal fade" tabindex="-1" id="changePassword">
-    <div class="modal-dialog modal-sm" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title">修改密码</h4>
-        </div>
-        <div class="modal-body">
-            <div class="form-group">
-              <div class="input-group">
-                <span class="input-group-addon">输入旧密码：</span>
-                <input type="password" class="form-control" placeholder="请输入旧密码">
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="input-group">
-                <span class="input-group-addon">输入新密码：</span>
-                <input type="password" class="form-control" placeholder="请输入新密码">
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="input-group">
-                <span class="input-group-addon">确认新密码：</span>
-                <input type="password" class="form-control" placeholder="请再次输入新密码">
-              </div>
-            </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-          <button type="button" class="btn btn-primary">确定</button>
-        </div>
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
-  <!-- end 修改密码弹窗 -->
-<script type="text/javascript" src="static/js/jquery.js"></script>
-<script type="text/javascript" src="static/bootstrap/js/bootstrap.min.js"></script>
+<!-- /.modal --> 
+<!-- end 修改密码弹窗 --> 
+<script type="text/javascript" src="static/js/jquery.js"></script> 
+<script type="text/javascript" src="static/bootstrap/js/bootstrap.min.js"></script> 
 <script type="text/javascript">
   $(function(){
     //折叠左侧的菜单栏
@@ -152,9 +142,10 @@
     //点击左侧菜单ajax链接，右侧载入内容
     $(".ajax-link").each(function(){
       $(this).click(function(){
+        $("#loading").fadeIn(50);
+
         $(this).parent("li").addClass("active").siblings("li").removeClass("active");
         var target = $(this).attr("href");
-        $("#loading").fadeIn(50);
         $("#mainContent").empty().load(target,function(res,status,xhr){
           if(status=="success"){
                 //alert("外部内容加载成功!");
