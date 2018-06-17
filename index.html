@@ -17,15 +17,15 @@
 <div id="loading" class="loading">
   <div class="loading-box"><span class="circle"></span><span class="circle"></span></div>
 </div>
-<!-- end 全局的loading动态菊花 --> 
+<!-- end 全局的loading动态菊花 -->
 <!-- start header -->
 <nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid"> 
+  <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"> <span class="sr-only">Toggle</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
       <a class="navbar-brand" href="#">暖通维保平台</a> </div>
-    
+
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="navbar-collapse">
       <p class="navbar-text navbar-left"><span class="badge badge-info">设备总数：4</span><span class="badge badge-success">在线：23</span><span class="badge badge-danger">故障：4</span></p>
@@ -42,11 +42,11 @@
         <li><a href="login.html"><i class="glyphicon glyphicon-off"></i> 退出</a></li>
       </ul>
     </div>
-    <!-- /.navbar-collapse --> 
+    <!-- /.navbar-collapse -->
   </div>
-  <!-- /.container-fluid --> 
+  <!-- /.container-fluid -->
 </nav>
-<!-- end header --> 
+<!-- end header -->
 <!-- start aside -->
 <div class="aside"> <a href="javascript:void(0);" class="btn-toggle-aside" id="btnToggleAside"><i class="fa fa-caret-left"></i></a>
   <ul class="left-menu">
@@ -88,33 +88,35 @@
     <li><a href="templates/feed.html" class="ajax-link"><i class="fa fa-edit fa-fw"></i>问题反馈</a></li>
   </ul>
 </div>
-<!-- end aside --> 
+<!-- end aside -->
 <!-- start main -->
 <div class="main" id="mainContent"> </div>
-<!-- end main --> 
+<!-- end main -->
 
 <!-- start 修改密码弹窗 -->
 <div class="modal fade" tabindex="-1" id="changePassword">
-  <div class="modal-dialog modal-sm" role="document">
+  <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title">修改密码</h4>
       </div>
       <div class="modal-body">
-        <div class="form-group">
-          <div class="input-group"> <span class="input-group-addon">输入旧密码：</span>
-            <input type="password" class="form-control" placeholder="请输入旧密码">
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="input-group"> <span class="input-group-addon">输入新密码：</span>
-            <input type="password" class="form-control" placeholder="请输入新密码">
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="input-group"> <span class="input-group-addon">确认新密码：</span>
-            <input type="password" class="form-control" placeholder="请再次输入新密码">
+        <div class="row">
+          <div class="col-xs-4"><img src="static/images/img_change_psw.png" alt="修改密码" style="display:block;width:100%;"> </div>
+          <div class="col-xs-8">
+              <div class="form-group">
+                <label for="exampleInputEmail1">输入旧密码：</label>
+                <input type="password" class="form-control" placeholder="请输入旧密码">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">输入新密码：</label>
+                <input type="password" class="form-control" placeholder="请输入新密码">
+              </div>
+              <div class="form-group mb0">
+                <label for="exampleInputEmail1">确认新密码：</label>
+                <input type="password" class="form-control" placeholder="请再次输入新密码">
+              </div>
           </div>
         </div>
       </div>
@@ -123,14 +125,14 @@
         <button type="button" class="btn btn-primary">确定</button>
       </div>
     </div>
-    <!-- /.modal-content --> 
+    <!-- /.modal-content -->
   </div>
-  <!-- /.modal-dialog --> 
+  <!-- /.modal-dialog -->
 </div>
-<!-- /.modal --> 
-<!-- end 修改密码弹窗 --> 
-<script type="text/javascript" src="static/js/jquery.js"></script> 
-<script type="text/javascript" src="static/bootstrap/js/bootstrap.min.js"></script> 
+<!-- /.modal -->
+<!-- end 修改密码弹窗 -->
+<script type="text/javascript" src="static/js/jquery.js"></script>
+<script type="text/javascript" src="static/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript">
   $(function(){
     //折叠左侧的菜单栏
