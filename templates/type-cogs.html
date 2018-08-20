@@ -1,5 +1,163 @@
 <!doctype html>
+<style>
+body { font-size: 14px; line-height: 1.42857143; color: #495060; font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; }
+</style>
+<div class="container-fluid type-cogs-wrapper" id="app">
+  <Row style="margin-bottom:15px;">
+    <i-col span="12">
+      <button-group>
+        <i-button @click="handleSelectAll(true)">全选</i-button>
+        <i-button @click="handleSelectAll(false)">全不选</i-button>
+    </button-group>
+      <button-group>
+      <i-button type="primary" ghost>添加</i-button>
+      <i-button type="primary" ghost>删除</i-button>      
+      </button-group>
+    </i-col>
+    <i-col span="12" align="right">
+      <i-button type="dashed"><Icon  type="md-cloud-download"></Icon> 下载协议模板</i-button>
+      <i-button type="dashed"><Icon  type="md-copy"></Icon> 注意事项</i-button>
+    </i-col>
+  </Row>
+  <template>
+    <i-table border ref="selection" :columns="columns4" :data="data1"></i-table>
+  </template>
 
-<div class="container-fluid type-cogs-wrapper">
-  机型配置
 </div>
+<script>
+    new Vue({
+        el: '#app',
+        data () {
+            return {
+                columns4: [
+                    {
+                        type: 'selection',
+                        width: 60,
+                        align: 'center'
+                    },
+                    {
+                        title: '机型名称',
+                        key: 'name'
+                    },
+                    {
+                        title: '设备类型',
+                        key: 'type'
+                    },
+                    {
+                        title: '协议版本',
+                        key: 'agreement'
+                    },
+                    {
+                        title: '协议配置',
+                        key: 'cogs',
+                        width:150,
+                        align:'center',
+                        render: (h, params) => {
+                            return h('div', [
+                                h('Button', {
+                                    props: {
+                                        type: 'default',
+                                        size: 'small'
+                                    },
+                                    style: {
+                                        marginRight: '5px'
+                                    },
+                                    on: {
+                                        click: () => {
+                                            this.show(params.index)
+                                        }
+                                    }
+                                }, '修改'),
+                                h('Button', {
+                                    props: {
+                                        type: 'default',
+                                        size: 'small'
+                                    },
+                                    on: {
+                                        click: () => {
+                                            this.remove(params.index)
+                                        }
+                                    }
+                                }, '导出')
+                            ]);
+                        }
+                    },
+                    {
+                        title: '界面配置',
+                        key: 'ui',
+                        width: 85,
+                        align: 'right',
+                        render: (h, params) => {
+                            return h('div', [
+                                h('Button', {
+                                    props: {
+                                        type: 'default',
+                                        size: 'small'
+                                    },
+                                    style: {
+                                        marginRight: '5px'
+                                    },
+                                    on: {
+                                        click: () => {
+                                            this.show(params.index)
+                                        }
+                                    }
+                                }, '修改'),                                
+                            ]);
+                        }
+                    }
+                ],
+                data1: [
+                    {
+                        name: '东方斯扽',
+                        type: '类型累心阿萨德离开家',
+                        agreement: '1.5'
+                    },
+                    {
+                        name: '第三方地方',
+                        type: '第三方跟第三方',
+                        agreement: '1.7'
+                    },
+                    {
+                        name: '规范化飞过海',
+                        type: '范德萨凤凰股份公司的',
+                        agreement: '1.8'
+                    },
+                    {
+                        name: '好几个环节',
+                        type: '光和热岁的发的撒',
+                        agreement: '2.0'
+                    },
+                    {
+                        name: '企鹅王轻松的',
+                        type: '规划为特色的速度',
+                        agreement: '2.1'
+                    },
+                    {
+                        name: '梵蒂冈梵蒂冈',
+                        type: '广发行物色范文芳',
+                        agreement: '2.5'
+                    }
+                ]
+            }
+        },
+        methods: {
+            handleSelectAll (status) {
+                this.$refs.selection.selectAll(status);
+            },
+            show (index) {
+                this.$Modal.info({
+                    title: 'User Info',
+                    content: `Name：${this.data1[index].name}<br>Age：${this.data1[index].type}<br>Address：${this.data1[index].agreement}`
+                })
+            },
+            remove (index) {
+                //this.data1.splice(index, 1);
+                this.$Modal.info({
+                    title: '系统提示',
+                    content: `确定导出以下内容：<br>Name：${this.data1[index].name}<br>Age：${this.data1[index].type}<br>Address：${this.data1[index].agreement}`
+                })
+            }
+        }
+    })
+  </script>
