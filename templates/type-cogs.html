@@ -1,6 +1,8 @@
 <!doctype html>
 <style>
 body { font-size: 14px; line-height: 1.42857143; color: #495060; font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; }
+  .ivu-modal-mask{z-index: 1500;}
+  .ivu-modal-wrap{z-index: 1600;}
 </style>
 <div class="container-fluid type-cogs-wrapper" id="app">
   <Row style="margin-bottom:15px;">
@@ -22,13 +24,21 @@ body { font-size: 14px; line-height: 1.42857143; color: #495060; font-family: -a
   <template>
     <i-table border ref="selection" :columns="columns4" :data="data1"></i-table>
   </template>
-
+  <Modal
+        v-model="modal1"
+        title="界面配置"
+        fullscreen>
+        <p>Content of dialog</p>
+        <p>Content of dialog</p>
+        <p>Content of dialog</p>
+    </Modal>
 </div>
 <script>
     new Vue({
         el: '#app',
         data () {
             return {
+                modal1:false,
                 columns4: [
                     {
                         type: 'selection',
@@ -94,12 +104,10 @@ body { font-size: 14px; line-height: 1.42857143; color: #495060; font-family: -a
                                         type: 'default',
                                         size: 'small'
                                     },
-                                    style: {
-                                        marginRight: '5px'
-                                    },
                                     on: {
                                         click: () => {
-                                            this.show(params.index)
+                                            //this.show(params.index)
+                                          this.modal1 = true
                                         }
                                     }
                                 }, '修改'),                                
