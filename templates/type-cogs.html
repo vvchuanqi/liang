@@ -13,7 +13,7 @@ body { font-size: 14px; line-height: 1.42857143; color: #495060; font-family: -a
     </button-group>
       <button-group>
       <i-button type="primary" ghost>添加</i-button>
-      <i-button type="primary" ghost>删除</i-button>      
+      <i-button type="primary" ghost>删除</i-button>
       </button-group>
     </i-col>
     <i-col span="12" align="right">
@@ -24,13 +24,50 @@ body { font-size: 14px; line-height: 1.42857143; color: #495060; font-family: -a
   <template>
     <i-table border ref="selection" :columns="columns4" :data="data1"></i-table>
   </template>
-  <Modal
-        v-model="modal1"
-        title="界面配置"
-        fullscreen>
-        <p>Content of dialog</p>
-        <p>Content of dialog</p>
-        <p>Content of dialog</p>
+  <Modal v-model="modal1" title="界面配置" fullscreen>
+        <div class="layout" style="height:100%;">
+          <Layout style="height:100%;">
+            <Sider hide-trigger>
+              <i-menu active-name="1-2" theme="dark" width="auto" :open-names="['1']">
+                  <Submenu name="1">
+                      <template slot="title">
+                          <Icon type="ios-navigate"></Icon>
+                          背景图片
+                      </template>
+                      <Submenu name="2">
+                          <template slot="title">
+                              <Icon type="ios-keypad"></Icon>
+                              布局方式
+                          </template>
+                          <menu-item name="2-1">自由布局</menu-item>
+                          <menu-item name="2-2">按列布局</menu-item>
+                      </Submenu>
+                      <menu-item name="1-1">Option 1</menu-item>
+                      <menu-item name="1-2">Option 2</menu-item>
+                      <menu-item name="1-3">Option 3</menu-item>
+                  </Submenu>
+                  <Submenu name="3">
+                      <template slot="title">
+                          <Icon type="ios-analytics"></Icon>
+                          Item 3
+                      </template>
+                      <menu-item name="3-1">Option 1</menu-item>
+                      <menu-item name="3-2">Option 2</menu-item>
+                  </Submenu>
+              </i-menu>
+            </Sider>
+            <i-content :style="{background: '#FFF',padding:'0 15px 0'}">
+              <template>
+                 <Tabs type="card" closable @on-tab-remove="handleTabRemove" :animated="false">
+                   <tab-pane label="标签一" v-if="tab0">标签一的内容</tab-pane>
+                   <tab-pane label="标签二" v-if="tab1">标签二的内容</tab-pane>
+                   <tab-pane label="标签三" v-if="tab2">标签三的内容</tab-pane>
+                </Tabs>
+                </template>
+            </i-content>
+            <Sider hide-trigger :style="{background: '#FFF'}">Sider</Sider>
+          </Layout>
+        </div>
     </Modal>
 </div>
 <script>
@@ -39,6 +76,9 @@ body { font-size: 14px; line-height: 1.42857143; color: #495060; font-family: -a
         data () {
             return {
                 modal1:false,
+                tab0: true,
+                tab1: true,
+                tab2: true,
                 columns4: [
                     {
                         type: 'selection',
@@ -110,7 +150,7 @@ body { font-size: 14px; line-height: 1.42857143; color: #495060; font-family: -a
                                           this.modal1 = true
                                         }
                                     }
-                                }, '修改'),                                
+                                }, '修改'),
                             ]);
                         }
                     }
@@ -165,7 +205,10 @@ body { font-size: 14px; line-height: 1.42857143; color: #495060; font-family: -a
                     title: '系统提示',
                     content: `确定导出以下内容：<br>机型名称：${this.data1[index].name}<br>设备类型：${this.data1[index].type}<br>协议版本：${this.data1[index].agreement}`
                 })
-            }
+            },
+            handleTabRemove (name) {
+                this['tab' + name] = false;
+            },
         }
     })
   </script>
