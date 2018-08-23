@@ -1,8 +1,15 @@
 <!doctype html>
 <style>
 body { font-size: 14px; line-height: 1.42857143; color: #495060; font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; }
-  .ivu-modal-mask{z-index: 1500;}
-  .ivu-modal-wrap{z-index: 1600;}
+.ivu-modal-mask { z-index: 1500; }
+.ivu-modal-wrap { z-index: 1600; }
+.ivu-modal-body{font-size:14px;}
+.modal-sider .ivu-collapse-simple{background-color:#515a6e !important;border:none;}
+.modal-sider .ivu-collapse >.ivu-collapse-item{border:none;}
+.modal-sider .ivu-collapse-header{color: #fff !important;}
+.modal-sider .ivu-collapse-content{background-color: #363e4f !important;color: #fff !important;}
+.modal-sider .ivu-collapse-content-box{padding:16px 0 16px 24px !important;}
+.modal-sider .ivu-upload{display: block;margin-bottom:16px;}
 </style>
 <div class="container-fluid type-cogs-wrapper" id="app">
   <Row style="margin-bottom:15px;">
@@ -10,65 +17,110 @@ body { font-size: 14px; line-height: 1.42857143; color: #495060; font-family: -a
       <button-group>
         <i-button @click="handleSelectAll(true)">全选</i-button>
         <i-button @click="handleSelectAll(false)">全不选</i-button>
-    </button-group>
+      </button-group>
       <button-group>
-      <i-button type="primary" ghost>添加</i-button>
-      <i-button type="primary" ghost>删除</i-button>
+        <i-button type="primary" ghost>添加</i-button>
+        <i-button type="primary" ghost>删除</i-button>
       </button-group>
     </i-col>
     <i-col span="12" align="right">
-      <i-button type="dashed"><Icon  type="md-cloud-download"></Icon> 下载协议模板</i-button>
-      <i-button type="dashed"><Icon  type="md-copy"></Icon> 注意事项</i-button>
+      <i-button type="dashed">
+        <Icon  type="md-cloud-download"></Icon>
+        下载协议模板</i-button>
+      <i-button type="dashed">
+        <Icon  type="md-copy"></Icon>
+        注意事项</i-button>
     </i-col>
   </Row>
   <template>
     <i-table border ref="selection" :columns="columns4" :data="data1"></i-table>
   </template>
   <Modal v-model="modal1" title="界面配置" fullscreen>
-        <div class="layout" style="height:100%;">
-          <Layout style="height:100%;">
-            <Sider hide-trigger>
-              <i-menu active-name="1-2" theme="dark" width="auto" :open-names="['1']">
-                  <Submenu name="1">
-                      <template slot="title">
-                          <Icon type="ios-navigate"></Icon>
-                          背景图片
-                      </template>
-                      <Submenu name="2">
-                          <template slot="title">
-                              <Icon type="ios-keypad"></Icon>
-                              布局方式
-                          </template>
-                          <menu-item name="2-1">自由布局</menu-item>
-                          <menu-item name="2-2">按列布局</menu-item>
-                      </Submenu>
-                      <menu-item name="1-1">Option 1</menu-item>
-                      <menu-item name="1-2">Option 2</menu-item>
-                      <menu-item name="1-3">Option 3</menu-item>
-                  </Submenu>
-                  <Submenu name="3">
-                      <template slot="title">
-                          <Icon type="ios-analytics"></Icon>
-                          Item 3
-                      </template>
-                      <menu-item name="3-1">Option 1</menu-item>
-                      <menu-item name="3-2">Option 2</menu-item>
-                  </Submenu>
-              </i-menu>
-            </Sider>
-            <i-content :style="{background: '#FFF',padding:'0 15px 0'}">
-              <template>
-                 <Tabs type="card" closable @on-tab-remove="handleTabRemove" :animated="false">
-                   <tab-pane label="标签一" v-if="tab0">标签一的内容</tab-pane>
-                   <tab-pane label="标签二" v-if="tab1">标签二的内容</tab-pane>
-                   <tab-pane label="标签三" v-if="tab2">标签三的内容</tab-pane>
-                </Tabs>
-                </template>
-            </i-content>
-            <Sider hide-trigger :style="{background: '#FFF'}">Sider</Sider>
-          </Layout>
-        </div>
-    </Modal>
+    <div class="layout" style="height:100%;">
+      <Layout style="height:100%;">
+        <Sider hide-trigger class="modal-sider">
+          <template>
+            <Collapse accordion simple>
+                <Panel name="1">
+                    背景图片
+                    <div slot="content">
+                      <Upload action="#">
+                          <i-button icon="ios-cloud-upload-outline" ghost size="large">上传图片</i-button>
+                      </Upload>
+                      <i-button icon="md-contract" ghost size="large">调节大小</i-button>
+                  </div>
+                </Panel>
+                <Panel name="2">
+                    布局方式
+                    <div slot="content">
+                    <radio-group vertical>
+                      <Radio label="自由布局"></Radio>
+                      <Radio label="按列布局"></Radio>
+                    </radio-group>
+                  </div>
+                </Panel>
+                <Panel name="3">
+                    添加分组控件
+                    <div slot="content">乔纳森·伊夫是一位工业设计师，现任Apple公司设计师兼资深副总裁，英国爵士。他曾参与设计了iPod，iMac，iPhone，iPad等众多苹果产品。除了乔布斯，他是对苹果那些著名的产品最有影响力的人。</div>
+                </Panel>
+            </Collapse>
+        </template>
+          
+          
+<!--
+          <i-menu active-name="1-2" theme="dark" width="auto" :open-names="['1']">
+            <Submenu name="1">
+              <template slot="title">
+                <Icon type="ios-navigate"></Icon>
+                背景图片 </template>
+              <Submenu name="2">
+                <template slot="title">
+                  <Icon type="ios-keypad"></Icon>
+                  布局方式 </template>
+                <menu-item name="2-1"> sdfsd </menu-item>
+                <menu-item name="2-2">按列布局</menu-item>
+              </Submenu>
+              <menu-item name="1-1">Option 1</menu-item>
+              <menu-item name="1-2">Option 2</menu-item>
+              <menu-item name="1-3">Option 3</menu-item>
+            </Submenu>
+            <Submenu name="3">
+              <template slot="title">
+                <Icon type="ios-keypad"></Icon>
+                布局方式 </template>
+              <menu-item name="3-1">
+                
+              </menu-item>
+              <menu-item name="3-2">Option 2</menu-item>
+            </Submenu>
+          </i-menu>
+-->
+        </Sider>
+        <i-content :style="{background: '#FFF',padding:'0 15px 0'}">
+          <template>
+            <Tabs type="card" closable @on-tab-remove="handleTabRemove" :animated="false">
+              <tab-pane label="首页" v-if="tab0">
+                <!-- start 标签一的内容-->
+                <Row :gutter="16">
+                    <i-col span="4"><Alert closable>文字标题内容</Alert></i-col>
+                    <i-col span="4"><Alert closable>文字标题内容</Alert></i-col>
+                    <i-col span="4"><Alert closable>文字标题内容</Alert></i-col>
+                    <i-col span="4"><Alert closable>文字标题内容</Alert></i-col>
+                    <i-col span="4"><Alert closable>文字标题内容</Alert></i-col>
+                    <i-col span="4"><Alert closable>文字标题内容</Alert></i-col>
+                </Row>
+                
+                <!-- end 标签一的内容-->
+              </tab-pane>
+              <tab-pane label="用户控制" v-if="tab1">标签二的内容</tab-pane>
+              <tab-pane label="标签三" v-if="tab2">标签三的内容</tab-pane>
+            </Tabs>
+          </template>
+        </i-content>
+        <Sider hide-trigger :style="{background: '#FFF'}">Sider</Sider>
+      </Layout>
+    </div>
+  </Modal>
 </div>
 <script>
     new Vue({
@@ -211,4 +263,4 @@ body { font-size: 14px; line-height: 1.42857143; color: #495060; font-family: -a
             },
         }
     })
-  </script>
+  </script> 
