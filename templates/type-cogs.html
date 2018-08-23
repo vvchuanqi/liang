@@ -8,7 +8,7 @@ body { font-size: 14px; line-height: 1.42857143; color: #495060; font-family: -a
 .modal-sider .ivu-collapse >.ivu-collapse-item{border:none;}
 .modal-sider .ivu-collapse-header{color: #fff !important;}
 .modal-sider .ivu-collapse-content{background-color: #363e4f !important;color: #fff !important;}
-.modal-sider .ivu-collapse-content-box{padding:16px 0 16px 24px !important;}
+.modal-sider .ivu-collapse-content-box{padding:16px 0 16px 0 !important;}
 .modal-sider .ivu-upload{display: block;margin-bottom:16px;}
 </style>
 <div class="container-fluid type-cogs-wrapper" id="app">
@@ -117,7 +117,15 @@ body { font-size: 14px; line-height: 1.42857143; color: #495060; font-family: -a
             </Tabs>
           </template>
         </i-content>
-        <Sider hide-trigger :style="{background: '#FFF'}">Sider</Sider>
+        <Sider hide-trigger :style="{background: '#f5f7f9',padding:'0 16px'}">
+          <h4>未使用参数</h4>
+          <i-button type="dashed" long>压缩机最短运行</i-button><br><br>
+          <i-button type="dashed" long>压缩机最短停机</i-button><br><br>
+          <i-button type="dashed" long>压缩机最短停机</i-button><br><br>
+          <i-button type="dashed" long>压缩机最短停机</i-button><br><br>
+          <i-button type="dashed" long>压缩机最短停机</i-button><br><br>
+          <i-button type="dashed" long>压缩机最短停机</i-button><br><br>
+        </Sider>
       </Layout>
     </div>
   </Modal>
