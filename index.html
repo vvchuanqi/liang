@@ -193,6 +193,30 @@
       $brother.removeClass("active");
       $father.addClass("active");
     });
+    //页面全局容器中的链接点击事件
+    $(document).on("click","#mainContent .ajax-link",function(){
+      $("#loading").fadeIn(50);
+      var target = $(this).attr("href");
+      $("#mainContent").empty().load(target,function(res,status,xhr){
+          if(status=="success"){
+                //alert("外部内容加载成功!");
+                $("#loading").fadeOut(50);
+                $("#mainContent").addClass("fadeInRight");
+                setTimeout(function(){
+                  $("#mainContent").removeClass("fadeInRight");
+                },500);
+              }
+            if(status=="error"){
+                $("#loading").fadeOut(50);
+                $("#mainContent").addClass("fadeInRight");
+                setTimeout(function(){
+                  $("#mainContent").removeClass("fadeInRight");
+                },500);
+                alert("加载错误: "+xhr.status+": "+xhr.statusText);
+              }
+        });
+      return false;
+    });
   });
 </script>
 </body>

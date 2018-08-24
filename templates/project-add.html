@@ -1,0 +1,323 @@
+<!doctype html>
+<div class="container-fluid project-wrapper">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand ajax-link" href="templates/project.html">
+        <i class="fas fa-arrow-left"></i> 返回
+      </a>
+    </div>
+  </div>
+</nav>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            工程信息
+          </h4>         
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-6" style="border-right:1px solid #e5e5e5;">
+              <fieldset>
+                <legend>基本信息</legend>
+                <div class="form-horizontal">
+                  <div class="form-group">
+                    <label class="col-sm-3 control-label">工程名称 <span class="text-danger">*</span></label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" placeholder="请输入工程名称">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-3 control-label">面积</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" placeholder="请输入工程面积">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-3 control-label">地址</label>
+                    <div class="col-sm-3">
+                      <select class="form-control">
+                        <option>广东省</option>
+                        <option>河南省</option>
+                        <option>吉林省</option>
+                        <option>浙江省</option>
+                        <option>福建省</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-3">
+                      <select class="form-control">
+                        <option>珠海市</option>
+                        <option>信阳市</option>
+                        <option>长春市</option>
+                        <option>金华市</option>
+                        <option>厦门市</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-3">
+                      <select class="form-control">
+                        <option>香洲区</option>
+                        <option>金湾区</option>
+                        <option>斗门区</option>
+                        <option>高新区</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-3 control-label">街道</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" placeholder="请输入详细街道名">
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>安装信息</legend>
+                <div class="form-horizontal">
+                  <div class="form-group">
+                    <label class="col-sm-3 control-label">施工单位</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" placeholder="请输入施工单位名称">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-3 control-label">联系人</label>
+                    <div class="col-sm-4">
+                      <input type="text" class="form-control" placeholder="请输入联系人姓名">
+                    </div>
+                    <div class="col-sm-5">
+                      <input type="tel" class="form-control" placeholder="请输入联系人手机号">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-3 control-label">安装完成时间</label>
+                    <div class="col-sm-4">
+                      <input type="datetime" class="form-control" placeholder="请选择安装完成时间">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-3 control-label">调试完成时间</label>
+                    <div class="col-sm-4">
+                      <input type="datetime" class="form-control" placeholder="请选择调试完成时间">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-3 control-label">调试完成时间</label>
+                    <div class="col-sm-4">
+                      <input type="datetime" class="form-control" placeholder="请选择调试完成时间">
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>客户信息</legend>
+                <div class="form-horizontal">
+                  <div class="form-group">
+                    <label class="col-sm-3 control-label">单位名称</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" placeholder="请输入单位名称">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-3 control-label">联系人</label>
+                    <div class="col-sm-4">
+                      <input type="text" class="form-control" placeholder="请输入联系人姓名">
+                    </div>
+                    <div class="col-sm-5">
+                      <input type="tel" class="form-control" placeholder="请输入联系人手机号">
+                    </div>
+                  </div>                  
+                </div>
+              </fieldset>
+            </div>
+            <div class="col-md-6">
+              <fieldset>
+                <legend>
+                  <div class="row">
+                    <div class="col-md-6">包含的设备</div>
+                    <div class="col-md-6 text-right"><button class="btn btn-default">添加</button> <button class="btn btn-default">移除</button></div>
+                  </div>
+                </legend>
+                <div class="table-responsive">
+                  <table class="table table-bordered table-vertical-middle">
+                    <tr>
+                      <th width="55"><input type="checkbox"></th>
+                      <th>设备名称</th>
+                      <th>设备型号</th>
+                      <th>网关信息</th>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox"></td>
+                      <td>
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="请输入设备名称" value="碧桂园1期 低4号" readonly>
+                          <span class="input-group-btn">
+                            <button class="btn btn-default" type="button"><i class="fas fa-edit"></i></button>
+                          </span>
+                        </div>
+                      </td>
+                      <td>PH630</td>
+                      <td>866710038844236</td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox"></td>
+                      <td>
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="请输入设备名称" value="碧桂园1期 低4号" readonly>
+                          <span class="input-group-btn">
+                            <button class="btn btn-default" type="button"><i class="fas fa-edit"></i></button>
+                          </span>
+                        </div>
+                      </td>
+                      <td>PH630</td>
+                      <td>866710038844236</td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox"></td>
+                      <td>
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="请输入设备名称" value="碧桂园1期 低4号" readonly>
+                          <span class="input-group-btn">
+                            <button class="btn btn-default" type="button"><i class="fas fa-edit"></i></button>
+                          </span>
+                        </div>
+                      </td>
+                      <td>PH630</td>
+                      <td>866710038844236</td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox"></td>
+                      <td>
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="请输入设备名称" value="碧桂园1期 低4号" readonly>
+                          <span class="input-group-btn">
+                            <button class="btn btn-default" type="button"><i class="fas fa-edit"></i></button>
+                          </span>
+                        </div>
+                      </td>
+                      <td>PH630</td>
+                      <td>866710038844236</td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox"></td>
+                      <td>
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="请输入设备名称" value="碧桂园1期 低4号" readonly>
+                          <span class="input-group-btn">
+                            <button class="btn btn-default" type="button"><i class="fas fa-edit"></i></button>
+                          </span>
+                        </div>
+                      </td>
+                      <td>PH630</td>
+                      <td>866710038844236</td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox"></td>
+                      <td>
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="请输入设备名称" value="碧桂园1期 低4号" readonly>
+                          <span class="input-group-btn">
+                            <button class="btn btn-default" type="button"><i class="fas fa-edit"></i></button>
+                          </span>
+                        </div>
+                      </td>
+                      <td>PH630</td>
+                      <td>866710038844236</td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox"></td>
+                      <td>
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="请输入设备名称" value="碧桂园1期 低4号" readonly>
+                          <span class="input-group-btn">
+                            <button class="btn btn-default" type="button"><i class="fas fa-edit"></i></button>
+                          </span>
+                        </div>
+                      </td>
+                      <td>PH630</td>
+                      <td>866710038844236</td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox"></td>
+                      <td>
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="请输入设备名称" value="碧桂园1期 低4号" readonly>
+                          <span class="input-group-btn">
+                            <button class="btn btn-default" type="button"><i class="fas fa-edit"></i></button>
+                          </span>
+                        </div>
+                      </td>
+                      <td>PH630</td>
+                      <td>866710038844236</td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox"></td>
+                      <td>
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="请输入设备名称" value="碧桂园1期 低4号" readonly>
+                          <span class="input-group-btn">
+                            <button class="btn btn-default" type="button"><i class="fas fa-edit"></i></button>
+                          </span>
+                        </div>
+                      </td>
+                      <td>PH630</td>
+                      <td>866710038844236</td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox"></td>
+                      <td>
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="请输入设备名称" value="碧桂园1期 低4号" readonly>
+                          <span class="input-group-btn">
+                            <button class="btn btn-default" type="button"><i class="fas fa-edit"></i></button>
+                          </span>
+                        </div>
+                      </td>
+                      <td>PH630</td>
+                      <td>866710038844236</td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="row">
+                  <div class="col-md-9"><span style="display:inline-block;margin: 20px 0;padding: 6px 12px;line-height: 1.42857143;vertical-align: middle;">当前显示第1页/共14页</span>
+                    <ul class="pagination" style="vertical-align: middle;">
+                      <li>
+                        <a href="#" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                        </a>
+                      </li>
+                      <li><a href="#">1</a></li>
+                      <li><a href="#">2</a></li>
+                      <li><a href="#">3</a></li>
+                      <li><a href="#">···</a></li>
+                      <li><a href="#">14</a></li>
+                      <li>
+                        <a href="#" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="input-group" style="margin: 20px 0;vertical-align: middle;">
+                      <span class="input-group-addon">到第</span>
+                      <input type="text" class="form-control">
+                      <span class="input-group-addon">页</span>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>      
+    </div>
+  </div>
+</div>
+<footer class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container-fluid">
+    <div class="pull-right"><button type="button" class="btn btn-primary navbar-btn">保存</button></div>    
+  </div>
+</footer>
