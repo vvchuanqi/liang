@@ -5481,10 +5481,12 @@ button.list-group-item-danger.active:focus {
 }
 .panel-heading .panel-actions {
   position: absolute;
-  right: 0;
+  right: 15px;
   top: 0;
   bottom: 0;
   text-align: right;
+  display: flex;
+  align-items: center;
 }
 .panel-heading .panel-actions .more {
   display: inline-block;
