@@ -3467,34 +3467,87 @@ input[type="button"].btn-block {
 }
 .switch {
   height: 34px;
-  width: 58px;
-  border-radius: 60px;
+  width: 64px;
   position: relative;
-  background-color: #2d8cf0;
+  overflow: hidden;
 }
 .switch > label {
-  height: 32px;
-  width: 32px;
-  background-color: #FFF;
-  border-radius: 100%;
   position: absolute;
-  left: 1px;
-  top: 1px;
-}
-.switch > input[type="checkbox"] {
-  position: absolute;
+  display: block;
+  margin: 0;
+  padding: 0;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
 }
+.switch > label:before,
+.switch > label:after {
+  position: absolute;
+  z-index: 1;
+  content: "";
+  transition: all 0.2s;
+}
+.switch > label:before {
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 60px;
+  background-color: #eaeaea;
+  border: 1px solid #c4c4c4;
+}
+.switch > label:after {
+  left: 1px;
+  top: 1px;
+  height: 32px;
+  width: 32px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  background-color: #FFF;
+  border-radius: 100%;
+}
+.switch > input[type="checkbox"] {
+  position: absolute;
+  cursor: pointer;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.switch > input[type="checkbox"]:checked + label:before {
+  background-color: #2d8cf0;
+  border-color: #2d8cf0;
+}
+.switch > input[type="checkbox"]:checked + label:after {
+  transform: translateX(30px);
+}
 .switch-lg {
   height: 46px;
-  width: 72px;
+  width: 90px;
+}
+.switch-lg > label:after {
+  height: 44px;
+  width: 44px;
+}
+.switch-lg > input[type="checkbox"]:checked + label:after {
+  transform: translateX(44px);
 }
 .switch-sm {
   height: 30px;
-  width: 48px;
+  width: 58px;
+}
+.switch-sm > label:after {
+  height: 28px;
+  width: 28px;
+}
+.switch-sm > input[type="checkbox"]:checked + label:after {
+  transform: translateX(28px);
 }
 .fade {
   opacity: 0;
