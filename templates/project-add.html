@@ -16,13 +16,13 @@
         <div class="panel-heading">
           <h4 class="panel-title">
             工程信息
-          </h4>         
+          </h4>
         </div>
         <div class="panel-body">
           <div class="row">
             <div class="col-md-6" style="border-right:1px solid #e5e5e5;">
               <fieldset>
-                <legend>基本信息</legend>
+                <legend><span class="badge badge-default">基本信息</span></legend>
                 <div class="form-horizontal">
                   <div class="form-group">
                     <label class="col-sm-3 control-label">工程名称 <span class="text-danger">*</span></label>
@@ -74,7 +74,7 @@
                 </div>
               </fieldset>
               <fieldset>
-                <legend>安装信息</legend>
+                <legend><span class="badge badge-default">安装信息</span></legend>
                 <div class="form-horizontal">
                   <div class="form-group">
                     <label class="col-sm-3 control-label">施工单位</label>
@@ -112,7 +112,7 @@
                 </div>
               </fieldset>
               <fieldset>
-                <legend>客户信息</legend>
+                <legend><span class="badge badge-default">客户信息</span></legend>
                 <div class="form-horizontal">
                   <div class="form-group">
                     <label class="col-sm-3 control-label">单位名称</label>
@@ -128,7 +128,7 @@
                     <div class="col-sm-5">
                       <input type="tel" class="form-control" placeholder="请输入联系人手机号">
                     </div>
-                  </div>                  
+                  </div>
                 </div>
               </fieldset>
             </div>
@@ -136,7 +136,7 @@
               <fieldset>
                 <legend>
                   <div class="row">
-                    <div class="col-md-6">包含的设备</div>
+                    <div class="col-md-6"><span class="badge badge-default">包含的设备</span></div>
                     <div class="col-md-6 text-right"><button class="btn btn-default">添加</button> <button class="btn btn-default">移除</button></div>
                   </div>
                 </legend>
@@ -312,12 +312,24 @@
             </div>
           </div>
         </div>
-      </div>      
+      </div>
     </div>
   </div>
 </div>
 <footer class="navbar navbar-default navbar-fixed-bottom">
   <div class="container-fluid">
-    <div class="pull-right"><button type="button" class="btn btn-primary navbar-btn">保存</button></div>    
+    <div class="pull-right"><button type="button" class="btn btn-primary navbar-btn">保存</button></div>
   </div>
 </footer>
+<script type="text/javascript">
+  $(function(){
+    //点击编辑按钮编辑设备名称
+    $(".input-group .btn").click(function(){
+      $(this).parents(".input-group").find(".form-control[readonly]").removeAttr("readonly").focus();
+    });
+    //编辑完设备名称取消focus状态时增加readonly属性
+    $(".input-group .form-control").blur(function(){
+      $(this).attr("readonly","readonly");
+    });
+  })
+</script>

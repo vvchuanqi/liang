@@ -130,7 +130,7 @@
               <tr>
                 <td class="text-right">开关机：</td>
                 <td><div class="switch">
-                    <input type="checkbox"/>
+                    <input type="checkbox" id="switchOpenDevice"/>
                     <label></label>
                   </div></td>
                 <td class="text-right">模式选择：</td>
@@ -308,5 +308,57 @@
       <div class="list-group"> <a href="#" class="list-group-item active"> <i class="fas fa-arrow-left fa-fw" style="font-size:16px;"></i> 实时数据 </a> <a href="templates/project-detail2.html" class="list-group-item  ajax-link">曲线查看</a> <a href="templates/project-detail3.html" class="list-group-item ajax-link">历史数据</a> <a href="#" class="list-group-item">故障记录</a> </div>
     </div>
   </div>
-  <!-- end 页签组 --> 
+  <!-- end 页签组 -->
 </div>
+<!-- start 打开开关模态框确认是否继续操作 -->
+<div class="modal fade" tabindex="-1" role="dialog" id="openDeviceModal" data-backdrop="static">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="media" style="padding:20px 0;">
+          <div class="media-left">
+            <i class="fas fa-info-circle text-info" style="font-size: 48px;"></i>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">您将打开系统设备</h4>
+            点击确定将发送远程开机信号。
+          </div>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary">确定</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- end 打开开关模态框确认是否继续操作 -->
+<script type="text/javascript">
+  $(function(){
+    //打开开关操作弹出模态框提示
+    $("#switchOpenDevice").change(function(){
+      if($(this).prop('checked')){
+        $("#openDeviceModal").modal('show');
+      }
+    });
+    //弹出窗点击取消按钮时操作
+    $('#openDeviceModal .btn-default[data-dismiss="modal"]').on('click', function (e) {
+      // 开机按钮关闭
+      $("#switchOpenDevice").prop('checked',false);
+    });
+    //弹出窗点击确认按钮时操作
+    $('#openDeviceModal .btn-primary').on('click', function (e) {
+      // 开机按钮打开
+      $("#openDeviceModal").modal('hide');
+      $("#switchOpenDevice").prop('checked',true);
+    })
+    //点击编辑按钮编辑机组制冷参数设置
+    $(".input-group .btn").click(function(){
+      $(this).parents(".input-group").find(".form-control[readonly]").removeAttr("readonly").focus();
+    });
+    //编辑完机组制冷参数设置取消focus状态时增加readonly属性
+    $(".input-group .form-control").blur(function(){
+      $(this).attr("readonly","readonly");
+    });
+  })
+</script>
