@@ -7,6 +7,7 @@
         <i class="fas fa-arrow-left"></i> 返回
       </a>
     </div>
+  <div class="pull-right" style="padding-top:8px;"> <button class="btn btn-default"><i class="fas fa-asterisk"></i> 默认</button> <button class="btn btn-danger"><i class="fas fa-trash"></i> 删除</button> <button class="btn btn-info"><i class="fas fa-edit"></i> 修改</button> <button class="btn btn-success"><i class="fas fa-eye"></i> 查看</button> <button class="btn btn-info"><i class="fas fa-upload"></i> 上传</button> <button class="btn btn-info"><i class="fas fa-download"></i> 下载</button> <button class="btn btn-primary"><i class="fas fa-check"></i> 确定</button> <button class="btn btn-warning"><i class="fas fa-minus-circle"></i> 取消</button> <button class="btn btn-primary"><i class="fas fa-save"></i> 保存</button></div>
   </div>
 </nav>
 
@@ -136,8 +137,8 @@
               <fieldset>
                 <legend>
                   <div class="row">
-                    <div class="col-md-6"><span class="badge badge-default">包含的设备</span></div>
-                    <div class="col-md-6 text-right"><button class="btn btn-default">添加</button> <button class="btn btn-default">移除</button></div>
+                    <div class="col-md-3"><span class="badge badge-default">包含的设备</span></div>
+                    <div class="col-md-9 text-right"><button class="btn btn-info btn-sm"><i class="fas fa-plus"></i> 添加</button> <button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> 移除</button> </div>
                   </div>
                 </legend>
                 <div class="table-responsive">
@@ -336,11 +337,6 @@
     </div>
   </div>
 </div>
-<footer class="navbar navbar-default navbar-fixed-bottom">
-  <div class="container-fluid">
-    <div class="pull-right"><button type="button" class="btn btn-primary navbar-btn">保存</button></div>
-  </div>
-</footer>
 <script type="text/javascript">
   $(function(){
     //点击编辑按钮编辑设备名称
