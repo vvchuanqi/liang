@@ -487,22 +487,35 @@ html{
 //常见问题
 .help-wrapper{
   padding-top:15px;
-  .help-block-group{
-      display:block;padding:25px 15px 25px 80px;font-size:20px;color:#FFF;border-radius: 6px;text-decoration: none;transition: all 0.2s;position: relative;margin-bottom:20px;
-      &:hover,&:active,&:focus{text-decoration: none;}
-      &:hover,&:focus{box-shadow:0 3px 15px rgba(0,0,0,.15);opacity: .85;}
-      &:active{box-shadow: none;}
-      > .fa{position: absolute;width:48px;height:48px;left:15px;top:50%;margin-top:-24px;border-radius: 100%;background-color:rgba(255,255,255,.15);line-height: 48px;text-align:center;}
-      &.bg1{background-color:@brand-primary;}
-      &.bg2{background-color:@brand-success;}
-      &.bg3{background-color:@brand-info;}
-      &.bg4{background-color:@brand-warning;}
+  .nav-help{
+      margin-bottom:30px;
+    > li+li{margin-left:12px;}
+    > li > a{padding:25px 15px 25px 75px;font-size:20px;color:#FFF;border-radius: 6px;text-decoration: none;transition: all 0.2s;position: relative;
+            > .fa{position: absolute;width:48px;height:48px;left:15px;top:50%;margin-top:-24px;border-radius: 100%;background-color:rgba(255,255,255,.15);line-height: 48px;text-align:center;}
+            &.bg1{background-color:@brand-primary;opacity: .8;}
+            &.bg2{background-color:@brand-success;opacity: .8;}
+            &.bg3{background-color:@brand-info;opacity: .8;}
+            &.bg4{background-color:@brand-warning;opacity: .8;}
+        }
+    > li.active > a.bg1{opacity: 1;
+      &:after{content:"";position: absolute;border:12px solid transparent;border-top-color:@brand-primary;left:50%;bottom:-24px;margin-left:-6px;}
+    }
+    > li.active > a.bg2{opacity: 1;
+      &:after{content:"";position: absolute;border:12px solid transparent;border-top-color:@brand-success;left:50%;bottom:-24px;margin-left:-6px;}
+    }
+    > li.active > a.bg3{opacity: 1;
+      &:after{content:"";position: absolute;border:12px solid transparent;border-top-color:@brand-info;left:50%;bottom:-24px;margin-left:-6px;}
+    }
+    > li.active > a.bg4{opacity: 1;
+      &:after{content:"";position: absolute;border:12px solid transparent;border-top-color:@brand-warning;left:50%;bottom:-24px;margin-left:-6px;}
+    }
+        
       }
-  .help-list{margin:0 0 15px;padding:0;
-    >dt{margin-bottom:8px;font-weight: bold;position: relative;padding-left:35px;cursor:pointer;
+  .help-list{margin:0 0 15px;padding:15px;border:1px solid #ddd;border-radius: 6px;
+    >dt{margin-bottom:0;position: relative;padding-left:35px;cursor:pointer;font-size:16px;font-weight: lighter;
       >strong{position: absolute;left:0;top:0;border-radius: 100%;height:24px;width:24px;color:@brand-success;background-color:lighten(@brand-success,50%);text-align: center;line-height:24px;font-size:12px;}
     }
-    >dd{line-height: 1.8;position: relative;padding-left:35px;
+    >dd{line-height: 1.8;position: relative;padding-left:35px;opacity: .80;
     >strong{position: absolute;left:0;top:0;border-radius: 100%;height:24px;width:24px;color:@brand-warning;background-color:lighten(@brand-warning,46%);text-align: center;line-height: 24px;font-size:12px;}
     }
   }
