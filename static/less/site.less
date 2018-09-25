@@ -1,7 +1,7 @@
 
 @brand-primary:         darken(#2d8cf0, 6.5%);
 @brand-success:         #19be6b;
-@brand-info:            #2d8cf0;
+@brand-info:            #2db7f5;
 @brand-warning:         #ff9900;
 @brand-danger:          #ed3f14;
 //定义全局颜色
@@ -486,9 +486,29 @@ html{
 }
 //常见问题
 .help-wrapper{
-  padding-top:15px
+  padding-top:15px;
+  .help-block-group{
+      display:block;padding:25px 15px 25px 80px;font-size:20px;color:#FFF;border-radius: 6px;text-decoration: none;transition: all 0.2s;position: relative;margin-bottom:20px;
+      &:hover,&:active,&:focus{text-decoration: none;}
+      &:hover,&:focus{box-shadow:0 3px 15px rgba(0,0,0,.15);opacity: .85;}
+      &:active{box-shadow: none;}
+      > .fa{position: absolute;width:48px;height:48px;left:15px;top:50%;margin-top:-24px;border-radius: 100%;background-color:rgba(255,255,255,.15);line-height: 48px;text-align:center;}
+      &.bg1{background-color:@brand-primary;}
+      &.bg2{background-color:@brand-success;}
+      &.bg3{background-color:@brand-info;}
+      &.bg4{background-color:@brand-warning;}
+      }
+  .help-list{margin:0 0 15px;padding:0;
+    >dt{margin-bottom:8px;font-weight: bold;position: relative;padding-left:35px;cursor:pointer;
+      >strong{position: absolute;left:0;top:0;border-radius: 100%;height:24px;width:24px;color:@brand-success;background-color:lighten(@brand-success,50%);text-align: center;line-height:24px;font-size:12px;}
+    }
+    >dd{line-height: 1.8;position: relative;padding-left:35px;
+    >strong{position: absolute;left:0;top:0;border-radius: 100%;height:24px;width:24px;color:@brand-warning;background-color:lighten(@brand-warning,46%);text-align: center;line-height: 24px;font-size:12px;}
+    }
+  }
 }
 //问题反馈
 .feed-wrapper{
   padding-top:15px
+    
 }
