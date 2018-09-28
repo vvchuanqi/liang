@@ -1,0 +1,47 @@
+/* start 全局的布局框架 */
+html,body,.page{height:100%;margin:0;padding:0;}
+.page{display:flex;flex-flow: column;}
+.page-header{height:50px;background-color:#303030;display: flex;flex-flow: row;}
+.page-header h1{font-size:18px;color:#FFF;align-items:center;line-height: 50px;font-weight: lighter;}
+.page-content{flex:1;background-color: #f8f8f9;overflow-y: auto;-webkit-overflow-scrolling: touch;}
+.page-footer{height:52px;background-color:#FFF;display: flex;flex-flow: row;border-top:1px solid #e5e5e5;align-items: center;}
+.page-footer__item{flex:1;text-align:center;align-self: center;line-height: 52px;position: relative;color:#333;}
+.page-footer__item___link:before{position: absolute;left:0;top:0;bottom:0;content:"";border-left:1px solid #e5e5e5;}
+.page-footer__item___link:after{position: absolute;left:2em;top:5px;right:2em;content:"";border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;height:2px;}
+.page-footer__item___link:active{background-color: #f8f8f9;}
+/* end 全局的布局框架 */
+
+
+/* start 顶部导航栏的后退按钮图标、关闭图标 */
+.btn-close,.header-btn-left{line-height: 50px;color:#FFF;padding:0 0 0 48px;display: inline-block;position: relative;}
+.btn-close:active,.header-btn-left:active{background-color:#222;}
+.header-btn-left__access:before{content:"";position: absolute;left:18px;border:2px solid transparent;transform:rotate(45deg);border-left-color:#FFF;border-bottom-color:#FFF;top:50%;margin-top:-6px;width:8px;height:8px;}
+
+.header-btn-left__close:before,.header-btn-left__close:after{content:"";position: absolute;height:2px;width:20px;background-color:#FFF;left:16px;top:24px;}
+.header-btn-left__close:before{transform: rotate(45deg);}
+.header-btn-left__close:after{transform: rotate(-45deg);}
+
+
+/* start 顶部导航栏的后退按钮图标、关闭图标 */
+
+/* start 零碎的元素 */
+.text-muted{color:#999;}
+.text-primary{color:#2d8cf0;}
+.text-success{color:#19be6b;}
+.text-warning{color:#ff9900;}
+.text-info{color:#2db7f5;}
+.text-danger{color:#ed3f14;}
+
+.bg-primary{background-color: #2d8cf0;}
+.bg-success{background-color: #19be6b;}
+.bg-warning{background-color: #ff9900;}
+.bg-info{background-color: #2db7f5;}
+.bg-danger{background-color: #ed3f14;}
+
+.price:before{font-size:75%;content:"￥";opacity: .5;}
+
+/* start 全局顶部页签样式修改 */
+.weui-navbar__item{background-color: #FFF;}
+.weui-navbar__item.weui-bar__item_on{background-color: #FFF;}
+.weui-navbar__item.weui-bar__item_on:before{content:"";position:absolute;left:0;bottom:0;right:0;height:4px;background-color:#4CAF50;}
+/* end */
