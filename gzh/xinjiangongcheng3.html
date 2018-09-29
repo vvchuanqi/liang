@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>新建工程</title>
+  <link rel="stylesheet" href="css/weui.min.css">
+  <link rel="stylesheet" href="css/gzh.css">
+  <style>
+    .gutter{padding:0 5px;}
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <div class="page-header">
+      <span class="header-left"><a href="index.html" class="btn-back"><img src="images/icon_back.svg" width="48" height="48"></a></span>
+      <h1>新建工程</h1>
+      <span class="header-right"></span>
+    </div>
+    <div class="page-content">
+      <!-- start 基本信息 -->
+      <div class="weui-cells__title">设备信息</div>
+      <div class="weui-cells weui-cells_form">
+        <div class="weui-cell weui-cell_vcode">
+          <div class="weui-cell__hd">
+            <label class="weui-label">网关信息</label>
+          </div>
+          <div class="weui-cell__bd">
+            <input class="weui-input" type="text" placeholder="IMEI码">
+          </div>
+          <div class="weui-cell__ft">
+            <button class="weui-vcode-btn">扫一扫</button>
+          </div>
+        </div>
+        <div class="weui-cell">
+          <div class="weui-cell__hd"><label class="weui-label">设备名称</label></div>
+          <div class="weui-cell__bd">
+            <input class="weui-input" type="text" placeholder="例如：碧桂园5号机组">
+          </div>
+        </div>
+        <div class="weui-cell weui-cell_select weui-cell_select-after">
+          <div class="weui-cell__hd">
+            <label for="" class="weui-label">设备型号</label>
+          </div>
+          <div class="weui-cell__bd">
+            <select class="weui-select" name="select2">
+              <option value="1">PHP660</option>
+              <option value="2">PHP650</option>
+              <option value="3">PHP640</option>
+              <option value="3">PHP630</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="weui-btn-area">
+        <a href="#" class="weui-btn weui-btn_primary">添加</a>
+      </div>
+      <div class="weui-cells__title">已包含的设备</div>
+      <div class="weui-cells">
+        <div class="weui-cell">
+          <div class="weui-cell__hd">
+            <label class="weui-label">PH630</label>
+          </div>
+          <div class="weui-cell__bd">
+            <p>碧桂园1期低4号</p>
+            <small class="text-muted">866710038844236</small>
+          </div>
+          <div class="weui-cell__ft">
+            <button class="weui-vcode-btn"><i class="weui-icon-cancel"></i></button>
+          </div>
+        </div>
+        <div class="weui-cell">
+          <div class="weui-cell__hd">
+            <label class="weui-label">PH640</label>
+          </div>
+          <div class="weui-cell__bd">
+            <p>碧桂园1期低4号</p>
+            <small class="text-muted">866710038844236</small>
+          </div>
+          <div class="weui-cell__ft">
+            <button class="weui-vcode-btn"><i class="weui-icon-cancel"></i></button>
+          </div>
+        </div>
+        <div class="weui-cell">
+          <div class="weui-cell__hd">
+            <label class="weui-label">PH650</label>
+          </div>
+          <div class="weui-cell__bd">
+            <p>碧桂园1期低4号</p>
+            <small class="text-muted">866710038844236</small>
+          </div>
+          <div class="weui-cell__ft">
+            <button class="weui-vcode-btn"><i class="weui-icon-cancel"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="weui-flex weui-btn-area">
+        <div class="weui-flex__item">
+          <div class="gutter"><a href="xinjiangongcheng2.html" class="weui-btn weui-btn_default">上一步</a></div>
+        </div>
+        <div class="weui-flex__item">
+          <div class="gutter"><a href="#" class="weui-btn weui-btn_primary">完成</a></div>
+        </div>
+      </div>
+      <!-- end 基本信息 -->
+    </div>
+  </div>
+  <script type="text/javascript" src="js/zepto.min.js"></script>
+  <!-- 注释：zepto和下面的weui.js互不依赖，只是为了方便移动端的dom操作，才引入zepto.js -->
+  <script type="text/javascript" src="js/weui.min.js"></script>
+  <!-- 关于weui.min.js的使用文档详见：https://github.com/Tencent/weui.js/blob/master/docs/README.md，里面包含了常用的组件：actionSheet、alert、confirm、dialog、form、gallery、loading、picker、searchBar、slider、tab、toast、topTips、uploader。注释者:于传奇QQ:402526562 -->
+  <script type="text/javascript">
+    $(function() {
+      //to do
+
+    });
+  </script>
+</body>
+
+</html>

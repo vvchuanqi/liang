@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>新建工程</title>
+  <link rel="stylesheet" href="css/weui.min.css">
+  <link rel="stylesheet" href="css/gzh.css">
+  <style>
+    .gutter{padding:0 5px;}
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <div class="page-header">
+      <span class="header-left"><a href="index.html" class="btn-back"><img src="images/icon_back.svg" width="48" height="48"></a></span>
+      <h1>新建工程</h1>
+      <span class="header-right"></span>
+    </div>
+    <div class="page-content">
+      <!-- start 基本信息 -->
+      <div class="weui-cells__title">基本信息</div>
+      <div class="weui-cells weui-cells_form">
+        <!-- 注释1：如果用户没有填写工程名称就点击下一步，则需要给下面的weui-cell后面追加一个class为weui-cell_warn,同时在weui-cell__bd后面追加一个weui-cell__ft -->
+        <div class="weui-cell weui-cell_warn">
+          <div class="weui-cell__hd"><label class="weui-label">工程名称</label></div>
+          <div class="weui-cell__bd">
+            <input class="weui-input" type="text" placeholder="必填项">
+          </div>
+          <!-- 注释2：如果用户没有填写工程名称就点击下一步，下面的就应该出现，否则就删除class="weui-cell__ft"整个div-->
+          <div class="weui-cell__ft">
+            <i class="weui-icon-warn"></i>
+          </div>
+        </div>
+        <div class="weui-cell">
+          <div class="weui-cell__hd"><label class="weui-label">面积</label></div>
+          <div class="weui-cell__bd">
+            <input class="weui-input" type="text" placeholder="请输入工程面积">
+          </div>
+        </div>
+      </div>
+      <div class="weui-cells__title">地址</div>
+      <div class="weui-cells">
+        <div class="weui-cell weui-cell_select weui-cell_select-after">
+          <div class="weui-cell__hd">
+            <label for="" class="weui-label">省份</label>
+          </div>
+          <div class="weui-cell__bd">
+            <select class="weui-select" name="select2">
+              <option value="1">广东省</option>
+              <option value="2">福建省</option>
+              <option value="3">广西省</option>
+            </select>
+          </div>
+        </div>
+        <div class="weui-cell weui-cell_select weui-cell_select-after">
+          <div class="weui-cell__hd">
+            <label for="" class="weui-label">市</label>
+          </div>
+          <div class="weui-cell__bd">
+            <select class="weui-select" name="select2">
+              <option value="1">珠海市</option>
+              <option value="2">福州市</option>
+              <option value="3">桂林市</option>
+            </select>
+          </div>
+        </div>
+        <div class="weui-cell weui-cell_select weui-cell_select-after">
+          <div class="weui-cell__hd">
+            <label for="" class="weui-label">区域</label>
+          </div>
+          <div class="weui-cell__bd">
+            <select class="weui-select" name="select2">
+              <option value="1">香洲区</option>
+              <option value="2">金湾区</option>
+              <option value="3">斗门区</option>
+            </select>
+          </div>
+        </div>
+        <div class="weui-cell">
+          <div class="weui-cell__bd">
+            <textarea class="weui-textarea" placeholder="请输入具体街道" rows="3"></textarea>
+            <div class="weui-textarea-counter"><span>0</span>/200</div>
+          </div>
+        </div>
+      </div>
+      <div class="weui-flex weui-btn-area">
+        <div class="weui-flex__item">
+          <div class="gutter"><a href="xinjiangongcheng.html" class="weui-btn weui-btn_default">上一步</a></div>
+        </div>
+        <div class="weui-flex__item">
+          <div class="gutter"><a href="xinjiangongcheng2.html" class="weui-btn weui-btn_primary">下一步</a></div>
+        </div>
+      </div>
+      <!-- end 基本信息 -->
+    </div>
+  </div>
+  <script type="text/javascript" src="js/zepto.min.js"></script>
+  <!-- 注释：zepto和下面的weui.js互不依赖，只是为了方便移动端的dom操作，才引入zepto.js -->
+  <script type="text/javascript" src="js/weui.min.js"></script>
+  <!-- 关于weui.min.js的使用文档详见：https://github.com/Tencent/weui.js/blob/master/docs/README.md，里面包含了常用的组件：actionSheet、alert、confirm、dialog、form、gallery、loading、picker、searchBar、slider、tab、toast、topTips、uploader。注释者:于传奇QQ:402526562 -->
+  <script type="text/javascript">
+    $(function() {
+      //to do
+
+    });
+  </script>
+</body>
+
+</html>

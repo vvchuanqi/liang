@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>设备数据</title>
+  <link rel="stylesheet" href="css/weui.min.css">
+  <link rel="stylesheet" href="css/gzh.css">
+  <style>
+    .weui-panel{overflow: visible;}
+    .weui-cell_link{position: relative;z-index:100;}
+    .weui-cell_link .sub-menu{list-style: none;padding:0;margin:0;flex:none;position: absolute;z-index:101;right:15px;top:100%;background-color:#FFF;box-shadow:0 2px 8px rgba(0,0,0,.175);transition:all 0.2s;transform: scale(1,0);transform-origin: right top;opacity:0;display: flex;flex-flow: column;}
+    .weui-cell_link.open .sub-menu{transform: scale(1,1);opacity:1;}
+     .sub-menu li a{position: relative;display: block;line-height: 48px;padding:0 15px;color:#333;}
+     .sub-menu li a:active{background-color: #f8f8f9;}
+     .sub-menu li a:after{position: absolute;content:"";left:0;bottom:0;right: 0;border-bottom:1px solid #e5e5e5;transform: scaleY(0.5);}
+     .sub-menu li:last-child a:after{display: none;}
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <div class="page-header">
+      <span class="header-left"><a href="index.html" class="btn-back"><img src="images/icon_back.svg" width="48" height="48"></a></span>
+      <h1>设备数据</h1>
+      <span class="header-right"></span>
+    </div>
+    <div class="page-content">
+      <!-- start 基本信息 -->
+      <div class="weui-panel">
+        <div class="weui-panel__bd">
+          <div class="weui-media-box weui-media-box_appmsg">
+            <div class="weui-media-box__hd" style="width:36px;height:36px;line-height:36px;">
+              <img class="weui-media-box__thumb" src="images/icon_success.svg" alt="">
+            </div>
+            <div class="weui-media-box__bd">
+              <h4 class="weui-media-box__title">碧桂园4号 低5位</h4>
+              <p class="weui-media-box__desc">记录时间:2018/7/30 15:24:01</p>
+            </div>
+          </div>
+        </div>
+        <div class="weui-panel__ft">
+          <div class="weui-cell weui-cell_select weui-cell_select-after">
+            <div class="weui-cell__hd">
+              <label for="" class="weui-label">概况</label>
+            </div>
+            <div class="weui-cell__bd">
+              <select class="weui-select" name="select2">
+                <option value="1">高级参数</option>
+                <option value="2">用户设置</option>
+                <option value="3">定时</option>
+                <option value="4">厂家控制</option>
+                <option value="5">PLC维护</option>
+              </select>
+            </div>
+          </div>
+          <div class="weui-cell weui-cell_access weui-cell_link" id="moreInfo">
+            <div class="weui-cell__bd">概况</div>
+            <span class="weui-cell__ft">更多信息</span>
+            <ul class="sub-menu">
+              <li><a href="#">高级参数</a></li>
+              <li><a href="#">用户设置</a></li>
+              <li><a href="#">定时</a></li>
+              <li><a href="#">厂家控制</a></li>
+              <li><a href="#">PLC维护</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="weui-cells__title">主要参数</div>
+      <div class="weui-cells">
+        <div class="weui-cell">
+          <div class="weui-cell__bd">
+            <p>制冷回水下限</p>
+          </div>
+          <div class="weui-cell__ft">-10</div>
+        </div>
+        <div class="weui-cell">
+          <div class="weui-cell__bd">
+            <p>制冷出水下限</p>
+          </div>
+          <div class="weui-cell__ft">-15</div>
+        </div>
+        <div class="weui-cell">
+          <div class="weui-cell__bd">
+            <p>制热回水上限</p>
+          </div>
+          <div class="weui-cell__ft">55</div>
+        </div>
+        <div class="weui-cell">
+          <div class="weui-cell__bd">
+            <p>除霜温差1</p>
+          </div>
+          <div class="weui-cell__ft">4</div>
+        </div>
+      </div>
+      <div class="weui-cells__title">压机参数</div>
+      <div class="weui-cells">
+        <div class="weui-cell">
+          <div class="weui-cell__bd">
+            <p>制冷回水下限</p>
+          </div>
+          <div class="weui-cell__ft">-10</div>
+        </div>
+        <div class="weui-cell">
+          <div class="weui-cell__bd">
+            <p>制冷出水下限</p>
+          </div>
+          <div class="weui-cell__ft">-15</div>
+        </div>
+        <div class="weui-cell">
+          <div class="weui-cell__bd">
+            <p>制热回水上限</p>
+          </div>
+          <div class="weui-cell__ft">55</div>
+        </div>
+        <div class="weui-cell">
+          <div class="weui-cell__bd">
+            <p>除霜温差1</p>
+          </div>
+          <div class="weui-cell__ft">4</div>
+        </div>
+      </div>
+      <div class="weui-flex weui-btn-area">
+        <div class="weui-flex__item">
+          <div class="gutter"><a href="xinjiangongcheng2.html" class="weui-btn weui-btn_default">上一步</a></div>
+        </div>
+        <div class="weui-flex__item">
+          <div class="gutter"><a href="#" class="weui-btn weui-btn_primary">完成</a></div>
+        </div>
+      </div>
+      <!-- end 基本信息 -->
+    </div>
+  </div>
+  <script type="text/javascript" src="js/zepto.min.js"></script>
+  <!-- 注释：zepto和下面的weui.js互不依赖，只是为了方便移动端的dom操作，才引入zepto.js -->
+  <script type="text/javascript" src="js/weui.min.js"></script>
+  <!-- 关于weui.min.js的使用文档详见：https://github.com/Tencent/weui.js/blob/master/docs/README.md，里面包含了常用的组件：actionSheet、alert、confirm、dialog、form、gallery、loading、picker、searchBar、slider、tab、toast、topTips、uploader。注释者:于传奇QQ:402526562 -->
+  <script type="text/javascript">
+    $(function() {
+      //to do
+      $("#moreInfo").click(function() {
+        $(this).toggleClass("open");
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,25 +8,65 @@
   <title>公众号首页</title>
   <link rel="stylesheet" href="css/weui.min.css">
   <link rel="stylesheet" href="css/gzh.css">
-  <script type="text/javascript" src="js/zepto.min.js"></script>
   <style>
-    .btn-port-toggle{padding:0 15px;}
+    .btn-port-toggle{padding:0 8px;}
     .btn-port-toggle img{display: block;}
+    .page-footer__item___link{position:relative;}
+    .page-footer__item___link .sub-menu{position: absolute;bottom:100%;left:0;right:0;background-color: #FFF;box-shadow: 0 2px 8px rgba(0,0,0,.175);display: flex;flex-flow: column;list-style: none;padding:0;margin:0;transition:all 0.2s;transform: scale(1,0);transform-origin: right bottom;opacity:0;}
+    .page-footer__item___link.open .sub-menu{transform: scale(1,1);opacity:1;}
+    .page-footer__item___link .sub-menu li a{line-height: 48px;position: relative;display: block;color:#333;}
+    .page-footer__item___link .sub-menu li a:after{position: absolute;content:"";left:0;bottom:0;right: 0;border-bottom:1px solid #e5e5e5;transform: scaleY(0.5);}
+    .page-footer__item___link .sub-menu li:last-child a:after{display: none;}
+    .page-footer__item___link:before{position: absolute;left:0;top:0;bottom:0;content:"";border-left:1px solid #e5e5e5;}
+    .page-footer__item___link:after{position: absolute;left:2em;top:5px;right:2em;content:"";border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;height:3px;}
+    .page-footer__item___link:active,.page-footer__item___link .sub-menu li a:active{background-color: #f8f8f9;}
   </style>
 </head>
+
 <body>
   <div class="page">
     <div class="page-header">
-      <a href="#" class="header-btn-left header-btn-left__access"></a>
+      <span class="header-left"><a href="#" class="btn-back"><img src="images/icon_back.svg" width="48" height="48"></a></span>
       <h1>公众号首页</h1>
+      <span class="header-right"></span>
     </div>
     <div class="page-content"></div>
     <div class="page-footer">
-      <div class="btn-port-toggle"><img src="images/icon_keyboard@2x.png" alt="键盘图标" width="27"></div>
-      <a class="page-footer__item page-footer__item___link" href="#">我要充电</a>
-      <a class="page-footer__item page-footer__item___link" href="#">充电监控</a>
-      <a class="page-footer__item page-footer__item___link" href="#">个人中心</a>
+      <div class="btn-port-toggle"><img src="images/icon_keyboard.svg" alt="键盘图标" width="48" height="48"></div>
+      <a class="page-footer__item page-footer__item___link" href="gaikuang.html">概况</a>
+      <div class="page-footer__item page-footer__item___link">工程管理
+        <ul class="sub-menu">
+          <li><a href="sousuogongcheng.html">搜索工程</a></li>
+          <li><a href="xinjiangongcheng.html">新建工程</a></li>
+          <li><a href="tianjiashebei.html">添加设备</a></li>
+          <li><a href="guzhanggongcheng.html">故障工程</a></li>
+          <li><a href="suoyougongcheng.html">所有工程</a></li>
+        </ul>
+      </div>
+      <div class="page-footer__item page-footer__item___link">我的帐号
+        <ul class="sub-menu">
+          <li><a href="xiugaimima.html">修改密码</a></li>
+          <li><a href="xiugaidianhua.html">修改电话</a></li>
+          <li><a href="tuisongsheding.html">推送设定</a></li>
+          <li><a href="bangdingjiebang.html">绑定/解绑</a></li>
+          <li><a href="changjianwenti.html">常见问题</a></li>
+        </ul>
+      </div>
     </div>
   </div>
+  <script type="text/javascript" src="js/zepto.min.js"></script>
+  <!-- 注释：zepto和下面的weui.js互不依赖，只是为了方便移动端的dom操作，才引入zepto.js -->
+  <script type="text/javascript" src="js/weui.min.js"></script>
+  <!-- 关于weui.min.js的使用文档详见：https://github.com/Tencent/weui.js/blob/master/docs/README.md，里面包含了常用的组件：actionSheet、alert、confirm、dialog、form、gallery、loading、picker、searchBar、slider、tab、toast、topTips、uploader。注释者:于传奇QQ:402526562 -->
+  <script type="text/javascript">
+    //weui.alert('确定要删除？');
+    $(function() {
+      //点击公众号首页的下部菜单显示二级菜单
+      $("div.page-footer__item___link").click(function() {
+        $(this).toggleClass("open").siblings("div.page-footer__item___link").removeClass("open");
+      });
+    });
+  </script>
 </body>
+
 </html>
