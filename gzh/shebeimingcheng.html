@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>设备数据-设备名称</title>
+  <link rel="stylesheet" href="css/weui.min.css">
+  <link rel="stylesheet" href="css/gzh.css">
+  <style>
+    .gutter{padding: 0 5px;}
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <div class="page-content">
+      <!-- start 基本信息 -->
+      <div class="weui-cells__title">主要参数</div>
+      <div class="weui-cells weui-cells_form">
+        <div class="weui-cell">
+          <div class="weui-cell__hd"><label class="weui-label">设备名称</label></div>
+          <div class="weui-cell__bd">
+            <input class="weui-input" type="text" value="碧桂园3期 低1号" placeholder="请输入设备名称" autofocus>
+          </div>
+        </div>
+      </div>
+      <div class="weui-cells__title">网关信息</div>
+      <div class="weui-cells">
+        <div class="weui-cell">
+          <div class="weui-cell__bd">
+            <p>IMEI</p>
+          </div>
+          <div class="weui-cell__ft">869552101112110</div>
+        </div>
+        <div class="weui-cell">
+          <div class="weui-cell__bd">
+            <p>ICCID</p>
+          </div>
+          <div class="weui-cell__ft">8695521011188992110</div>
+        </div>
+      </div>
+      <div class="weui-flex weui-btn-area">
+        <div class="weui-flex__item">
+          <div class="gutter"><a href="#" class="weui-btn weui-btn_primary" id="confirmBtn">保存修改</a></div>
+        </div>
+        <div class="weui-flex__item">
+          <div class="gutter"><a href="shebeishuju.html" class="weui-btn weui-btn_default">返回</a></div>
+        </div>
+      </div>
+      <!-- end 基本信息 -->
+    </div>
+  </div>
+  <script type="text/javascript" src="js/zepto.min.js"></script>
+
+  <script type="text/javascript" src="js/weui.min.js"></script>
+  <!-- 关于weui.min.js的使用文档详见：https://github.com/Tencent/weui.js/blob/master/docs/README.md，里面包含了常用的组件：actionSheet、alert、confirm、dialog、form、gallery、loading、picker、searchBar、slider、tab、toast、topTips、uploader。注释者:于传奇QQ:402526562 -->
+  <script type="text/javascript">
+    $(function() {
+      //to do
+      $("#confirmBtn").click(function() {
+        weui.confirm('点击确定将提交修改', {
+          title: '系统提示',
+          buttons: [{
+            label: '取消',
+            type: 'default',
+            onClick: function() {
+              console.log('我点击了取消保存按钮')
+            }
+          }, {
+            label: '确定',
+            type: 'primary',
+            onClick: function() {
+              console.log('我点击了确认保存按钮')
+            }
+          }]
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
