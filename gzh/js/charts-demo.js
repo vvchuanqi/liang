@@ -1,18 +1,10 @@
 var myChart1 = echarts.init(document.getElementById('chart1'), 'macarons');
 var option1 = {
-  tooltip: {
-    trigger: 'axis',
-    axisPointer: { // 坐标轴指示器，坐标轴触发有效
-      type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
-    }
-  },
-  legend: {
-    data: ['正常', '故障工程', '新安装', '离线']
-  },
   grid: {
     left: '3%',
     right: '4%',
-    bottom: '3%',
+    top: '8%',
+    bottom:'8%',
     containLabel: true
   },
   xAxis: {
@@ -20,55 +12,17 @@ var option1 = {
   },
   yAxis: {
     type: 'category',
-    data: ['周一(5.21)', '周二(5.22)', '周三(5.23)', '周四(5.24)', '周五(5.25)', '周六(5.26)', '周日(5.27)']
+    data: ['正常', '故障工程', '新安装', '离线']
   },
   series: [{
-      name: '正常',
       type: 'bar',
-      stack: '总量',
       label: {
         normal: {
           show: true,
           position: 'insideRight'
         }
       },
-      data: [320, 302, 301, 334, 390, 330, 320]
-    },
-    {
-      name: '故障工程',
-      type: 'bar',
-      stack: '总量',
-      label: {
-        normal: {
-          show: true,
-          position: 'insideRight'
-        }
-      },
-      data: [120, 132, 101, 134, 90, 230, 210]
-    },
-    {
-      name: '新安装',
-      type: 'bar',
-      stack: '总量',
-      label: {
-        normal: {
-          show: true,
-          position: 'insideRight'
-        }
-      },
-      data: [220, 182, 191, 234, 290, 330, 310]
-    },
-    {
-      name: '离线',
-      type: 'bar',
-      stack: '总量',
-      label: {
-        normal: {
-          show: true,
-          position: 'insideRight'
-        }
-      },
-      data: [150, 212, 201, 154, 190, 330, 410]
+      data: [320,60,200,105]
     }
   ]
 };
@@ -418,20 +372,19 @@ var chart4 = echarts.init(document.getElementById('chart4'), 'macarons');
 var option4 = {
   tooltip: {
     trigger: 'item',
-    formatter: "{a} <br/>{b}: {c} ({d}%)"
+    formatter: "{a}{b}: {c} ({d}%)"
   },
   legend: {
     orient: 'vertical',
-    right: '5%',
-    top: "20%",
-    bottom: "20%",
-    data: ['C1_1冷凝风机过载', 'C1_1压缩机高压', 'C1_2压缩机高压', 'C1_3冷凝风机过载', 'C1_3压缩机高压']
+    left: '5%',
+    top: "10%",
+    data: ['C1_1冷凝风机过载', 'C1_1压缩机高压', 'C1_2压缩机高压', 'C1_3冷凝风机过载', 'C1_3压缩机高压', 'C1_4压缩机高压', 'C1_5压缩机高压', 'C1_6压缩机高压', 'C1_7压缩机高压', 'C1_8压缩机高压']
   },
   series: [{
-    name: '机型比例',
+    name: '',
     type: 'pie',
     radius: ['40%', '60%'],
-    center: ['28%', '50%'],
+    center: ['70%', '65%'],
     avoidLabelOverlap: false,
     label: {
       normal: {
@@ -441,8 +394,8 @@ var option4 = {
       emphasis: {
         show: true,
         textStyle: {
-          fontSize: '30',
-          fontWeight: 'bold'
+          fontSize: '13',
+          fontWeight: 'lighter'
         }
       }
     },
@@ -452,24 +405,44 @@ var option4 = {
       }
     },
     data: [{
-        value: 335,
+        value:35,
         name: 'C1_1冷凝风机过载'
       },
       {
-        value: 310,
+        value:20,
         name: 'C1_1压缩机高压'
       },
       {
-        value: 234,
+        value: 14,
         name: 'C1_2压缩机高压'
       },
       {
-        value: 135,
+        value: 11,
         name: 'C1_3冷凝风机过载'
       },
       {
-        value: 1548,
+        value:20,
         name: 'C1_3压缩机高压'
+      },
+      {
+        value:4,
+        name: 'C1_4压缩机高压'
+      },
+      {
+        value:5,
+        name: 'C1_5压缩机高压'
+      },
+      {
+        value:8,
+        name: 'C1_6压缩机高压'
+      },
+      {
+        value:24,
+        name: 'C1_7压缩机高压'
+      },
+      {
+        value:10,
+        name: 'C1_8压缩机高压'
       }
     ]
   }]

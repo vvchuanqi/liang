@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/weui.min.css">
   <link rel="stylesheet" href="css/gzh.css">
   <style>
+    .gutter{padding:0 5px;}
     .weui-panel{overflow: visible;}
     .weui-cell_link{position: relative;z-index:100;}
     .weui-cell_link .sub-menu{list-style: none;padding:0;margin:0;flex:none;position: absolute;z-index:101;right:15px;top:100%;background-color:#FFF;box-shadow:0 2px 8px rgba(0,0,0,.175);transition:all 0.2s;transform: scale(1,0);transform-origin: right top;opacity:0;display: flex;flex-flow: column;}
@@ -42,12 +43,13 @@
           </div>
         </div>
         <div class="weui-panel__ft">
-          <div class="weui-cell weui-cell_select weui-cell_select-after">
+          <div class="weui-cell weui-cell_link weui-cell_select weui-cell_select-after">
             <div class="weui-cell__hd">
-              <label for="" class="weui-label">概况</label>
+              <label for="" class="weui-label">请选择：</label>
             </div>
             <div class="weui-cell__bd">
-              <select class="weui-select" name="select2">
+              <select class="weui-select" style="text-align:right;">
+                <option value="0">概况</option>
                 <option value="1">高级参数</option>
                 <option value="2">用户设置</option>
                 <option value="3">定时</option>
@@ -55,17 +57,6 @@
                 <option value="5">PLC维护</option>
               </select>
             </div>
-          </div>
-          <div class="weui-cell weui-cell_access weui-cell_link" id="moreInfo">
-            <div class="weui-cell__bd">概况</div>
-            <span class="weui-cell__ft">更多信息</span>
-            <ul class="sub-menu">
-              <li><a href="#">高级参数</a></li>
-              <li><a href="#">用户设置</a></li>
-              <li><a href="#">定时</a></li>
-              <li><a href="#">厂家控制</a></li>
-              <li><a href="#">PLC维护</a></li>
-            </ul>
           </div>
         </div>
       </div>
