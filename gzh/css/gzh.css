@@ -33,7 +33,7 @@ body,
 }
 .page-content {
   flex: 1;
-  background-color: #f8f8f9;
+  background-color: #e9e7ef;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -94,18 +94,23 @@ body,
 
 .bg-primary {
   background-color: #2d8cf0;
+  color: #fff;
 }
 .bg-success {
   background-color: #19be6b;
+  color: #fff;
 }
 .bg-warning {
   background-color: #ff9900;
+  color: #fff;
 }
 .bg-info {
   background-color: #2db7f5;
+  color: #fff;
 }
 .bg-danger {
   background-color: #ed3f14;
+  color: #fff;
 }
 
 .price:before {
@@ -113,21 +118,3 @@ body,
   content: "￥";
   opacity: 0.5;
 }
-
-/* start 全局顶部页签样式修改 */
-.weui-navbar__item {
-  background-color: #fff;
-}
-.weui-navbar__item.weui-bar__item_on {
-  background-color: #fff;
-}
-.weui-navbar__item.weui-bar__item_on:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  height: 4px;
-  background-color: #4caf50;
-}
-/* end */

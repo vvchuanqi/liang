@@ -5,86 +5,66 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>设备数据</title>
+  <title>设备数据-实时数据</title>
   <link rel="stylesheet" href="css/weui.min.css">
   <link rel="stylesheet" href="css/gzh.css">
   <style>
-    .gutter{padding:0 5px;}
-    .weui-panel{overflow: visible;}
-    .weui-cell_link{position: relative;z-index:100;}
-    .weui-cell_link .sub-menu{list-style: none;padding:0;margin:0;flex:none;position: absolute;z-index:101;right:15px;top:100%;background-color:#FFF;box-shadow:0 2px 8px rgba(0,0,0,.175);transition:all 0.2s;transform: scale(1,0);transform-origin: right top;opacity:0;display: flex;flex-flow: column;}
-    .weui-cell_link.open .sub-menu{transform: scale(1,1);opacity:1;}
-     .sub-menu li a{position: relative;display: block;line-height: 48px;padding:0 15px;color:#333;}
-     .sub-menu li a:active{background-color: #f8f8f9;}
-     .sub-menu li a:after{position: absolute;content:"";left:0;bottom:0;right: 0;border-bottom:1px solid #e5e5e5;transform: scaleY(0.5);}
-     .sub-menu li:last-child a:after{display: none;}
+    .page-footer .weui-btn+.weui-btn{margin-top: 0;}
   </style>
 </head>
 
 <body>
   <div class="page">
-    <div class="page-header">
-      <span class="header-left"><a href="index.html" class="btn-back"><img src="images/icon_back.svg" width="48" height="48"></a></span>
-      <h1>设备数据</h1>
-      <span class="header-right"></span>
-    </div>
-    <div class="page-content">
-      <!-- start 基本信息 -->
-      <div class="weui-panel">
-        <div class="weui-panel__bd">
-          <div class="weui-media-box weui-media-box_appmsg">
-            <div class="weui-media-box__hd" style="width:36px;height:36px;line-height:36px;">
-              <img class="weui-media-box__thumb" src="images/icon_success.svg" alt="">
-            </div>
-            <div class="weui-media-box__bd">
-              <h4 class="weui-media-box__title">碧桂园4号 低5位</h4>
-              <p class="weui-media-box__desc">记录时间:2018/7/30 15:24:01</p>
-            </div>
+    <!-- start 固定不动的区域 -->
+    <div class="weui-panel">
+      <div class="weui-panel__bd">
+        <div class="weui-media-box weui-media-box_appmsg">
+          <div class="weui-media-box__hd" style="width:36px;height:36px;line-height:36px;">
+            <img class="weui-media-box__thumb" src="images/icon_success.svg" alt="">
           </div>
-        </div>
-        <div class="weui-panel__ft">
-          <div class="weui-cell weui-cell_link weui-cell_select weui-cell_select-after">
-            <div class="weui-cell__hd">
-              <label for="" class="weui-label">请选择：</label>
-            </div>
-            <div class="weui-cell__bd">
-              <select class="weui-select" style="text-align:right;">
-                <option value="0">概况</option>
-                <option value="1">高级参数</option>
-                <option value="2">用户设置</option>
-                <option value="3">定时</option>
-                <option value="4">厂家控制</option>
-                <option value="5">PLC维护</option>
-              </select>
-            </div>
+          <div class="weui-media-box__bd">
+            <h4 class="weui-media-box__title">碧桂园4号 低5位</h4>
+            <p class="weui-media-box__desc">记录时间:2018/7/30 15:24:01</p>
           </div>
+          <select class="weui-select" style="height:32px;border:1px solid #e5e5e5;border-radius:4px;line-height:32px;font-size:14px;padding:0 12px;width:auto;">
+            <option value="0">概况</option>
+            <option value="1">高级参数</option>
+            <option value="2">用户设置</option>
+            <option value="3">定时</option>
+            <option value="4">厂家控制</option>
+            <option value="5">PLC维护</option>
+          </select>
         </div>
       </div>
+    </div>
+    <!-- end 固定不动的区域 -->
+    <div class="page-content">
+      <!-- start 基本信息 -->
       <div class="weui-cells__title">主要参数</div>
       <div class="weui-cells">
         <div class="weui-cell">
           <div class="weui-cell__bd">
             <p>制冷回水下限</p>
           </div>
-          <div class="weui-cell__ft">-10</div>
+          <div class="weui-cell__ft text-primary">-10</div>
         </div>
         <div class="weui-cell">
           <div class="weui-cell__bd">
             <p>制冷出水下限</p>
           </div>
-          <div class="weui-cell__ft">-15</div>
+          <div class="weui-cell__ft text-primary">-15</div>
         </div>
         <div class="weui-cell">
           <div class="weui-cell__bd">
             <p>制热回水上限</p>
           </div>
-          <div class="weui-cell__ft">55</div>
+          <div class="weui-cell__ft text-primary">55</div>
         </div>
         <div class="weui-cell">
           <div class="weui-cell__bd">
             <p>除霜温差1</p>
           </div>
-          <div class="weui-cell__ft">4</div>
+          <div class="weui-cell__ft text-primary">4</div>
         </div>
       </div>
       <div class="weui-cells__title">压机参数</div>
@@ -93,48 +73,72 @@
           <div class="weui-cell__bd">
             <p>制冷回水下限</p>
           </div>
-          <div class="weui-cell__ft">-10</div>
+          <div class="weui-cell__ft text-primary">-10</div>
         </div>
         <div class="weui-cell">
           <div class="weui-cell__bd">
             <p>制冷出水下限</p>
           </div>
-          <div class="weui-cell__ft">-15</div>
+          <div class="weui-cell__ft text-primary">-15</div>
         </div>
         <div class="weui-cell">
           <div class="weui-cell__bd">
             <p>制热回水上限</p>
           </div>
-          <div class="weui-cell__ft">55</div>
+          <div class="weui-cell__ft text-primary">55</div>
         </div>
         <div class="weui-cell">
           <div class="weui-cell__bd">
             <p>除霜温差1</p>
           </div>
-          <div class="weui-cell__ft">4</div>
+          <div class="weui-cell__ft text-primary">4</div>
         </div>
       </div>
-      <div class="weui-flex weui-btn-area">
-        <div class="weui-flex__item">
-          <div class="gutter"><a href="xinjiangongcheng2.html" class="weui-btn weui-btn_default">上一步</a></div>
+
+      <div class="weui-cells__title">风机参数</div>
+      <div class="weui-cells">
+        <div class="weui-cell">
+          <div class="weui-cell__bd">
+            <p>制冷回水下限</p>
+          </div>
+          <div class="weui-cell__ft text-primary">-10</div>
         </div>
-        <div class="weui-flex__item">
-          <div class="gutter"><a href="#" class="weui-btn weui-btn_primary">完成</a></div>
+        <div class="weui-cell">
+          <div class="weui-cell__bd">
+            <p>制冷出水下限</p>
+          </div>
+          <div class="weui-cell__ft text-primary">-15</div>
+        </div>
+        <div class="weui-cell">
+          <div class="weui-cell__bd">
+            <p>制热回水上限</p>
+          </div>
+          <div class="weui-cell__ft text-primary">55</div>
+        </div>
+        <div class="weui-cell">
+          <div class="weui-cell__bd">
+            <p>除霜温差1</p>
+          </div>
+          <div class="weui-cell__ft text-primary">4</div>
         </div>
       </div>
       <!-- end 基本信息 -->
     </div>
+    <div class="page-footer">
+      <a href="shebeishuju.html" class="weui-btn weui-btn_mini weui-btn_primary">实时数据</a>
+      <a href="quxian.html" class="weui-btn weui-btn_mini weui-btn_plain-default">曲线</a>
+      <a href="guzhangjilu.html" class="weui-btn weui-btn_mini weui-btn_plain-default">故障记录</a>
+      <a href="index.html" class="weui-btn weui-btn_mini weui-btn_plain-default">退出</a>
+    </div>
   </div>
   <script type="text/javascript" src="js/zepto.min.js"></script>
-  
+
   <script type="text/javascript" src="js/weui.min.js"></script>
   <!-- 关于weui.min.js的使用文档详见：https://github.com/Tencent/weui.js/blob/master/docs/README.md，里面包含了常用的组件：actionSheet、alert、confirm、dialog、form、gallery、loading、picker、searchBar、slider、tab、toast、topTips、uploader。注释者:于传奇QQ:402526562 -->
   <script type="text/javascript">
     $(function() {
       //to do
-      $("#moreInfo").click(function() {
-        $(this).toggleClass("open");
-      });
+
     });
   </script>
 </body>
