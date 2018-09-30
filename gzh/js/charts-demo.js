@@ -33,7 +33,7 @@ var myChart2 = echarts.init(document.getElementById('chart2'), 'macarons');
 var option2 = {
   tooltip: {
     trigger: 'item',
-    formatter: "{a} <br/>{b} : {c} ({d}%)"
+    formatter: "{a}{b} : {c} <br/> ({d}%)"
   },
   legend: {
     orient: 'vertical',
@@ -41,7 +41,7 @@ var option2 = {
     data: ['C1-1冷凝风机过载', 'C1-1压缩机高压', 'C1-2压缩机高压', 'C1-3冷凝风机过载', 'C1-3压缩机高压']
   },
   series: [{
-    name: '故障比例',
+    name: '',
     type: 'pie',
     radius: '60%',
     center: ['50%', '50%'],
@@ -119,90 +119,6 @@ var data3 = [{
   {
     name: '湖南',
     value: 2.4
-  },
-  {
-    name: '安徽',
-    value: 3.3
-  },
-  {
-    name: '山东',
-    value: 3.0
-  },
-  {
-    name: '新疆',
-    value: 1
-  },
-  {
-    name: '江苏',
-    value: 3.9
-  },
-  {
-    name: '浙江',
-    value: 3.5
-  },
-  {
-    name: '江西',
-    value: 2.0
-  },
-  {
-    name: '湖北',
-    value: 2.1
-  },
-  {
-    name: '广西',
-    value: 3.0
-  },
-  {
-    name: '甘肃',
-    value: 1.2
-  },
-  {
-    name: '山西',
-    value: 3.2
-  },
-  {
-    name: '内蒙古',
-    value: 3.5
-  },
-  {
-    name: '陕西',
-    value: 2.5
-  },
-  {
-    name: '吉林',
-    value: 4.5
-  },
-  {
-    name: '福建',
-    value: 2.8
-  },
-  {
-    name: '贵州',
-    value: 1.8
-  },
-  {
-    name: '广东',
-    value: 3.7
-  },
-  {
-    name: '青海',
-    value: 0.6
-  },
-  {
-    name: '西藏',
-    value: 0.4
-  },
-  {
-    name: '四川',
-    value: 3.3
-  },
-  {
-    name: '宁夏',
-    value: 0.8
-  },
-  {
-    name: '海南',
-    value: 1.9
   }
 ];
 
@@ -242,7 +158,7 @@ var option3 = {
   },
   grid: {
     right: 10,
-    top: 80,
+    top: 20,
     bottom: 30,
     width: '15%'
   },

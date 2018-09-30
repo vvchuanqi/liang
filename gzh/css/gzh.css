@@ -21,6 +21,7 @@ body,
   background-color: #303030;
   display: flex;
   flex-flow: row;
+  display: none;
 }
 .page-header h1 {
   font-size: 18px;
