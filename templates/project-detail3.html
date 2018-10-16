@@ -1,5 +1,11 @@
 <!doctype html>
 
+<!-- start 历史数据页面中的table需要用到bootstrap table插件，因此该页面需要单独引用bootstrap相关的css和js文件,相关文档说明可以参考：http://bootstrap-table.wenzhixin.net.cn/zh-cn/getting-started/  -->
+<link rel="stylesheet" type="text/css" href="static/bootstrap-table/bootstrap-table.min.css" />
+<script type="text/javascript" src="static/bootstrap-table/bootstrap-table.min.js"></script>
+<script type="text/javascript" src="static/bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
+<!-- end 历史数据页面中的table需要用到bootstrap table插件，因此该页面需要单独引用bootstrap相关的css和js文件 -->
+
 <div class="container-fluid project-wrapper">
   <nav class="navbar navbar-default">
     <div class="container-fluid">
@@ -41,228 +47,12 @@
       </div>
       <!-- end 日期选择和翻页按钮组 -->
       <!-- start 表格 -->
-      <div class="table-responsive">
-        <table class="table table-striped table-nowrap table-vertical-middle">
-          <tr>
-            <th width="50"><input type="checkbox"></th>
-            <th>记录时间</th>
-            <th>机组开关机</th>
-            <th>水泵1</th>
-            <th>压缩机</th>
-            <th>电加热</th>
-            <th>底盘加热带</th>
-            <th>曲轴加热带</th>
-            <th>四通阀</th>
-            <th>进水温度传感器故障</th>
-            <th>出水温度传感器故障</th>
-            <th>水流不足</th>
-            <th>水泵过载</th>
-            <th class="text-right">操作</th>
-          </tr>
-          <tr>
-            <td><input type="checkbox"></td>
-            <td>2018.8.23 10:45:26</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td class="text-right"><button class="btn btn-success btn-sm"><i class="fas fa-eye"></i> 查看</button>
-            <button class="btn btn-info btn-sm"><i class="glyphicon glyphicon-import"></i> 导入</button>
-            <button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-export"></i> 导出</button></td>
-          </tr>
-          <tr>
-            <td><input type="checkbox"></td>
-            <td>2018.8.25 10:45:26</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td class="text-right"><button class="btn btn-success btn-sm"><i class="fas fa-eye"></i> 查看</button>
-            <button class="btn btn-info btn-sm"><i class="glyphicon glyphicon-import"></i> 导入</button>
-            <button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-export"></i> 导出</button></td>
-          </tr>
-          <tr>
-            <td><input type="checkbox"></td>
-            <td>2018.8.23 10:45:26</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td class="text-right"><button class="btn btn-success btn-sm"><i class="fas fa-eye"></i> 查看</button>
-            <button class="btn btn-info btn-sm"><i class="glyphicon glyphicon-import"></i> 导入</button>
-            <button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-export"></i> 导出</button></td>
-          </tr>
-          <tr>
-            <td><input type="checkbox"></td>
-            <td>2018.8.23 10:45:26</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td class="text-right"><button class="btn btn-success btn-sm"><i class="fas fa-eye"></i> 查看</button>
-            <button class="btn btn-info btn-sm"><i class="glyphicon glyphicon-import"></i> 导入</button>
-            <button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-export"></i> 导出</button></td>
-          </tr>
-          <tr>
-            <td><input type="checkbox"></td>
-            <td>2018.8.23 10:45:26</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td class="text-right"><button class="btn btn-success btn-sm"><i class="fas fa-eye"></i> 查看</button>
-            <button class="btn btn-info btn-sm"><i class="glyphicon glyphicon-import"></i> 导入</button>
-            <button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-export"></i> 导出</button></td>
-          </tr>
-          <tr>
-            <td><input type="checkbox"></td>
-            <td>2018.8.23 10:45:26</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td class="text-right"><button class="btn btn-success btn-sm"><i class="fas fa-eye"></i> 查看</button>
-            <button class="btn btn-info btn-sm"><i class="glyphicon glyphicon-import"></i> 导入</button>
-            <button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-export"></i> 导出</button></td>
-          </tr>
-          <tr>
-            <td><input type="checkbox"></td>
-            <td>2018.8.23 10:45:26</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td class="text-right"><button class="btn btn-success btn-sm"><i class="fas fa-eye"></i> 查看</button>
-            <button class="btn btn-info btn-sm"><i class="glyphicon glyphicon-import"></i> 导入</button>
-            <button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-export"></i> 导出</button></td>
-          </tr>
-          <tr>
-            <td><input type="checkbox"></td>
-            <td>2018.8.23 10:45:26</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td class="text-right"><button class="btn btn-success btn-sm"><i class="fas fa-eye"></i> 查看</button>
-            <button class="btn btn-info btn-sm"><i class="glyphicon glyphicon-import"></i> 导入</button>
-            <button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-export"></i> 导出</button></td>
-          </tr>
-          <tr>
-            <td><input type="checkbox"></td>
-            <td>2018.8.23 10:45:26</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td class="text-right"><button class="btn btn-success btn-sm"><i class="fas fa-eye"></i> 查看</button>
-            <button class="btn btn-info btn-sm"><i class="glyphicon glyphicon-import"></i> 导入</button>
-            <button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-export"></i> 导出</button></td>
-          </tr>
-          <tr>
-            <td><input type="checkbox"></td>
-            <td>2018.8.23 10:45:26</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td class="text-right"><button class="btn btn-success btn-sm"><i class="fas fa-eye"></i> 查看</button>
-            <button class="btn btn-info btn-sm"><i class="glyphicon glyphicon-import"></i> 导入</button>
-            <button class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-export"></i> 导出</button></td>
-          </tr>
-        </table>
-      </div>
-      <div class="row">
-        <div class="col-md-9"><span style="display:inline-block;margin: 20px 0;padding: 6px 12px;line-height: 1.42857143;vertical-align: middle;">当前显示第1页/共14页</span>
-          <ul class="pagination" style="vertical-align: middle;">
-            <li> <a href="#" aria-label="Previous"> <span aria-hidden="true">&laquo;</span> </a> </li>
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">···</a></li>
-            <li><a href="#">14</a></li>
-            <li> <a href="#" aria-label="Next"> <span aria-hidden="true">&raquo;</span> </a> </li>
-          </ul>
-        </div>
-        <div class="col-md-3">
-          <div class="input-group pull-right" style="margin: 20px 0;vertical-align: middle;width:140px;"> <span class="input-group-addon">到第</span>
-            <input type="text" class="form-control">
-            <span class="input-group-addon">页</span> </div>
-        </div>
-      </div>
+      <table class="table table-striped table-nowrap table-vertical-middle" id="historyData"></table>
       <!-- end 表格 -->
     </div>
     <div class="col-md-3 col-lg-2">
-      <div class="list-group"> <a href="templates/project-detail.html" class="list-group-item ajax-link">实时数据 </a> <a href="templates/project-detail2.html" class="list-group-item ajax-link">曲线查看</a> <a href="#" class="list-group-item active"><i class="fas fa-arrow-left fa-fw" style="font-size:16px;"></i> 历史数据</a> <a href="#" class="list-group-item">故障记录</a> </div>
+      <div class="list-group"> <a href="templates/project-detail.html" class="list-group-item ajax-link">实时数据 </a> <a href="templates/project-detail2.html" class="list-group-item ajax-link">曲线查看</a> <a href="#" class="list-group-item active"><i
+            class="fas fa-arrow-left fa-fw" style="font-size:16px;"></i> 历史数据</a> <a href="#" class="list-group-item">故障记录</a> </div>
       <div class="panel panel-default">
         <div class="panel-heading">网关状态
           <div class="panel-actions"><span class="badge badge-success">在线</span></div>
@@ -271,9 +61,10 @@
           <div class="help-block">最后一次上传：2018-05-16 10:20:15</div>
           <div class="help-block">数据保存策略：1分钟保存一次数据</div>
         </div>
-        <div class="panel-footer text-center"> <a href="#" class="btn btn-default btn-block">网关信息</a> <a href="#" class="btn btn-default btn-block">维保记录</a> <a href="#" class="btn btn-default btn-block">操作日志</a> <a href="#" class="btn btn-default btn-block">报警规则</a> </div>
+        <div class="panel-footer text-center"> <a href="#" class="btn btn-default btn-block">网关信息</a> <a href="#" class="btn btn-default btn-block">维保记录</a> <a href="#" class="btn btn-default btn-block">操作日志</a> <a href="#" class="btn btn-default btn-block">报警规则</a>
+        </div>
       </div>
-      
+
     </div>
   </div>
   <!-- end 页签组 -->
@@ -281,128 +72,424 @@
 
 <!-- start 打开开关模态框：筛选参数 -->
 <div class="modal fade" tabindex="-1" role="dialog" id="screeningParameters" data-backdrop="static">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">筛选参数</h4>
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">筛选参数</h4>
+      </div>
+      <div class="modal-body">
+        <!-- start 第一行表单 -->
+        <div class="form-group">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="text">
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="button"><i class="fas fa-edit"></i> 更改名称</button>
+                </span>
+              </div><!-- /input-group -->
+            </div>
+            <div class="col-lg-6"></div>
           </div>
-            <div class="modal-body">
-                <!-- start 第一行表单 -->
-                <div class="form-group">
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <div class="input-group">
-                        <input type="text" class="form-control" placeholder="text">
-                        <span class="input-group-btn">
-                          <button class="btn btn-default" type="button"><i class="fas fa-edit"></i> 更改名称</button>
-                        </span>
-                      </div><!-- /input-group -->
-                    </div>
-                    <div class="col-lg-6"></div>
-                  </div>
-                </div>
-                <!-- end 第一行表单-->
-              <table class="table" style="margin-bottom:0;">
+        </div>
+        <!-- end 第一行表单-->
+        <table class="table" style="margin-bottom:0;">
+          <tr>
+            <td>
+              <!-- start 左栏的列表区域 -->
+              <table class="table table-vertical-middle">
                 <tr>
-                  <td>
-                    <!-- start 左栏的列表区域 -->
-                    <table class="table table-vertical-middle">
-                      <tr>
-                          <th colspan="2">工程包含DTU</th>
-                        </tr>
-                      <tr>
-                        <td width="66">选择</td>
-                        <td>DTU名称</td>
-                      </tr>
-                      <tr>
-                        <td><input type="checkbox"> 全选</td>
-                        <td><input type="text" placeholder="名称关键字" class="form-control"></td>
-                      </tr>
-                    </table>
-                    <div class="table-responsive" style="max-height: 300px;">
-                      <table class="table table-vertical-middle">                        
-                        <tr>
-                          <td width="66"><input type="checkbox"></td>
-                          <td>神骏影视游乐城机组1：866798770606588</td>
-                        </tr>
-                        <tr>
-                          <td><input type="checkbox"></td>
-                          <td>神骏影视游乐城机组2：866798770606588</td>
-                        </tr>
-                      </table>
-                    </div>
-                    <!-- end 左栏的列表区域 -->
-                  </td>
-                  <td width="66" style="border-left:1px solid #ddd;border-right:1px solid #ddd;text-align:center; vertical-align: middle;"><button type="button" class="btn btn-default"><i class="fas fa-arrow-right"></i></button><br><br><button type="button" class="btn btn-default"><i class="fas fa-arrow-left"></i></button></td>
-                  <td>
-                    <!-- start 右栏的列表区域 -->
-                    <table class="table table-vertical-middle">
-                      <tr>
-                          <th colspan="2">未分配工程DTU</th>
-                        </tr>
-                      <tr>
-                        <td width="66">选择</td>
-                        <td>DTU名称</td>
-                      </tr>
-                      <tr>
-                        <td><input type="checkbox"> 全选</td>
-                        <td><input type="text" placeholder="名称关键字" class="form-control"></td>
-                      </tr>
-                    </table>
-                    <div class="table-responsive" style="max-height: 300px;">
-                      <table class="table table-vertical-middle">
-                        <tr>
-                          <td width="66"><input type="checkbox"></td>
-                          <td>神骏影视游乐城机组1：866798770606588</td>
-                        </tr>
-                        <tr>
-                          <td><input type="checkbox"></td>
-                          <td>神骏影视游乐城机组2：866798770606588</td>
-                        </tr>
-                        <tr>
-                          <td><input type="checkbox"></td>
-                          <td>新设备：866798770606588</td>
-                        </tr>
-                        <tr>
-                          <td><input type="checkbox"></td>
-                          <td>晖达测试：866798770606588</td>
-                        </tr>
-                        <tr>
-                          <td><input type="checkbox"></td>
-                          <td>晖达测试：866798770606588</td>
-                        </tr>
-                        <tr>
-                          <td><input type="checkbox"></td>
-                          <td>晖达测试：866798770606588</td>
-                        </tr>
-                        <tr>
-                          <td><input type="checkbox"></td>
-                          <td>晖达测试：866798770606588</td>
-                        </tr>
-                        <tr>
-                          <td><input type="checkbox"></td>
-                          <td>晖达测试：866798770606588</td>
-                        </tr>
-                        <tr>
-                          <td><input type="checkbox"></td>
-                          <td>晖达测试：866798770606588</td>
-                        </tr>
-                      </table>
-                    </div>
-                    <!-- end 右栏的列表区域 -->
-                  </td>
+                  <th colspan="2">工程包含DTU</th>
+                </tr>
+                <tr>
+                  <td width="66">选择</td>
+                  <td>DTU名称</td>
+                </tr>
+                <tr>
+                  <td><label style="margin:0;"><input type="checkbox"> 全选</label></td>
+                  <td><input type="text" placeholder="名称关键字" class="form-control"></td>
                 </tr>
               </table>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                <button type="button" class="btn btn-primary">确定</button>
-            </div>
-        </div>
-        <!-- /.modal-content --> 
+              <div class="table-responsive" style="max-height: 300px;">
+                <table class="table table-vertical-middle">
+                  <tr>
+                    <td width="66"><input type="checkbox"></td>
+                    <td>神骏影视游乐城机组1：866798770606588</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td>神骏影视游乐城机组2：866798770606588</td>
+                  </tr>
+                </table>
+              </div>
+              <!-- end 左栏的列表区域 -->
+            </td>
+            <td width="66" style="border-left:1px solid #ddd;border-right:1px solid #ddd;text-align:center; vertical-align: middle;"><button type="button" class="btn btn-default"><i class="fas fa-arrow-right"></i></button><br><br><button type="button"
+                class="btn btn-default"><i class="fas fa-arrow-left"></i></button></td>
+            <td>
+              <!-- start 右栏的列表区域 -->
+              <table class="table table-vertical-middle">
+                <tr>
+                  <th colspan="2">未分配工程DTU</th>
+                </tr>
+                <tr>
+                  <td width="66">选择</td>
+                  <td>DTU名称</td>
+                </tr>
+                <tr>
+                  <td><label style="margin:0;"><input type="checkbox"> 全选</label></td>
+                  <td><input type="text" placeholder="名称关键字" class="form-control"></td>
+                </tr>
+              </table>
+              <div class="table-responsive" style="max-height: 300px;">
+                <table class="table table-vertical-middle">
+                  <tr>
+                    <td width="66"><input type="checkbox"></td>
+                    <td>神骏影视游乐城机组1：866798770606588</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td>神骏影视游乐城机组2：866798770606588</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td>新设备：866798770606588</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td>晖达测试：866798770606588</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td>晖达测试：866798770606588</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td>晖达测试：866798770606588</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td>晖达测试：866798770606588</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td>晖达测试：866798770606588</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td>晖达测试：866798770606588</td>
+                  </tr>
+                </table>
+              </div>
+              <!-- end 右栏的列表区域 -->
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary">确定</button>
+      </div>
     </div>
-    <!-- /.modal-dialog --> 
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
 </div>
-<!-- /.modal --> 
+<!-- /.modal -->
 <!-- end 打开开关模态框：筛选参数 -->
+<table id="historyData"></table>
+<script type="text/javascript">
+  $('#historyData').bootstrapTable({
+    pagination: true, //是否显示分页（*）
+    sortable: true, //是否启用排序
+    sortOrder: "asc", //排序方式
+    sidePagination: "client", //分页方式：client客户端分页，server服务端分页（*）
+    pageNumber: 1, //初始化加载第一页，默认第一页,并记录
+    pageSize: 10, //每页的记录行数（*）
+    clickToSelect: true, //是否启用点击选中行
+    pageList: [10, 25, 50, 100],
+    columns: [{
+      checkbox: true,
+      visible: true
+    }, {
+      field: 'recordTime',
+      title: '记录时间',
+      sortable: true
+    }, {
+      field: 'device1',
+      title: '水泵1'
+    }, {
+      field: 'device2',
+      title: '压缩机'
+    }, {
+      field: 'device3',
+      title: '电加热'
+    }, {
+      field: 'device4',
+      title: '底盘加热带'
+    }, {
+      field: 'device5',
+      title: '曲轴加热带'
+    }, {
+      field: 'device6',
+      title: '四通阀'
+    }, {
+      field: 'device7',
+      title: '进水温度传感器故障'
+    }, {
+      field: 'device8',
+      title: '水流不足'
+    }, {
+      field: 'device9',
+      title: '水泵过载'
+    }, {
+      field: 'options',
+      title: '操作',
+      align: 'right',
+      formatter: actionFormatter
+    }],
+    data: [{
+      recordTime: '2018.8.23 10:45:26',
+      device1: 'false',
+      device2: 'false',
+      device3: 'false',
+      device4: 'false',
+      device5: 'false',
+      device6: 'false',
+      device7: 'false',
+      device8: 'false',
+      device9: 'false',
+    }, {
+      recordTime: '2018.8.23 10:45:25',
+      device1: 'false',
+      device2: 'false',
+      device3: 'false',
+      device4: 'false',
+      device5: 'false',
+      device6: 'false',
+      device7: 'false',
+      device8: 'false',
+      device9: 'false',
+    }, {
+      recordTime: '2018.8.23 10:45:24',
+      device1: 'false',
+      device2: 'false',
+      device3: 'false',
+      device4: 'false',
+      device5: 'false',
+      device6: 'false',
+      device7: 'false',
+      device8: 'false',
+      device9: 'false',
+    }, {
+      recordTime: '2018.8.23 10:45:23',
+      device1: 'false',
+      device2: 'false',
+      device3: 'false',
+      device4: 'false',
+      device5: 'false',
+      device6: 'false',
+      device7: 'false',
+      device8: 'false',
+      device9: 'false',
+    }, {
+      recordTime: '2018.8.23 10:45:22',
+      device1: 'false',
+      device2: 'false',
+      device3: 'false',
+      device4: 'false',
+      device5: 'false',
+      device6: 'false',
+      device7: 'false',
+      device8: 'false',
+      device9: 'false',
+    }, {
+      recordTime: '2018.8.23 10:45:21',
+      device1: 'false',
+      device2: 'false',
+      device3: 'false',
+      device4: 'false',
+      device5: 'false',
+      device6: 'false',
+      device7: 'false',
+      device8: 'false',
+      device9: 'false',
+    }, {
+      recordTime: '2018.8.23 10:45:20',
+      device1: 'false',
+      device2: 'false',
+      device3: 'false',
+      device4: 'false',
+      device5: 'false',
+      device6: 'false',
+      device7: 'false',
+      device8: 'false',
+      device9: 'false',
+    }, {
+      recordTime: '2018.8.23 10:45:19',
+      device1: 'false',
+      device2: 'false',
+      device3: 'false',
+      device4: 'false',
+      device5: 'false',
+      device6: 'false',
+      device7: 'false',
+      device8: 'false',
+      device9: 'false',
+    }, {
+      recordTime: '2018.8.23 10:45:18',
+      device1: 'false',
+      device2: 'false',
+      device3: 'false',
+      device4: 'false',
+      device5: 'false',
+      device6: 'false',
+      device7: 'false',
+      device8: 'false',
+      device9: 'false',
+    }, {
+      recordTime: '2018.8.23 10:45:17',
+      device1: 'false',
+      device2: 'false',
+      device3: 'false',
+      device4: 'false',
+      device5: 'false',
+      device6: 'false',
+      device7: 'false',
+      device8: 'false',
+      device9: 'false',
+    }, {
+      recordTime: '2018.8.23 10:45:16',
+      device1: 'false',
+      device2: 'false',
+      device3: 'false',
+      device4: 'false',
+      device5: 'false',
+      device6: 'false',
+      device7: 'false',
+      device8: 'false',
+      device9: 'false',
+    }, {
+      recordTime: '2018.8.23 10:45:15',
+      device1: 'false',
+      device2: 'false',
+      device3: 'false',
+      device4: 'false',
+      device5: 'false',
+      device6: 'false',
+      device7: 'false',
+      device8: 'false',
+      device9: 'false',
+    }, {
+      recordTime: '2018.8.23 10:45:14',
+      device1: 'false',
+      device2: 'false',
+      device3: 'false',
+      device4: 'false',
+      device5: 'false',
+      device6: 'false',
+      device7: 'false',
+      device8: 'false',
+      device9: 'false',
+    }, {
+      recordTime: '2018.8.23 10:45:13',
+      device1: 'false',
+      device2: 'false',
+      device3: 'false',
+      device4: 'false',
+      device5: 'false',
+      device6: 'false',
+      device7: 'false',
+      device8: 'false',
+      device9: 'false',
+    }, {
+      recordTime: '2018.8.23 10:45:12',
+      device1: 'false',
+      device2: 'false',
+      device3: 'false',
+      device4: 'false',
+      device5: 'false',
+      device6: 'false',
+      device7: 'false',
+      device8: 'false',
+      device9: 'false',
+    }, {
+      recordTime: '2018.8.23 10:45:11',
+      device1: 'false',
+      device2: 'false',
+      device3: 'false',
+      device4: 'false',
+      device5: 'false',
+      device6: 'false',
+      device7: 'false',
+      device8: 'false',
+      device9: 'false',
+    }, {
+      recordTime: '2018.8.23 10:45:10',
+      device1: 'false',
+      device2: 'false',
+      device3: 'false',
+      device4: 'false',
+      device5: 'false',
+      device6: 'false',
+      device7: 'false',
+      device8: 'false',
+      device9: 'false',
+    }, {
+      recordTime: '2018.8.23 10:45:09',
+      device1: 'false',
+      device2: 'false',
+      device3: 'false',
+      device4: 'false',
+      device5: 'false',
+      device6: 'false',
+      device7: 'false',
+      device8: 'false',
+      device9: 'false',
+    }, {
+      recordTime: '2018.8.23 10:45:08',
+      device1: 'false',
+      device2: 'false',
+      device3: 'false',
+      device4: 'false',
+      device5: 'false',
+      device6: 'false',
+      device7: 'false',
+      device8: 'false',
+      device9: 'false',
+    }, {
+      recordTime: '2018.8.23 10:45:07',
+      device1: 'false',
+      device2: 'false',
+      device3: 'false',
+      device4: 'false',
+      device5: 'false',
+      device6: 'false',
+      device7: 'false',
+      device8: 'false',
+      device9: 'false',
+    }, {
+      recordTime: '2018.8.23 10:45:06',
+      device1: 'false',
+      device2: 'false',
+      device3: 'false',
+      device4: 'false',
+      device5: 'false',
+      device6: 'false',
+      device7: 'false',
+      device8: 'false',
+      device9: 'false',
+    }]
+  });
+
+  function actionFormatter(value, row, index) {
+    var id = value;
+    var result = "";
+    result += "<button class='btn btn-success btn-sm' onclick=\"viewById('" + id + "', view='view')\" title='查看'><i class='glyphicon glyphicon-eye-open'></i> 查看</button> ";
+    result += "<button class='btn btn-info btn-sm' onclick=\"inportById('" + id + "')\" title='导入'><i class='glyphicon glyphicon-import'></i> 导入</button> ";
+    result += "<button class='btn btn-warning btn-sm' onclick=\"importByIds('" + id + "')\" title='导出'><i class='glyphicon glyphicon-export'></i> 导出</button>";
+
+    return result;
+  }
+</script>

@@ -1,113 +1,117 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>首页</title>
-<link rel="stylesheet" type="text/css" href="static/iview/css/iview.css">
-<link rel="stylesheet" type="text/css" href="static/bootstrap/css/bootstrap.css" />
-<link rel="stylesheet" type="text/css" href="static/fontawesome/css/fontawesome-all.min.css" />
-<link rel="stylesheet/less" type="text/css" href="static/less/site.less" />
-<script type="text/javascript" src="static/js/vue.min.js"></script>
-<script type="text/javascript" src="static/iview/js/iview.min.js"></script>
-<script src="static/js/less.min.js" ></script>
-<style media="screen"></style>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>首页</title>
+  <link rel="stylesheet" type="text/css" href="static/iview/css/iview.css">
+  <link rel="stylesheet" type="text/css" href="static/bootstrap/css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="static/fontawesome/css/fontawesome-all.min.css" />
+  <link rel="stylesheet/less" type="text/css" href="static/less/site.less" />
+  <script type="text/javascript" src="static/js/jquery.js"></script>
+  <script type="text/javascript" src="static/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="static/js/vue.min.js"></script>
+  <script type="text/javascript" src="static/iview/js/iview.min.js"></script>
+  <script src="static/js/less.min.js"></script>
+  <style media="screen"></style>
 </head>
 
 <body class="page-main">
-<!-- start 全局的loading动态菊花 -->
-<div id="loading" class="loading">
-  <div class="loading-box"><span class="circle"></span><span class="circle"></span></div>
-</div>
-<!-- end 全局的loading动态菊花 -->
-<!-- start header -->
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"> <span class="sr-only">Toggle</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="navbar-brand" href="#">暖通维保平台</a> </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="navbar-collapse">
-      <p class="navbar-text navbar-left"><span class="badge badge-info">设备总数：4</span><span class="badge badge-success">在线：23</span><span class="badge badge-danger">故障：4</span></p>
-      <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">张三丰 <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#changePassword" data-toggle="modal"><i class="fa fa-lock fa-fw"></i> 修改密码</a></li>
-            <li><a href="#"><i class="fa fa-cog fa-fw"></i> 个人设置</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#"><i class="fa fa-user-secret fa-fw"></i> 管理员入口</a></li>
-            <li><a href="#"><i class="fa fa-low-vision fa-fw"></i> 权限设置</a></li>
-          </ul>
-        </li>
-        <li><a href="login.html"><i class="glyphicon glyphicon-off"></i> 退出</a></li>
-      </ul>
-    </div>
-    <!-- /.navbar-collapse -->
+  <!-- start 全局的loading动态菊花 -->
+  <div id="loading" class="loading">
+    <div class="loading-box"><span class="circle"></span><span class="circle"></span></div>
   </div>
-  <!-- /.container-fluid -->
-</nav>
-<!-- end header -->
-<!-- start aside -->
-<div class="aside"> <a href="javascript:void(0);" class="btn-toggle-aside" id="btnToggleAside"><i class="fa fa-caret-left"></i></a>
-  <ul class="left-menu">
-    <li class="active"><a href="templates/home.html" class="ajax-link"><i class="fa fa-home fa-fw"></i>首页</a></li>
-    <li><a href="templates/map.html" class="ajax-link"><i class="fa fa-map fa-fw"></i>地图搜索</a></li>
-    <li><a href="templates/project.html" class="ajax-link"><i class="fa fa-building fa-fw"></i>工程管理</a></li>
-    <li><a href="templates/type-cogs.html" class="ajax-link"><i class="fa fa-cogs fa-fw"></i>机型配置</a></li>
-    <li><a href="#"><i class="fa fa-shield-alt fa-fw"></i>维保服务 <i class="fa fa-caret-down"></i></a>
-      <ul>
-        <li><a href="templates/wb-plan.html" class="ajax-link">维保计划</a></li>
-        <li><a href="templates/wb-record.html" class="ajax-link">维保记录</a></li>
-      </ul>
-    </li>
-    <li><a href="#"><i class="fa fa-bell fa-fw"></i>报警服务 <i class="fa fa-caret-down"></i></a>
-      <ul>
-        <li><a href="templates/alarm-tmp.html" class="ajax-link">报警模板</a></li>
-        <li><a href="templates/alarm-rule.html" class="ajax-link">报警规则</a></li>
-        <li><a href="templates/alarm-history.html" class="ajax-link">报警历史</a></li>
-        <li><a href="templates/alarm-subscription-rule.html" class="ajax-link">订阅规则</a></li>
-      </ul>
-    </li>
-    <li><a href="templates/data-saving-rule.html" class="ajax-link"><i class="fa fa-server fa-fw"></i>数据保存策略</a></li>
-    <li><a href="templates/account-management.html" class="ajax-link"><i class="fa fa-user-cog fa-fw"></i>账号管理</a></li>
-    <li><a href="#"><i class="fa fa-chart-line fa-fw"></i>数据分析 <i class="fa fa-caret-down"></i></a>
-      <ul>
-        <li><a href="templates/fault-analysis.html" class="ajax-link">故障分析</a></li>
-        <li><a href="templates/unit-distribution.html" class="ajax-link">机组分布</a></li>
-      </ul>
-    </li>
-    <li><a href="#"><i class="fa fa-cloud-upload-alt fa-fw"></i>远程升级 <i class="fa fa-caret-down"></i></a>
-      <ul>
-        <li><a href="templates/equipment-upgrading.html" class="ajax-link">设备升级</a></li>
-        <li><a href="templates/dtu-update.html" class="ajax-link">DTU升级</a></li>
-        <li><a href="templates/firmware-management.html" class="ajax-link">固件管理</a></li>
-      </ul>
-    </li>
-    <li><a href="templates/operation-log.html" class="ajax-link"><i class="fa fa-info-circle fa-fw"></i>操作日志</a></li>
-    <li><a href="templates/help.html" class="ajax-link"><i class="fa fa-question-circle fa-fw"></i>常见问题</a></li>
-    <li><a href="templates/feed.html" class="ajax-link"><i class="fa fa-edit fa-fw"></i>问题反馈</a></li>
-  </ul>
-</div>
-<!-- end aside -->
-<!-- start main -->
-<div class="main" id="mainContent"> </div>
-<!-- end main -->
+  <!-- end 全局的loading动态菊花 -->
+  <!-- start header -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"> <span class="sr-only">Toggle</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">暖通维保平台</a> </div>
 
-<!-- start 修改密码弹窗 -->
-<div class="modal fade" tabindex="-1" id="changePassword">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">修改密码</h4>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <p class="navbar-text navbar-left"><span class="badge badge-info">设备总数：4</span><span class="badge badge-success">在线：23</span><span class="badge badge-danger">故障：4</span></p>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">张三丰 <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#changePassword" data-toggle="modal"><i class="fa fa-lock fa-fw"></i> 修改密码</a></li>
+              <li><a href="#"><i class="fa fa-cog fa-fw"></i> 个人设置</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#"><i class="fa fa-user-secret fa-fw"></i> 管理员入口</a></li>
+              <li><a href="#"><i class="fa fa-low-vision fa-fw"></i> 权限设置</a></li>
+            </ul>
+          </li>
+          <li><a href="login.html"><i class="glyphicon glyphicon-off"></i> 退出</a></li>
+        </ul>
       </div>
-      <div class="modal-body">
-        <div class="row">
-          <div class="col-xs-4"><img src="static/images/img_change_psw.png" alt="修改密码" style="display:block;width:100%;"> </div>
-          <div class="col-xs-8">
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+  <!-- end header -->
+  <!-- start aside -->
+  <div class="aside"> <a href="javascript:void(0);" class="btn-toggle-aside" id="btnToggleAside"><i class="fa fa-caret-left"></i></a>
+    <ul class="left-menu">
+      <li class="active"><a href="templates/home.html" class="ajax-link"><i class="fa fa-home fa-fw"></i>首页</a></li>
+      <li><a href="templates/map.html" class="ajax-link"><i class="fa fa-map fa-fw"></i>地图搜索</a></li>
+      <li><a href="templates/project.html" class="ajax-link"><i class="fa fa-building fa-fw"></i>工程管理</a></li>
+      <li><a href="templates/type-cogs.html" class="ajax-link"><i class="fa fa-cogs fa-fw"></i>机型配置</a></li>
+      <li><a href="#"><i class="fa fa-shield-alt fa-fw"></i>维保服务 <i class="fa fa-caret-down"></i></a>
+        <ul>
+          <li><a href="templates/wb-plan.html" class="ajax-link">维保计划</a></li>
+          <li><a href="templates/wb-record.html" class="ajax-link">维保记录</a></li>
+        </ul>
+      </li>
+      <li><a href="#"><i class="fa fa-bell fa-fw"></i>报警服务 <i class="fa fa-caret-down"></i></a>
+        <ul>
+          <li><a href="templates/alarm-tmp.html" class="ajax-link">报警模板</a></li>
+          <li><a href="templates/alarm-rule.html" class="ajax-link">报警规则</a></li>
+          <li><a href="templates/alarm-history.html" class="ajax-link">报警历史</a></li>
+          <li><a href="templates/alarm-subscription-rule.html" class="ajax-link">订阅规则</a></li>
+        </ul>
+      </li>
+      <li><a href="templates/data-saving-rule.html" class="ajax-link"><i class="fa fa-server fa-fw"></i>数据保存策略</a></li>
+      <li><a href="templates/account-management.html" class="ajax-link"><i class="fa fa-user-cog fa-fw"></i>账号管理</a></li>
+      <li><a href="#"><i class="fa fa-chart-line fa-fw"></i>数据分析 <i class="fa fa-caret-down"></i></a>
+        <ul>
+          <li><a href="templates/fault-analysis.html" class="ajax-link">故障分析</a></li>
+          <li><a href="templates/unit-distribution.html" class="ajax-link">机组分布</a></li>
+        </ul>
+      </li>
+      <li><a href="#"><i class="fa fa-cloud-upload-alt fa-fw"></i>远程升级 <i class="fa fa-caret-down"></i></a>
+        <ul>
+          <li><a href="templates/equipment-upgrading.html" class="ajax-link">设备升级</a></li>
+          <li><a href="templates/dtu-update.html" class="ajax-link">DTU升级</a></li>
+          <li><a href="templates/firmware-management.html" class="ajax-link">固件管理</a></li>
+        </ul>
+      </li>
+      <li><a href="templates/operation-log.html" class="ajax-link"><i class="fa fa-info-circle fa-fw"></i>操作日志</a></li>
+      <li><a href="templates/help.html" class="ajax-link"><i class="fa fa-question-circle fa-fw"></i>常见问题</a></li>
+      <li><a href="templates/feed.html" class="ajax-link"><i class="fa fa-edit fa-fw"></i>问题反馈</a></li>
+    </ul>
+  </div>
+  <!-- end aside -->
+  <!-- start main -->
+  <div class="main" id="mainContent"> </div>
+  <!-- end main -->
+
+  <!-- start 修改密码弹窗 -->
+  <div class="modal fade" tabindex="-1" id="changePassword">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">修改密码</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-xs-4"><img src="static/images/img_change_psw.png" alt="修改密码" style="display:block;width:100%;"> </div>
+            <div class="col-xs-8">
               <div class="form-group">
                 <label for="exampleInputEmail1">输入旧密码：</label>
                 <input type="password" class="form-control" placeholder="请输入旧密码">
@@ -120,105 +124,104 @@
                 <label for="exampleInputEmail1">确认新密码：</label>
                 <input type="password" class="form-control" placeholder="请再次输入新密码">
               </div>
+            </div>
           </div>
         </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+          <button type="button" class="btn btn-primary">确定</button>
+        </div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-        <button type="button" class="btn btn-primary">确定</button>
-      </div>
+      <!-- /.modal-content -->
     </div>
-    <!-- /.modal-content -->
+    <!-- /.modal-dialog -->
   </div>
-  <!-- /.modal-dialog -->
-</div>
-<!-- /.modal -->
-<!-- end 修改密码弹窗 -->
-<script type="text/javascript" src="static/js/jquery.js"></script>
-<script type="text/javascript" src="static/bootstrap/js/bootstrap.min.js"></script>
-<!-- 美化表单元素开关的js-->
-<script type="text/javascript">
-  $(function(){
-    //折叠左侧的菜单栏
-    $("#btnToggleAside").click(function(){
+  <!-- /.modal -->
+  <!-- end 修改密码弹窗 -->
+
+  <!-- 美化表单元素开关的js-->
+  <script type="text/javascript">
+    $(function() {
+      //折叠左侧的菜单栏
+      $("#btnToggleAside").click(function() {
         $(".page-main").toggleClass("off")
-    });
-    //默认载入首页模板
-    $("#mainContent").load("templates/home.html");
-    //点击左侧菜单ajax链接，右侧载入内容
-    $(".ajax-link").each(function(){
-      $(this).click(function(){
-        $("#loading").fadeIn(50);
+      });
+      //默认载入首页模板
+      $("#mainContent").load("templates/home.html");
+      //点击左侧菜单ajax链接，右侧载入内容
+      $(".ajax-link").each(function() {
+        $(this).click(function() {
+          $("#loading").fadeIn(50);
 
-        $(this).parent("li").addClass("active").siblings("li").removeClass("active");
-        var target = $(this).attr("href");
-        $("#mainContent").empty().load(target,function(res,status,xhr){
-          if(status=="success"){
-                //alert("外部内容加载成功!");
-                $("#loading").fadeOut(50);
-                $("#mainContent").addClass("fadeInRight");
-                setTimeout(function(){
-                  $("#mainContent").removeClass("fadeInRight");
-                },500);
-              }
-            if(status=="error"){
-                $("#loading").fadeOut(50);
-                $("#mainContent").addClass("fadeInRight");
-                setTimeout(function(){
-                  $("#mainContent").removeClass("fadeInRight");
-                },500);
-                alert("加载错误: "+xhr.status+": "+xhr.statusText);
-              }
+          $(this).parent("li").addClass("active").siblings("li").removeClass("active");
+          var target = $(this).attr("href");
+          $("#mainContent").empty().load(target, function(res, status, xhr) {
+            if (status == "success") {
+              //alert("外部内容加载成功!");
+              $("#loading").fadeOut(50);
+              $("#mainContent").addClass("fadeInRight");
+              setTimeout(function() {
+                $("#mainContent").removeClass("fadeInRight");
+              }, 500);
+            }
+            if (status == "error") {
+              $("#loading").fadeOut(50);
+              $("#mainContent").addClass("fadeInRight");
+              setTimeout(function() {
+                $("#mainContent").removeClass("fadeInRight");
+              }, 500);
+              alert("加载错误: " + xhr.status + ": " + xhr.statusText);
+            }
+          });
+
+          return false;
         });
-
+      });
+      //判断是否有下级菜单，如果有点击时就展开，其他的折叠隐藏
+      $(".left-menu > li > a").click(function() {
+        var $father = $(this).parent("li");
+        var $length = $father.find("ul").length;
+        if ($length > 0) {
+          if ($father.hasClass("active")) {
+            $father.removeClass("active");
+          } else {
+            $father.addClass("active").siblings("li").removeClass("active");
+          }
+        }
+      });
+      //二级菜单点击添加active效果
+      $(".left-menu > li ul > li > a").click(function() {
+        var $father = $(this).parent("li");
+        var $brother = $(".left-menu > li ul > li");
+        $brother.removeClass("active");
+        $father.addClass("active");
+      });
+      //页面全局容器中的链接点击事件
+      $(document).on("click", "#mainContent .ajax-link", function() {
+        $("#loading").fadeIn(50);
+        var target = $(this).attr("href");
+        $("#mainContent").empty().load(target, function(res, status, xhr) {
+          if (status == "success") {
+            //alert("外部内容加载成功!");
+            $("#loading").fadeOut(50);
+            $("#mainContent").addClass("fadeInRight");
+            setTimeout(function() {
+              $("#mainContent").removeClass("fadeInRight");
+            }, 500);
+          }
+          if (status == "error") {
+            $("#loading").fadeOut(50);
+            $("#mainContent").addClass("fadeInRight");
+            setTimeout(function() {
+              $("#mainContent").removeClass("fadeInRight");
+            }, 500);
+            alert("加载错误: " + xhr.status + ": " + xhr.statusText);
+          }
+        });
         return false;
       });
     });
-    //判断是否有下级菜单，如果有点击时就展开，其他的折叠隐藏
-    $(".left-menu > li > a").click(function(){
-      var $father = $(this).parent("li");
-      var $length = $father.find("ul").length;
-      if($length > 0){
-        if($father.hasClass("active")){
-          $father.removeClass("active");
-        }
-        else{
-          $father.addClass("active").siblings("li").removeClass("active");
-        }
-      }
-    });
-    //二级菜单点击添加active效果
-    $(".left-menu > li ul > li > a").click(function(){
-      var $father =   $(this).parent("li");
-      var $brother = $(".left-menu > li ul > li");
-      $brother.removeClass("active");
-      $father.addClass("active");
-    });
-    //页面全局容器中的链接点击事件
-    $(document).on("click","#mainContent .ajax-link",function(){
-      $("#loading").fadeIn(50);
-      var target = $(this).attr("href");
-      $("#mainContent").empty().load(target,function(res,status,xhr){
-          if(status=="success"){
-                //alert("外部内容加载成功!");
-                $("#loading").fadeOut(50);
-                $("#mainContent").addClass("fadeInRight");
-                setTimeout(function(){
-                  $("#mainContent").removeClass("fadeInRight");
-                },500);
-              }
-            if(status=="error"){
-                $("#loading").fadeOut(50);
-                $("#mainContent").addClass("fadeInRight");
-                setTimeout(function(){
-                  $("#mainContent").removeClass("fadeInRight");
-                },500);
-                alert("加载错误: "+xhr.status+": "+xhr.statusText);
-              }
-        });
-      return false;
-    });
-  });
-</script>
+  </script>
 </body>
+
 </html>
