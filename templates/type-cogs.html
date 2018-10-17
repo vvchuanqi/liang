@@ -1,274 +1,196 @@
 <!doctype html>
-<style>
-body { font-size: 14px; line-height: 1.42857143; color: #495060; font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; }
-.ivu-modal-mask { z-index: 1500; }
-.ivu-modal-wrap { z-index: 1600; }
-.ivu-modal-body{font-size:14px;}
-.modal-sider .ivu-collapse-simple{background-color:#515a6e !important;border:none;}
-.modal-sider .ivu-collapse >.ivu-collapse-item{border:none;}
-.modal-sider .ivu-collapse-header{color: #fff !important;}
-.modal-sider .ivu-collapse-content{background-color: #363e4f !important;color: #fff !important;}
-.modal-sider .ivu-collapse-content-box{padding:16px 0 16px 0 !important;}
-.modal-sider .ivu-upload{display: block;margin-bottom:16px;}
-</style>
-<div class="container-fluid type-cogs-wrapper" id="app">
-  <Row style="margin-bottom:15px;">
-    <i-col span="12">
-      <button-group>
-        <i-button @click="handleSelectAll(true)">全选</i-button>
-        <i-button @click="handleSelectAll(false)">全不选</i-button>
-      </button-group>
-      <button-group>
-        <i-button type="primary" ghost>添加</i-button>
-        <i-button type="primary" ghost>删除</i-button>
-      </button-group>
-    </i-col>
-    <i-col span="12" align="right">
-      <i-button type="dashed">
-        <Icon  type="md-cloud-download"></Icon>
-        下载协议模板</i-button>
-      <i-button type="dashed">
-        <Icon  type="md-copy"></Icon>
-        注意事项</i-button>
-    </i-col>
-  </Row>
-  <template>
-    <i-table stripe border ref="selection" :columns="columns4" :data="data1"></i-table>
-  </template>
-  <Modal v-model="modal1" title="界面配置" fullscreen>
-    <div class="layout" style="height:100%;">
-      <Layout style="height:100%;">
-        <Sider hide-trigger class="modal-sider">
-          <template>
-            <Collapse accordion simple>
-                <Panel name="1">
-                    背景图片
-                    <div slot="content">
-                      <Upload action="#">
-                          <i-button icon="ios-cloud-upload-outline" ghost size="large">上传图片</i-button>
-                      </Upload>
-                      <i-button icon="md-contract" ghost size="large">调节大小</i-button>
-                  </div>
-                </Panel>
-                <Panel name="2">
-                    布局方式
-                    <div slot="content">
-                    <radio-group vertical>
-                      <Radio label="自由布局"></Radio>
-                      <Radio label="按列布局"></Radio>
-                    </radio-group>
-                  </div>
-                </Panel>
-                <Panel name="3">
-                    添加分组控件
-                    <div slot="content">乔纳森·伊夫是一位工业设计师，现任Apple公司设计师兼资深副总裁，英国爵士。他曾参与设计了iPod，iMac，iPhone，iPad等众多苹果产品。除了乔布斯，他是对苹果那些著名的产品最有影响力的人。</div>
-                </Panel>
-            </Collapse>
-        </template>
-          
-          
-<!--
-          <i-menu active-name="1-2" theme="dark" width="auto" :open-names="['1']">
-            <Submenu name="1">
-              <template slot="title">
-                <Icon type="ios-navigate"></Icon>
-                背景图片 </template>
-              <Submenu name="2">
-                <template slot="title">
-                  <Icon type="ios-keypad"></Icon>
-                  布局方式 </template>
-                <menu-item name="2-1"> sdfsd </menu-item>
-                <menu-item name="2-2">按列布局</menu-item>
-              </Submenu>
-              <menu-item name="1-1">Option 1</menu-item>
-              <menu-item name="1-2">Option 2</menu-item>
-              <menu-item name="1-3">Option 3</menu-item>
-            </Submenu>
-            <Submenu name="3">
-              <template slot="title">
-                <Icon type="ios-keypad"></Icon>
-                布局方式 </template>
-              <menu-item name="3-1">
-                
-              </menu-item>
-              <menu-item name="3-2">Option 2</menu-item>
-            </Submenu>
-          </i-menu>
--->
-        </Sider>
-        <i-content :style="{background: '#FFF',padding:'0 15px 0'}">
-          <template>
-            <Tabs type="card" closable @on-tab-remove="handleTabRemove" :animated="false">
-              <tab-pane label="首页" v-if="tab0">
-                <!-- start 标签一的内容-->
-                <Row :gutter="16">
-                    <i-col span="4"><Alert closable>文字标题内容</Alert></i-col>
-                    <i-col span="4"><Alert closable>文字标题内容</Alert></i-col>
-                    <i-col span="4"><Alert closable>文字标题内容</Alert></i-col>
-                    <i-col span="4"><Alert closable>文字标题内容</Alert></i-col>
-                    <i-col span="4"><Alert closable>文字标题内容</Alert></i-col>
-                    <i-col span="4"><Alert closable>文字标题内容</Alert></i-col>
-                </Row>
-                
-                <!-- end 标签一的内容-->
-              </tab-pane>
-              <tab-pane label="用户控制" v-if="tab1">标签二的内容</tab-pane>
-              <tab-pane label="标签三" v-if="tab2">标签三的内容</tab-pane>
-            </Tabs>
-          </template>
-        </i-content>
-        <Sider hide-trigger :style="{background: '#f5f7f9',padding:'0 16px'}">
-          <h4>未使用参数</h4>
-          <i-button type="dashed" long>压缩机最短运行</i-button><br><br>
-          <i-button type="dashed" long>压缩机最短停机</i-button><br><br>
-          <i-button type="dashed" long>压缩机最短停机</i-button><br><br>
-          <i-button type="dashed" long>压缩机最短停机</i-button><br><br>
-          <i-button type="dashed" long>压缩机最短停机</i-button><br><br>
-          <i-button type="dashed" long>压缩机最短停机</i-button><br><br>
-        </Sider>
-      </Layout>
+
+<!-- start 页面中的table需要用到bootstrap table插件，因此该页面需要单独引用bootstrap相关的css和js文件,相关文档说明可以参考：http://bootstrap-table.wenzhixin.net.cn/zh-cn/getting-started/  -->
+<link rel="stylesheet" type="text/css" href="static/bootstrap-table/bootstrap-table.min.css" />
+<script type="text/javascript" src="static/bootstrap-table/bootstrap-table.min.js"></script>
+<script type="text/javascript" src="static/bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
+<!-- end 页面中的table需要用到bootstrap table插件，因此该页面需要单独引用bootstrap相关的css和js文件 -->
+
+<div class="container-fluid type-cogs-wrapper"> 
+  <!-- start 工具按钮行 -->
+  <div class="row form-group">
+    <div class="col-sm-6">
+      <div class="btn-group">
+        <button class="btn btn-success"><i class="fas fa-plus"></i> 添加</button>
+        <button class="btn btn-danger" disabled><i class="fas fa-trash"></i> 删除</button>
+      </div>
     </div>
-  </Modal>
+    <div class="col-sm-6">
+      <div class="btn-group pull-right">
+        <button class="btn btn-info"><i class="fas fa-download"></i> 下载协议模板</button>
+        <button class="btn btn-warning"><i class="fas fa-info-circle"></i> 注意事项</button>
+      </div>
+    </div>
+  </div>
+  <!-- end 工具按钮行 --> 
+  <!-- start 表格 -->
+  <table class="table table-striped table-nowrap table-vertical-middle" id="typeCogsData">
+  </table>
+  <!-- end 表格 --> 
 </div>
-<script>
-    new Vue({
-        el: '#app',
-        data () {
-            return {
-                modal1:false,
-                tab0: true,
-                tab1: true,
-                tab2: true,
-                columns4: [
-                    {
-                        type: 'selection',
-                        width: 60,
-                        align: 'center'
-                    },
-                    {
-                        title: '机型名称',
-                        key: 'name'
-                    },
-                    {
-                        title: '设备类型',
-                        key: 'type'
-                    },
-                    {
-                        title: '协议版本',
-                        key: 'agreement'
-                    },
-                    {
-                        title: '协议配置',
-                        key: 'cogs',
-                        width:150,
-                        align:'center',
-                        render: (h, params) => {
-                            return h('div', [
-                                h('Button', {
-                                    props: {
-                                        type: 'default',
-                                        size: 'small'
-                                    },
-                                    style: {
-                                        marginRight: '5px'
-                                    },
-                                    on: {
-                                        click: () => {
-                                            this.show(params.index)
-                                        }
-                                    }
-                                }, '修改'),
-                                h('Button', {
-                                    props: {
-                                        type: 'default',
-                                        size: 'small'
-                                    },
-                                    on: {
-                                        click: () => {
-                                            this.remove(params.index)
-                                        }
-                                    }
-                                }, '导出')
-                            ]);
-                        }
-                    },
-                    {
-                        title: '界面配置',
-                        key: 'ui',
-                        width: 85,
-                        align: 'right',
-                        render: (h, params) => {
-                            return h('div', [
-                                h('Button', {
-                                    props: {
-                                        type: 'default',
-                                        size: 'small'
-                                    },
-                                    on: {
-                                        click: () => {
-                                            //this.show(params.index)
-                                          this.modal1 = true
-                                        }
-                                    }
-                                }, '修改'),
-                            ]);
-                        }
-                    }
-                ],
-                data1: [
-                    {
-                        name: '东方斯扽',
-                        type: '类型累心阿萨德离开家',
-                        agreement: '1.5'
-                    },
-                    {
-                        name: '第三方地方',
-                        type: '第三方跟第三方',
-                        agreement: '1.7'
-                    },
-                    {
-                        name: '规范化飞过海',
-                        type: '范德萨凤凰股份公司的',
-                        agreement: '1.8'
-                    },
-                    {
-                        name: '好几个环节',
-                        type: '光和热岁的发的撒',
-                        agreement: '2.0'
-                    },
-                    {
-                        name: '企鹅王轻松的',
-                        type: '规划为特色的速度',
-                        agreement: '2.1'
-                    },
-                    {
-                        name: '梵蒂冈梵蒂冈',
-                        type: '广发行物色范文芳',
-                        agreement: '2.5'
-                    }
-                ]
-            }
-        },
-        methods: {
-            handleSelectAll (status) {
-                this.$refs.selection.selectAll(status);
-            },
-            show (index) {
-                this.$Modal.info({
-                    title: 'User Info',
-                    content: `机型名称：${this.data1[index].name}<br>设备类型：${this.data1[index].type}<br>协议版本：${this.data1[index].agreement}`
-                })
-            },
-            remove (index) {
-                //this.data1.splice(index, 1);
-                this.$Modal.info({
-                    title: '系统提示',
-                    content: `确定导出以下内容：<br>机型名称：${this.data1[index].name}<br>设备类型：${this.data1[index].type}<br>协议版本：${this.data1[index].agreement}`
-                })
-            },
-            handleTabRemove (name) {
-                this['tab' + name] = false;
-            },
-        }
-    })
-  </script> 
+<script type="text/javascript">
+  var tableData = [
+    {
+    typeName: '东方斯扽',
+    type: '类型累心阿萨德离开家',
+    version: '1.5',
+      number:'744'
+  }, {
+    typeName: '江口洋介',
+    type: '第三方跟第三方',
+    version: '1.7',
+      number:'33'
+  }, {
+    typeName: '死疯狗是',
+    type: '范德萨凤凰股份公司的',
+    version: '1.4',
+      number:'22'
+  }, {
+    typeName: '三分公司',
+    type: '类型累心阿萨德离开家',
+    version: '2.5',
+      number:'55'
+  }, {
+    typeName: '东方斯扽',
+    type: '光和热岁的发的撒',
+    version: '2.3',
+      number:'54'
+  }, {
+    typeName: '岁的发送',
+    type: '倒萨发送到',
+    version: '2.1',
+      number:'11'
+  }, {
+    typeName: '发送典范',
+    type: '阿萨德发送',
+    version: '1.1',
+      number:'77'
+  }, {
+    typeName: '温热',
+    type: '突然很听话',
+    version: '1.0',
+      number:'88'
+  }, {
+    typeName: '我耳朵嗡嗡',
+    type: '岁的分公司地方',
+    version: '0.9',
+      number:'233'
+  }, {
+    typeName: '我耳朵嗡嗡',
+    type: '岁的分公司地方',
+    version: '0.8',
+      number:'98'
+  }, {
+    typeName: '我耳朵嗡嗡',
+    type: '岁的分公司地方',
+    version: '0.7',
+      number:'123'
+  }, {
+    typeName: '我耳朵嗡嗡',
+    type: '岁的分公司地方',
+    version: '0.6',
+      number:'77'
+  }, {
+    typeName: '我耳朵嗡嗡',
+    type: '岁的分公司地方',
+    version: '1.5',
+      number:'987'
+  }, {
+    typeName: '我耳朵嗡嗡',
+    type: '岁的分公司地方',
+    version: '0.5',
+      number:'54'
+  }, {
+    typeName: '我耳朵嗡嗡',
+    type: '岁的分公司地方',
+    version: '0.4',
+      number:'65'
+  }, {
+    typeName: '我耳朵嗡嗡',
+    type: '岁的分公司地方',
+    version: '0.3',
+      number:'66'
+  }, {
+    typeName: '我耳朵嗡嗡',
+    type: '岁的分公司地方',
+    version: '0.2',
+      number:'29'
+  }, {
+    typeName: '我耳朵嗡嗡',
+    type: '岁的分公司地方',
+    version: '0.1',
+      number:'352'
+  }, 
+  ];
+  $('#typeCogsData').bootstrapTable({
+    pagination: true, //是否显示分页（*）
+    sortable: true, //是否启用排序
+    sortOrder: "asc", //排序方式
+    sidePagination: "client", //分页方式：client客户端分页，server服务端分页（*）
+    pageNumber: 1, //初始化加载第一页，默认第一页,并记录
+    pageSize: 10, //每页的记录行数（*）
+    clickToSelect: true, //是否启用点击选中行
+    pageList: [10, 25, 50, 100],
+    columns: [{
+      checkbox: true,
+      visible: true
+    }, {
+      field: 'typeName',
+      title: '机型名称'
+    }, {
+      field: 'type',
+      title: '设备类型'
+    }, {
+      field: 'version',
+      title: '协议版本',
+      width:100,
+      sortable: true,
+      align: 'center'
+    }, {
+      field: 'cogs',
+      title: '协议配置',
+      align: 'right',
+      width:200,
+      formatter: actionFormatter1
+    }, {
+      field: 'uiOptions',
+      title: '界面配置',
+      align: 'right',
+      width:100,
+      formatter: actionFormatter2
+    }, {
+      field: 'weixin',
+      title: '微信界面配置',
+      align: 'right',
+      width:100,
+      formatter: actionFormatter3
+    }, {
+      field: 'number',
+      title: '设备数量',
+      align: 'right',
+      sortable: true,
+      width:100
+    }],
+    data: tableData
+  });
+
+  function actionFormatter1(value, row, index) {
+    var id = value;
+    var result = "";
+    result += "<button class='btn btn-default btn-sm' onclick=\"editById('" + id + "', view='view')\" title='修改'><i class='fas fa-edit'></i> 修改</button> ";
+    result += "<button class='btn btn-default btn-sm' onclick=\"importById('" + id + "')\" title='导出'><i class='glyphicon glyphicon-export'></i> 导出</button> ";
+    return result;
+  }
+  function actionFormatter2(value, row, index) {
+    var id = value;
+    var result = "";
+    result += "<a class='btn btn-default btn-sm ajax-link' href='templates/type-cogs-ui.html' title='修改'><i class='fas fa-edit'></i> 修改</a> ";
+    return result;
+  }
+  function actionFormatter3(value, row, index) {
+    var id = value;
+    var result = "";
+    result += "<a class='btn btn-default btn-sm' href='###' title='修改'><i class='fas fa-edit'></i> 修改</a> ";
+    return result;
+  }
+</script> 
