@@ -39,5 +39,6 @@ liang/
 ## 更多详情请访问：
 ### [首页](https://vvchuanqi.github.io/liang/)
 ### [登录页面](https://vvchuanqi.github.io/liang/login.html)
+### [公众号](https://vvchuanqi.github.io/liang/gzh/)
   
   
