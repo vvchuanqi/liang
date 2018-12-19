@@ -2,16 +2,16 @@
 <div class="container-fluid project-wrapper">
   <nav class="navbar navbar-default">
     <form class="navbar-form navbar-left">
-        <div class="input-group">
-          <input type="text" class="form-control" placeholder="名称、IMEI码、位置、最近发生事件" style="min-width: 275px;">
-          <span class="input-group-btn">
-            <button class="btn btn-primary" type="button"><i class="fa fa-search"></i> 搜索</button>
-          </span>
-        </div><!-- /input-group -->
-        <button type="button" class="btn btn-link"><i class="fa fa-filter"></i> 筛选器</button>
-      </form>
-      <div style="margin-right:15px;float:right;"><a href="templates/project-add.html" class="btn btn-success navbar-btn ajax-link"><i class="fas fa-feather"></i> 创建工程</a></div>
-</nav>
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="名称、IMEI码、位置、最近发生事件" style="min-width: 275px;">
+        <span class="input-group-btn">
+          <button class="btn btn-primary" type="button"><i class="fa fa-search"></i> 搜索</button>
+        </span>
+      </div><!-- /input-group -->
+      <button type="button" class="btn btn-link"><i class="fa fa-filter"></i> 筛选器</button>
+    </form>
+    <div style="margin-right:15px;float:right;"><a href="templates/project-add.html" class="btn btn-success navbar-btn ajax-link"><i class="fas fa-feather"></i> 创建工程</a></div>
+  </nav>
 
   <div class="row">
     <div class="col-xs-12">
@@ -34,83 +34,102 @@
           </div>
         </div>
         <div id="collapseOne" class="panel-collapse collapse in">
-
-            <div class="table-responsive">
-              <table class="table table-nowrap table-hover">
-                <thead>
-                  <tr>
-                    <th>设备名称</th>
-                    <th>设备型号</th>
-                    <th>网关信息</th>
-                    <th>连网状态</th>
-                    <th>是否故障</th>
-                    <th>最近发生事件</th>
-                    <th>发生时间</th>
-                    <th>机型配置模板</th>
-                    <th style="text-align:right;">操作</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row"><span>碧桂园1期 低4号</span> <a href="#editName" data-toggle="modal"><i class="fa fa-edit"></i></a></th>
-                    <td>PH630</td>
-                    <td>86678945218</td>
-                    <td class="text-success"><i class="fa fa-check-circle"></i> 在线</td>
-                    <td class="text-success"><i class="fa fa-check-circle"></i> 正常</td>
-                    <td>上线</td>
-                    <td>1小时前</td>
-                    <td>PH630-特殊</td>
-                    <td style="text-align:right;"><a class="btn btn-xs btn-default ajax-link" href="templates/project-detail.html">查看</a> <a class="btn btn-xs btn-default">加入工程</a> <a class="btn btn-xs btn-default">更多</a></td>
-                  </tr>
-                    <tr>
-                      <th scope="row"><span>碧桂园1期 低4号</span> <a href="#editName" data-toggle="modal"><i class="fa fa-edit"></i></a></th>
-                      <td>PH630</td>
-                      <td>86678945218</td>
-                      <td class="text-success"><i class="fa fa-check-circle"></i> 在线</td>
-                      <td class="text-success"><i class="fa fa-check-circle"></i> 正常</td>
-                      <td>上线</td>
-                      <td>1小时前</td>
-                      <td>PH630-特殊</td>
-                      <td style="text-align:right;"><a class="btn btn-xs btn-default ajax-link" href="templates/project-detail.html">查看</a> <a class="btn btn-xs btn-default">加入工程</a> <a class="btn btn-xs btn-default">更多</a></td>
-                    </tr>
-                    <tr>
-                      <th scope="row"><span>碧桂园1期 低4号</span> <a href="#editName" data-toggle="modal"><i class="fa fa-edit"></i></a></th>
-                      <td>PH630</td>
-                      <td>86678945218</td>
-                      <td class="text-warning"><i class="fa fa-exclamation-circle"></i> 离线</td>
-                      <td class="text-danger"><i class="fa fa-exclamation-circle"></i> 故障</td>
-                      <td>上线</td>
-                      <td>1小时前</td>
-                      <td>PH630-特殊</td>
-                      <td style="text-align:right;"><a class="btn btn-xs btn-default ajax-link" href="templates/project-detail.html">查看</a> <a class="btn btn-xs btn-default">加入工程</a> <a class="btn btn-xs btn-default">更多</a></td>
-                    </tr>
-                      <tr>
-                        <th scope="row"><span>碧桂园1期 低4号</span> <a href="#editName" data-toggle="modal"><i class="fa fa-edit"></i></a></th>
-                        <td>PH630</td>
-                        <td>86678945218</td>
-                        <td class="text-success"><i class="fa fa-check-circle"></i> 在线</td>
-                        <td class="text-success"><i class="fa fa-check-circle"></i> 正常</td>
-                        <td>上线</td>
-                        <td>1小时前</td>
-                        <td>PH630-特殊</td>
-                        <td style="text-align:right;"><a class="btn btn-xs btn-default ajax-link" href="templates/project-detail.html">查看</a> <a class="btn btn-xs btn-default">加入工程</a> <a class="btn btn-xs btn-default">更多</a></td>
-                      </tr>
-                        <tr>
-                          <th scope="row"><span>碧桂园1期 低4号</span> <a href="#editName" data-toggle="modal"><i class="fa fa-edit"></i></a></th>
-                          <td>PH630</td>
-                          <td>86678945218</td>
-                          <td class="text-success"><i class="fa fa-check-circle"></i> 在线</td>
-                          <td class="text-success"><i class="fa fa-check-circle"></i> 正常</td>
-                          <td>上线</td>
-                          <td>1小时前</td>
-                          <td>PH630-特殊</td>
-                          <td style="text-align:right;"><a class="btn btn-xs btn-default ajax-link" href="templates/project-detail.html">查看</a> <a class="btn btn-xs btn-default">加入工程</a> <a class="btn btn-xs btn-default">更多</a></td>
-                        </tr>
-                </tbody>
-              </table>
+          <div class="table-responsive">
+            <table class="table table-nowrap table-hover">
+              <thead>
+                <tr>
+                  <th>设备名称</th>
+                  <th>设备型号</th>
+                  <th>网关信息</th>
+                  <th>连网状态</th>
+                  <th>是否故障</th>
+                  <th>最近发生事件</th>
+                  <th>发生时间</th>
+                  <th>机型配置模板</th>
+                  <th style="text-align:right;">操作</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row"><span>碧桂园1期 低4号</span> <a href="#editName" data-toggle="modal"><i class="fa fa-edit"></i></a></th>
+                  <td>PH630</td>
+                  <td>86678945218</td>
+                  <td class="text-success"><i class="fa fa-check-circle"></i> 在线</td>
+                  <td class="text-success"><i class="fa fa-check-circle"></i> 正常</td>
+                  <td>上线</td>
+                  <td>1小时前</td>
+                  <td>PH630-特殊</td>
+                  <td style="text-align:right;"><a class="btn btn-xs btn-default ajax-link" href="templates/project-detail.html">查看</a> <a class="btn btn-xs btn-default" data-toggle="modal" data-target="#addToProject">加入工程</a> <a class="btn btn-xs btn-default">更多</a></td>
+                </tr>
+                <tr>
+                  <th scope="row"><span>碧桂园1期 低4号</span> <a href="#editName" data-toggle="modal"><i class="fa fa-edit"></i></a></th>
+                  <td>PH630</td>
+                  <td>86678945218</td>
+                  <td class="text-success"><i class="fa fa-check-circle"></i> 在线</td>
+                  <td class="text-success"><i class="fa fa-check-circle"></i> 正常</td>
+                  <td>上线</td>
+                  <td>1小时前</td>
+                  <td>PH630-特殊</td>
+                  <td style="text-align:right;"><a class="btn btn-xs btn-default ajax-link" href="templates/project-detail.html">查看</a> <a class="btn btn-xs btn-default" data-toggle="modal" data-target="#addToProject">加入工程</a> <a class="btn btn-xs btn-default">更多</a></td>
+                </tr>
+                <tr>
+                  <th scope="row"><span>碧桂园1期 低4号</span> <a href="#editName" data-toggle="modal"><i class="fa fa-edit"></i></a></th>
+                  <td>PH630</td>
+                  <td>86678945218</td>
+                  <td class="text-warning"><i class="fa fa-exclamation-circle"></i> 离线</td>
+                  <td class="text-danger"><i class="fa fa-exclamation-circle"></i> 故障</td>
+                  <td>上线</td>
+                  <td>1小时前</td>
+                  <td>PH630-特殊</td>
+                  <td style="text-align:right;"><a class="btn btn-xs btn-default ajax-link" href="templates/project-detail.html">查看</a> <a class="btn btn-xs btn-default" data-toggle="modal" data-target="#addToProject">加入工程</a> <a class="btn btn-xs btn-default">更多</a></td>
+                </tr>
+                <tr>
+                  <th scope="row"><span>碧桂园1期 低4号</span> <a href="#editName" data-toggle="modal"><i class="fa fa-edit"></i></a></th>
+                  <td>PH630</td>
+                  <td>86678945218</td>
+                  <td class="text-success"><i class="fa fa-check-circle"></i> 在线</td>
+                  <td class="text-success"><i class="fa fa-check-circle"></i> 正常</td>
+                  <td>上线</td>
+                  <td>1小时前</td>
+                  <td>PH630-特殊</td>
+                  <td style="text-align:right;"><a class="btn btn-xs btn-default ajax-link" href="templates/project-detail.html">查看</a> <a class="btn btn-xs btn-default" data-toggle="modal" data-target="#addToProject">加入工程</a> <a class="btn btn-xs btn-default">更多</a></td>
+                </tr>
+                <tr>
+                  <th scope="row"><span>碧桂园1期 低4号</span> <a href="#editName" data-toggle="modal"><i class="fa fa-edit"></i></a></th>
+                  <td>PH630</td>
+                  <td>86678945218</td>
+                  <td class="text-success"><i class="fa fa-check-circle"></i> 在线</td>
+                  <td class="text-success"><i class="fa fa-check-circle"></i> 正常</td>
+                  <td>上线</td>
+                  <td>1小时前</td>
+                  <td>PH630-特殊0</td>
+                  <td style="text-align:right;"><a class="btn btn-xs btn-default ajax-link" href="templates/project-detail.html">查看</a> <a class="btn btn-xs btn-default" data-toggle="modal" data-target="#addToProject">加入工程</a> <a class="btn btn-xs btn-default">更多</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="panel-footer text-right">
+            <div class="btn-group"><button type="button" class="btn btn-default" disabled><i class="fa fa-backward"></i> 上一页</button>
+              <div class="btn-group"><button type="button" class="btn btn-default">1/5</button>
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                  <span class="caret"></span>
+                  <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li class="active"><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li><a href="#">6</a></li>
+                  <li><a href="#">7</a></li>
+                  <li><a href="#">8</a></li>
+                </ul>
+              </div><button type="button" class="btn btn-default">下一页 <i class="fa fa-forward"></i></button>
             </div>
-
+          </div>
         </div>
+
       </div>
       <div class="panel panel-default">
         <div class="panel-heading">
@@ -131,8 +150,8 @@
           </div>
         </div>
         <div id="collapseTwo" class="panel-collapse collapse">
-            <div class="table-responsive">
-              <table class="table table-nowrap table-hover" style="border-bottom:1px solid #e9eaec;">
+          <div class="table-responsive">
+            <table class="table table-nowrap table-hover" style="border-bottom:1px solid #e9eaec;">
               <thead>
                 <tr>
                   <th>设备名称</th>
@@ -158,45 +177,65 @@
                   <td>PH630-特殊</td>
                   <td style="text-align:right;"><a class="btn btn-xs btn-default ajax-link" href="templates/project-detail.html">查看</a> <a class="btn btn-xs btn-default">更多</a></td>
                 </tr>
-                  <tr>
-                    <th scope="row"><span>碧桂园1期 低4号</span> <a href="#editName" data-toggle="modal"><i class="fa fa-edit"></i></a></th>
-                    <td>PH630</td>
-                    <td>86678945218</td>
-                    <td class="text-success"><i class="fa fa-check-circle"></i> 在线</td>
-                    <td class="text-success"><i class="fa fa-check-circle"></i> 正常</td>
-                    <td>上线</td>
-                    <td>1小时前</td>
-                    <td>PH630-特殊</td>
-                    <td style="text-align:right;"><a class="btn btn-xs btn-default ajax-link" href="templates/project-detail.html">查看</a> <a class="btn btn-xs btn-default">更多</a></td>
-                  </tr>
-                  <tr>
-                    <th scope="row"><span>碧桂园1期 低4号</span> <a href="#editName" data-toggle="modal"><i class="fa fa-edit"></i></a></th>
-                    <td>PH630</td>
-                    <td>86678945218</td>
-                    <td class="text-warning"><i class="fa fa-exclamation-circle"></i> 离线</td>
-                    <td class="text-success"><i class="fa fa-check-circle"></i> 正常</td>
-                    <td>上线</td>
-                    <td>1小时前</td>
-                    <td>PH630-特殊</td>
-                    <td style="text-align:right;"><a class="btn btn-xs btn-default ajax-link" href="templates/project-detail.html">查看</a> <a class="btn btn-xs btn-default">更多</a></td>
-                  </tr>
+                <tr>
+                  <th scope="row"><span>碧桂园1期 低4号</span> <a href="#editName" data-toggle="modal"><i class="fa fa-edit"></i></a></th>
+                  <td>PH630</td>
+                  <td>86678945218</td>
+                  <td class="text-success"><i class="fa fa-check-circle"></i> 在线</td>
+                  <td class="text-success"><i class="fa fa-check-circle"></i> 正常</td>
+                  <td>上线</td>
+                  <td>1小时前</td>
+                  <td>PH630-特殊</td>
+                  <td style="text-align:right;"><a class="btn btn-xs btn-default ajax-link" href="templates/project-detail.html">查看</a> <a class="btn btn-xs btn-default">更多</a></td>
+                </tr>
+                <tr>
+                  <th scope="row"><span>碧桂园1期 低4号</span> <a href="#editName" data-toggle="modal"><i class="fa fa-edit"></i></a></th>
+                  <td>PH630</td>
+                  <td>86678945218</td>
+                  <td class="text-warning"><i class="fa fa-exclamation-circle"></i> 离线</td>
+                  <td class="text-success"><i class="fa fa-check-circle"></i> 正常</td>
+                  <td>上线</td>
+                  <td>1小时前</td>
+                  <td>PH630-特殊</td>
+                  <td style="text-align:right;"><a class="btn btn-xs btn-default ajax-link" href="templates/project-detail.html">查看</a> <a class="btn btn-xs btn-default">更多</a></td>
+                </tr>
               </tbody>
             </table>
+          </div>
+          <div class="panel-footer text-right">
+            <div class="btn-group"><button type="button" class="btn btn-default" disabled><i class="fa fa-backward"></i> 上一页</button>
+              <div class="btn-group"><button type="button" class="btn btn-default">2/5</button>
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                  <span class="caret"></span>
+                  <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">1</a></li>
+                  <li class="active"><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li><a href="#">6</a></li>
+                  <li><a href="#">7</a></li>
+                  <li><a href="#">8</a></li>
+                </ul>
+              </div><button type="button" class="btn btn-default">下一页 <i class="fa fa-forward"></i></button>
             </div>
-            <div class="panel-body">
-                <div class="well" style="margin-bottom: 0;">
-                    <div class="row">
-                      <div class="col-xs-4"><label>工程安装时间：</label>2017-6-10</div>
-                      <div class="col-xs-4"><label>调试完成时间：</label>2018-1-2</div>
-                      <div class="col-xs-4"><label>维保结束时间：</label>2022-3-4</div>
-                    </div>
-                    <div class="row">
-                      <div class="col-xs-4"><label>施工单位：</label>北京有道安装公司 吴有道 18522023608</div>
-                      <div class="col-xs-4"><label>客户名称：</label>吉林卫校 张铁锤 13489706541</div>
-                      <div class="col-xs-4"><label>客户地址：</label>吉林省长春市夕阳镇口永吉大街244号</div>
-                    </div>
-                </div>
+          </div>
+          <div class="panel-body">
+            <div class="well" style="margin-bottom: 0;">
+              <div class="row">
+                <div class="col-xs-4"><label>工程安装时间：</label>2017-6-10</div>
+                <div class="col-xs-4"><label>调试完成时间：</label>2018-1-2</div>
+                <div class="col-xs-4"><label>维保结束时间：</label>2022-3-4</div>
+              </div>
+              <div class="row">
+                <div class="col-xs-4"><label>施工单位：</label>北京有道安装公司 吴有道 18522023608</div>
+                <div class="col-xs-4"><label>客户名称：</label>吉林卫校 张铁锤 13489706541</div>
+                <div class="col-xs-4"><label>客户地址：</label>吉林省长春市夕阳镇口永吉大街244号</div>
+              </div>
             </div>
+          </div>
         </div>
       </div>
       <div class="panel panel-default">
@@ -219,8 +258,8 @@
         </div>
         <div id="collapseThree" class="panel-collapse collapse">
 
-            <div class="table-responsive">
-              <table class="table table-nowrap table-hover" style="border-bottom:1px solid #e9eaec;">
+          <div class="table-responsive">
+            <table class="table table-nowrap table-hover" style="border-bottom:1px solid #e9eaec;">
               <thead>
                 <tr>
                   <th>设备名称</th>
@@ -246,64 +285,70 @@
                   <td>PH630-特殊</td>
                   <td style="text-align:right;"><a class="btn btn-xs btn-default ajax-link" href="templates/project-detail.html">查看</a> <a class="btn btn-xs btn-default">更多</a></td>
                 </tr>
-                  <tr>
-                    <th scope="row"><span>碧桂园1期 低4号</span> <a href="#editName" data-toggle="modal"><i class="fa fa-edit"></i></a></th>
-                    <td>PH630</td>
-                    <td>86678945218</td>
-                    <td class="text-success"><i class="fa fa-check-circle"></i> 在线</td>
-                    <td class="text-success"><i class="fa fa-check-circle"></i> 正常</td>
-                    <td>上线</td>
-                    <td>1小时前</td>
-                    <td>PH630-特殊</td>
-                    <td style="text-align:right;"><a class="btn btn-xs btn-default ajax-link" href="templates/project-detail.html">查看</a> <a class="btn btn-xs btn-default">更多</a></td>
-                  </tr>
-                  <tr>
-                    <th scope="row"><span>碧桂园1期 低4号</span> <a href="#editName" data-toggle="modal"><i class="fa fa-edit"></i></a></th>
-                    <td>PH630</td>
-                    <td>86678945218</td>
-                    <td class="text-warning"><i class="fa fa-exclamation-circle"></i> 离线</td>
-                    <td class="text-danger"><i class="fa fa-exclamation-circle"></i> 故障</td>
-                    <td>上线</td>
-                    <td>1小时前</td>
-                    <td>PH630-特殊</td>
-                    <td style="text-align:right;"><a class="btn btn-xs btn-default ajax-link" href="templates/project-detail.html">查看</a> <a class="btn btn-xs btn-default">更多</a></td>
-                  </tr>
+                <tr>
+                  <th scope="row"><span>碧桂园1期 低4号</span> <a href="#editName" data-toggle="modal"><i class="fa fa-edit"></i></a></th>
+                  <td>PH630</td>
+                  <td>86678945218</td>
+                  <td class="text-success"><i class="fa fa-check-circle"></i> 在线</td>
+                  <td class="text-success"><i class="fa fa-check-circle"></i> 正常</td>
+                  <td>上线</td>
+                  <td>1小时前</td>
+                  <td>PH630-特殊</td>
+                  <td style="text-align:right;"><a class="btn btn-xs btn-default ajax-link" href="templates/project-detail.html">查看</a> <a class="btn btn-xs btn-default">更多</a></td>
+                </tr>
+                <tr>
+                  <th scope="row"><span>碧桂园1期 低4号</span> <a href="#editName" data-toggle="modal"><i class="fa fa-edit"></i></a></th>
+                  <td>PH630</td>
+                  <td>86678945218</td>
+                  <td class="text-warning"><i class="fa fa-exclamation-circle"></i> 离线</td>
+                  <td class="text-danger"><i class="fa fa-exclamation-circle"></i> 故障</td>
+                  <td>上线</td>
+                  <td>1小时前</td>
+                  <td>PH630-特殊</td>
+                  <td style="text-align:right;"><a class="btn btn-xs btn-default ajax-link" href="templates/project-detail.html">查看</a> <a class="btn btn-xs btn-default">更多</a></td>
+                </tr>
               </tbody>
             </table>
+          </div>
+          <div class="panel-footer text-right">
+            <div class="btn-group"><button type="button" class="btn btn-default" disabled><i class="fa fa-backward"></i> 上一页</button>
+              <div class="btn-group"><button type="button" class="btn btn-default">1/5</button>
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                  <span class="caret"></span>
+                  <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li class="active"><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li><a href="#">6</a></li>
+                  <li><a href="#">7</a></li>
+                  <li><a href="#">8</a></li>
+                </ul>
+              </div><button type="button" class="btn btn-default">下一页 <i class="fa fa-forward"></i></button>
             </div>
-
-            <div class="panel-body">
-                <div class="well" style="margin-bottom: 0;">
-                    <div class="row">
-                      <div class="col-xs-4"><label>工程安装时间：</label>2017-6-10</div>
-                      <div class="col-xs-4"><label>调试完成时间：</label>2018-1-2</div>
-                      <div class="col-xs-4"><label>维保结束时间：</label>2022-3-4</div>
-                    </div>
-                    <div class="row">
-                      <div class="col-xs-4"><label>施工单位：</label>北京有道安装公司 吴有道 18522023608</div>
-                      <div class="col-xs-4"><label>客户名称：</label>吉林卫校 张铁锤 13489706541</div>
-                      <div class="col-xs-4"><label>客户地址：</label>吉林省长春市夕阳镇口永吉大街244号</div>
-                    </div>
-                </div>
+          </div>
+          <div class="panel-body">
+            <div class="well" style="margin-bottom: 0;">
+              <div class="row">
+                <div class="col-xs-4"><label>工程安装时间：</label>2017-6-10</div>
+                <div class="col-xs-4"><label>调试完成时间：</label>2018-1-2</div>
+                <div class="col-xs-4"><label>维保结束时间：</label>2022-3-4</div>
+              </div>
+              <div class="row">
+                <div class="col-xs-4"><label>施工单位：</label>北京有道安装公司 吴有道 18522023608</div>
+                <div class="col-xs-4"><label>客户名称：</label>吉林卫校 张铁锤 13489706541</div>
+                <div class="col-xs-4"><label>客户地址：</label>吉林省长春市夕阳镇口永吉大街244号</div>
+              </div>
             </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-<div class="pagination-footer">
-  <ul class="pagination">
-        <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
-        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#">5</a></li>
-        <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
-     </ul>
-</div>
-
 
 <!-- start 打开开关模态框确认是否确认编辑设备名称 -->
 <div class="modal fade" tabindex="-1" role="dialog" id="editName" data-backdrop="static">
@@ -327,3 +372,42 @@
 </div>
 <!-- /.modal -->
 <!-- end 打开开关模态框确认是否确认编辑设备名称 -->
+
+<!-- start 模态窗：加入工程 -->
+<div class="modal fade" tabindex="-1" role="dialog" id="addToProject" data-backdrop="static">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">加入工程</h4>
+      </div>
+      <div class="modal-body">
+        <label for="">请选择工程：</label>
+        <div class="form-group">
+          <select class="form-control">
+            <option>吉林长生谷</option>
+            <option>碧桂园</option>
+            <option>登上林业站</option>
+            <option>五谷丰登场</option>
+            <option>长隆度假村</option>
+          </select>
+        </div>
+        <label for="">或创建新工程：</label>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="请输入工程名">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">确定</button>
+          </span>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary">确定</button>
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<!-- end 模态窗：加入工程 -->
